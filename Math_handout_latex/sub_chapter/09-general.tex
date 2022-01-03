@@ -1,0 +1,31 @@
+\chapterimage{chapter_head_2.pdf}
+\chapter{微积分通识}
+
+\section{计算细节问题}\index{计算细节问题}
+
+1、$arcsin(sin\theta)=\theta$时，$\theta$的范围必须是$[-\pi/2,\pi/2]$，否则需要利用$sin(\pi-\theta)=sin(\theta)$或者其它三角恒等式对内层函数进行预变换（变换的原因是内层的$sin\theta$会把值限制在$[-1,1]$的范围之内，也就抹除掉了$\theta$超出$[-\pi/2,\pi/2]$的特性）（反三角函数图像就是$x,y$轴交换之后的图像，三角函数图像关于$y=x$对称，注意与三角函数倒数的图像区别）
+
+2、${(x^2)}^{\frac{3}{2}}=|x|^{3}$：变量先平方再开方之后，负值特性就失去了
+
+3、$\sqrt{sin^2x}=|sinx|$：三角函数求根号值时加绝对值
+
+4、变量并入根号：$xy=\sqrt{x^2+y^2}$可得到$y=\sqrt{1+\frac{y^2}{x^2}}(x > 0)$和$y=-\sqrt{1+\frac{y^2}{x^2}}(x < 0)$两种情况
+
+5、$\int_{0}^{1} e^x dx$的计算，不要漏下限的计算结果$-1$，$e^0=1$！！！
+
+6、$arctan\ x + arctan\ \frac{1}{x}=\frac{\pi}{2}$，反三角函数的值的特性
+
+7、反三角函数的合并公式：$arctan\ a - arctan\ b=arctan\ \frac{a-b}{1+ab}$（通过$tan(a-b)$的展开式进行推导）
+
+
+
+\section{通识公式}\index{通识公式}
+
+1、海伦公式（求三角形面积）：$S=\sqrt{p(p-x)(p-y)(p-z)}=\frac{1}{2} y h$（其中$p$是三角形半周长）
+
+2、$e$的不等式：$\left(1+\frac{1}{n}\right)^{n}<\mathrm{e}<\left(1+\frac{1}{n}\right)^{n+1}$（n为正整数）
+
+3、伽马函数积分：伽马函数定义为$\Gamma(z)=\int_{0}^{\infty} t^{z-1} \mathrm{e}^{-t} \mathrm{~d} \mathrm{t}$，伽马函数的递推公式$\Gamma(z+1)=z \Gamma(z)$（成立条件为z是非负整数和非0以外的所有值），并且$\Gamma\left(\frac{1}{2}\right) =\sqrt{\pi}$；$\Gamma(1) =0 !$（对于其它的值利用递推公式递推即可）
+
+
+

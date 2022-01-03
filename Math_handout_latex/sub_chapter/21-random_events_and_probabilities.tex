@@ -1,0 +1,197 @@
+\chapterimage{chapter_head_2.pdf}
+\chapter{随机事件和概率}
+
+\section{事件}\index{事件}
+
+
+
+\subsection{事件与样本空间}\index{事件!事件与样本空间}
+
+1、随机试验：1、同条件可重复；2、实验开始前无法预知结果；3、结果可能有多个
+
+2、样本空间：1、随机试验的每一个结果为样本点；所有的样本点组成样本空间
+
+3、随机事件：1、样本空间的子集称为随机事件，简称事件；2、一个样本点组成的事件为基本事件；3、必然事件和不可能事件的定义
+
+
+
+\subsection{事件的基本运算}\index{事件!事件的基本运算}
+
+1、事件的并、交、差、包含、相等
+
+2、运算规律：交换律、结合律、分配律、对偶律
+
+3、运算过程中对一个等式两边与同一事件相交，等式仍成立；反之不能成立（没有消去律：等式两边同时消去同一个交事件等式不能成立）
+
+备注：可以使用图形（文氏图）求解或对结果进行验证
+
+
+
+\subsection{文字叙述：（正确理解至少、最少、最多、恰有的含义）}\index{事件!文字叙述：（正确理解至少、最少、最多、恰有的含义）}
+
+1、至少（最少）：求反向事件（一个都没有，几个都没有）
+
+2、最多：求反向事件（多于最多时的情况，大概率没有等号，即不包含最多）
+
+3、恰有：直接求
+
+注意：同一事件会有多种不同的表达形式
+
+
+
+\subsection{事件相互独立}\index{事件!事件相互独立}
+
+1、定义：相互独立是指事件集合的任意的子集都互相独立
+
+2、独立事件的充要条件：$P(AB)=P(A)P(B)$（备注：常用用判断两个事件是否是相互独立的）
+
+3、两事件$A,B$相互独立的充要条件是$A$与$\overline B$，或$\overline A$与$B$，或$\overline A$与$\overline B$相互独立（事件独立得到的推论，$A,B$独立并不意味着$A$与$\overline B$就不是独立的，这是个双重否定，害，真拗口，总而言之就是$A,B$相互独立则所有相关的都互相独立）
+
+4、当$0<P(A)<1$时，$A \  B$独立等价于$P(B|A)=P(B)$（一个事件在另一个事件条件下的概率与事件单独发生的概率一致，则这两个事件独立）或者$P(B|A)=P(B|\overline A)$成立（证明：使用条件概率公式）
+
+5、相互独立的n个事件中，任何几个事件换成对立事件，新组成的n个事件也相互独立（利用了上述3的推论）
+
+备注：独立是指两个事件互不影响
+
+\section{事件独立、不相容（也叫互斥）、对立的对比}\index{事件独立、不相容（也叫互斥）、对立的对比}
+
+1、事件独立：依据事件独立公式$P(AB)=P(A)P(B)$，$A,B$事件的发生互不影响（独立性要求两个变量完全不相关；不相关要求两个变量没有线性关系）
+
+2、事件对立：两个事件$A,B$占满了同一个样本空间（对立事件组成并占满整个样本空间），并且彼此之间没有交集
+
+3、事件不相容（互斥）：两个事件没有交集（事件不能同时发生，没有公共样本点），但是不一定占满了整个样本空间
+
+注意：互斥事件与对立事件的区别是互斥可能没有占据整个样本空间
+
+\section{概率}\index{概率}
+
+
+
+\subsection{概率的概念和基本运算}\index{概率!概率的概念和基本运算}
+
+1、概率定义：对应样本空间的实值函数P（即使事件存在也可以使事件概率为0，使用图形法计算事件的关系时，注意区分事件和概率）
+
+2、任意事件概率：$0 \leqslant P(A)\leqslant 1$
+
+3、必然事件概率为1（$P(\Omega)=1$）；空集的概率为0（$P(\emptyset)=0$）
+
+4、两两互斥（不相容）的事件并等于对应每一个事件概率的和（$P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=\sum_{i=1}^{n} P\left(A_{i}\right)$）
+
+5、$P(A)=1-P(\overline A)$ 常用
+
+6、$A \subset B\rightarrow P(A) \leqslant P(B)$：事件的包含与概率的大小的关系比较（事件关系与概率关系对应）
+
+
+
+\subsection{区分概率与事件}\index{概率!区分概率与事件}
+
+1、概率的定义为对应样本空间的实值函数（每一个样本都有一个概率值，即使样本存在概率可能也是零）
+
+2、区分概率和事件的运算的区别，事件相等概率是相等的，但是概率相等事件不一定等同
+
+文氏图法：通过图的相交或者分离表示事件事件的关系，对每一个区域标注变量表示事件区域的概率
+
+
+
+\section{概率计算公式}\index{概率计算公式}
+
+
+
+\subsection{加法公式}\index{概率计算公式!加法公式}
+
+1、$P(A\cup B) = P(A)+P(B)-P(AB)$
+
+2、$P(A\cup B \cup C) = P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$
+
+
+
+\subsection{减法公式}\index{概率计算公式!减法公式}
+
+1、$P(A - B) = P(A)-P(AB)$
+
+2、$A-B=A\overline B \rightarrow P(A-B) = P(A\overline B)$ （注意：如果AB互相独立，则$P(A-B) = P(A\overline B)=P(A)P(\overline B)$，利用了相互独立的公式）
+
+
+
+\subsection{乘法公式}\index{概率计算公式!乘法公式}
+
+1、$P(A)>0 \rightarrow P(AB)=P(A)P(B|A)$（非独立时乘法运算）
+
+2、$P(A_1A_2\cdots A_n) > 0 \rightarrow P(A_1A_2\cdots A_n)=P(A_1)P(A_2|A_1)\cdots P(A_n|A_1A_2\cdots A_{n-1})$
+
+3、推论：$P(AB) \le P(A)$
+
+备注：事件的相乘是以前提条件为基础的，所以转化成了条件概率
+
+
+
+\subsection{全概率公式}\index{概率计算公式!全概率公式}
+
+1、条件：$\mathop{ \bigcup }\limits_{{k=1}}^{{n}}\mathop{{B}}\nolimits_{{k}}=\Omega \ $，$\mathop{{B}}\nolimits_{{i}}\mathop{{B}}\nolimits_{{j}}= \emptyset { \left( {i \neq j,i,j=1,2,3, \cdots n} \right) }$，$P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } > 0{ \left( {k=1,2,3, \cdots n} \right) }$；（称$B_1,B_2,\cdots B_n$为$\Omega$的一个完备事件组）
+
+2、结论：$P{ \left( {A} \right) }=\mathop{ \sum }\limits_{{k=1}}^{{n}}P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } \cdot P{ \left( {A \left| \mathop{{B}}\nolimits_{{k}}\right. } \right) }$
+
+备注：事件$B_i$瓜分了整个样本空间，相当于A样本空间的基底？
+
+
+
+\subsection{贝叶斯公式}\index{概率计算公式!贝叶斯公式}
+
+1、条件：$\mathop{ \bigcup }\limits_{{k=1}}^{{n}}\mathop{{B}}\nolimits_{{k}}=\Omega$，$\mathop{{B}}\nolimits_{{i}}\mathop{{B}}\nolimits_{{j}}= \emptyset { \left( {i \neq j,i,j=1,2,3, \cdots n} \right) }$，$P(A) > 0,P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } > 0{ \left( {k=1,2,3, \cdots n} \right) }$
+
+2、结论：$P{ \left( {\mathop{{B}}\nolimits_{{k}} \left| A\right. } \right) }=\frac{{P \left( {\mathop{{B}}\nolimits_{{k}}} \left) \cdot P{ \left( {A \left| {\mathop{{B}}\nolimits_{{k}}}\right. } \right) }\right. \right. }}{{\mathop{ \sum }\limits_{{i=1}}^{{n}}P{ \left( {\mathop{{B}}\nolimits_{{i}}} \right) } \cdot P{ \left( {A \left| \mathop{{B}}\nolimits_{{i}}\right. } \right) }}}=\frac{{P \left( {\mathop{{B}}\nolimits_{{k}}} \left) \cdot P{ \left( {A \left| {\mathop{{B}}\nolimits_{{k}}}\right. } \right) }\right. \right. }}{P(A)}$，换算得到$P(B|A)=P(B)\cdot \frac{P(A|B)}{P(A)}$
+
+3、作用：新信息出现后的B概率=B概率 X 新信息带来的调整（理解调整式子$\frac{P(A|B)}{P(A)}$的计算，依据代数来理解，无法理解，记住公式）
+
+问题：贝叶斯公式能用来干什么？
+
+
+
+\subsection{其它公式（AB独立时）}\index{概率计算公式!其它公式（AB独立时）}
+
+1、$P(A-B) = P(A\overline B)=P(A)P(\overline B)$（事件的减法公式与独立时的进一步推广）
+
+2、$P(A\cup B) = 1-P(\overline A \  \overline B) = 1-P(\overline A)P(  \overline B)$（利用事件的图形关系可以解释）
+
+
+
+备注：可以利用事件的图形关系进行辅助理解上述公式
+
+\section{常见的事件模型}\index{常见的事件模型}
+
+
+
+\subsection{古典模型}\index{常见的事件模型!古典模型}
+
+1、实验结果为n个样本点，每个样本点的发生有相同的可能性，事件A由$n_A$个样本点组成，则事件A的概率为$P(A) = \frac{n_A}{n} = \frac{A包含的样本点数}{样本点总数}$
+
+注意：特点为有限等可能试样
+
+注意：计算时，尽可能选择较小并且简单的样本空间
+
+如何判断和发现最简单的样本空间，或者发现样本空间？整理一下技巧
+
+
+
+\subsection{几何型概率}\index{常见的事件模型!几何型概率}
+
+1、试验的样本空间为区域，以$L(\Omega)$表示其几何度量，$L(\Omega)$有限，且试验结果出现在$\Omega$中的任何区域只与该区域的几何度量成正比，事件A的样本点所表示的区域为$\Omega _A$，则事件A的概率为$P(A) = \frac{L(\Omega _A)}{L(\Omega)} = \frac{\Omega _A的几何度量}{\Omega 的几何度量}$
+
+注意：样本点无限，几何度量上是等可能的
+
+
+
+\subsection{独立重复实验与$n$重伯努利实验}\index{常见的事件模型!独立重复实验与$n$重伯努利实验}
+
+1、独立重复试验：一随机实验做若干次，各次试验所联系的事件相互独立，且同一事件在各个事件在各个试验中出现的概率相同
+
+2、伯努利试验：独立重复试验中只有两个结果
+
+3、n重伯努利实验：伯努利试验重复$n$次
+
+4、n重伯努利试验中事件A（$P(A) = p \ (0<p<1)$）发生$k$次的概率$C_n^kp^k(1-p^{n-k}),k=0,1,2,\cdots ,n$；即二项式的展开式中的项
+
+思路：独立重复实验中如果有多个结果，可以将结果进行归成两类，转换成伯努利实验
+
+
+

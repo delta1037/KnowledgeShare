@@ -1,0 +1,65 @@
+\chapterimage{chapter_head_2.pdf}
+\chapter{大数定律和中心极限定理}
+
+\section{求解随机变量与期望接近程度}\index{求解随机变量与期望接近程度}
+
+随机变量与期望的接近程度：（粗略估计）
+
+1、切比雪夫不等式：$P\{|X-\mu| \geqslant \varepsilon\} \leqslant \frac{\sigma^{2}}{\varepsilon^{2}}$，正数 $\varepsilon$任意，随机变量$X$具有期望$E(X)=\mu$，方差$D(X)=\sigma^{2}$（该式子表示，越偏离中心范围越大，其概率越小）
+
+注意：切比雪夫不等式主要用于估计概率，证明概率不等式
+
+\section{随机变量序列依概率收敛的情况-大数定律}\index{随机变量序列依概率收敛的情况-大数定律}
+
+
+
+\subsection{大数定律}\index{随机变量序列依概率收敛的情况-大数定律!大数定律}
+
+1、依概率收敛的定义：$\lim_{n \rightarrow \infty} P\{|X_n-A| \le \varepsilon \}=1$，对任意$\varepsilon > 0$成立
+
+2、切比雪夫大数定律：$\lim_{n \rightarrow \infty} P\left\{\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)\right|<\varepsilon\right\}=1$，其中$X_{1}, X_{2}, \cdots, X_{n}, \cdots$是一列相互独立 的随机变量(或者两两不相关), 它们的期望与方差分别为$E\left(X_{k}\right)$, $D\left(X_{k}\right)(k=1,2, \cdots)$，并且存在常数$C$, 使得$D\left(X_{k}\right) \leqslant C(k=1,2, \cdots)$
+
+3、辛钦大数定律（独立同分布的序列）：$\lim_{n \rightarrow \infty} P\left\{\left|\frac{1}{n} \sum_{k=1}^{n} X_{k}-\mu\right|<\varepsilon\right\}=1$，数学期望 $E\left(X_{k}\right)=\mu,(k=1,2, \cdots)$；任意 $\varepsilon>0$
+
+4、伯努利大数定律（$n$次独立重复试验中事件发生的次数$X_n$）：$\lim_{n \rightarrow \infty} P\left\{\left|\frac{X_n}{n}-p\right|<\varepsilon\right\}=1$或者$\lim_{n \rightarrow \infty} P\left\{\left|\frac{X_n}{n}-p\right| \geqslant \varepsilon\right\}=0$，任意$\varepsilon>0$（这时随机变量就不是序列的形式了，但是可以将二项分布拆开看作0-1分布）
+
+注意：切比雪夫大数定律并未要求同分布；切比雪夫大数定律是切比雪夫不等式的推论
+
+注意：辛钦大数定律将切比雪夫大数定律推向了特殊，对趋向的值做了化简（要求同分布）
+
+注意：伯努利大数定律将辛钦大数定律推向了特殊，对分布做了特殊要求（可以看作是0-1分布序列）
+
+
+
+\subsection{求解事件依概率收敛的值}\index{随机变量序列依概率收敛的情况-大数定律!求解事件依概率收敛的值}
+
+1、根据事件的类型套用相应的大数定律即可
+
+\section{依概率收敛的情况-中心极限定理}\index{依概率收敛的情况-中心极限定理}
+
+
+
+\subsection{中心极限定理}\index{依概率收敛的情况-中心极限定理!中心极限定理}
+
+1、棣莫弗一拉普拉斯定理（二项分布）：$\lim _{n \rightarrow \infty} P\left\{\frac{X_{n}-n p}{\sqrt{n p(1-p)}} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}} \mathrm{~d} t=\Phi(x)$（该定理说明二项分布在n充分大时，随机变量经过标准化之后（按照二项分布的期望和方差标准化），接近标准正态分布）
+
+2、列维一林德伯格定理（独立同分布）：$\lim_{n \rightarrow \infty} F_{n}(x)=\lim_{n \rightarrow \infty} P\left\{\frac{\sum_{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}} \mathrm{~d} t=\Phi(x)$，随机变量之间互相独立，服从同一分布，具有相同的均值$\mu$和方差$\sigma^2$（均值和方差需要都存在），则随机变量的标准化分布$Y_{n}=\frac{\sum_{k=1}^{n} X_{k}-E\left(\sum_{k=1}^{n} X_{k}\right)}{\sqrt{D\left(\sum_{k=1}^{n} X_{k}\right)}}=\frac{\sum_{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma}$成立上式（该定理说明任何同分布在n充分大时，随机变量经过标准化之后（按照同分布的期望和和方差和来进行标准化），接近标准正态分布）
+
+
+
+\subsection{利用中心极限定理求解事件的概率}\index{依概率收敛的情况-中心极限定理!利用中心极限定理求解事件的概率}
+
+1、判断事件的类型：二项分布或者独立同分布（问题：有些事件看似不是二项分布但是可以转换成二项分布？三项，求解一项的概率啥的）；有可能需要利用和的关系转换为相反的事件的概率（反向操作）
+
+2、求解二项分布或独立同分布的均值和方差
+
+3、求解标准化随机变量的范围（原始范围与标准化之后的范围对照）
+
+4、利用分位数和标准化后的分布的性质（正态分布性质等）求解
+
+\section{大数定律和中心极限定理的理解}\index{大数定律和中心极限定理的理解}
+
+1、大数定律：各种类型的分布在随机变量较多时，收敛的值
+
+2、中心极限定理：描述了当同分布的随机变量较多时，总体上会服从正态分布，正态分布的参数与随机变量的均值和方差有关，并且可以转换成标准正态分布（为了方便利用标准正态分布的分位数进行求解）
+

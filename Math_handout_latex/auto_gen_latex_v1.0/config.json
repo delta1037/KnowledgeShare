@@ -1,0 +1,15 @@
+{
+    "input_dir" : "input",
+    "classify_file": "classify_dic.csv",
+    "handout_file": [
+        "handout_0.csv",
+        "handout_1.csv",
+        "handout_2.csv"
+    ],
+    "csv_src_format": [
+        "topic",
+        "ideas",
+        "attributes",
+        "chapter"],
+    "output_filename": "sub_chapter"
+}

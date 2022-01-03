@@ -1,0 +1,451 @@
+\chapterimage{chapter_head_2.pdf}
+\chapter{一元积分}
+
+\section{不定积分与定积分-概念和关系}\index{不定积分与定积分-概念和关系}
+
+
+
+\subsection{概念}\index{不定积分与定积分-概念和关系!概念}
+
+1、原函数与不定积分：$\int f(x) \mathrm{d} x=F(x)+C$
+
+2、定积分：闭区间，函数有界，定积分的推导（分割、作乘积、求和、取极限，$\lim _{\lambda \rightarrow 0} \sum_{i=1}^{n} f\left(\xi_{i}\right) \Delta x_{i}=\int_{a}^{b} f(x) \mathrm{d} x$）
+
+3、定积分的存在定理：连续或者仅有有限个间断点
+
+4、原函数存在定理：在区间上连续一定存在原函数；有间断点仅保证定积分存在，但是不一定保证原函数存在（若函数有跳跃间断点，则一定不存在原函数（原因：可以用分段形式表示积分，但是尖锐点的导数不存在，原函数在这个点左右导数不一致导致原函数不存在）；如果函数不连续，则原函数存在与否可以与定积分存在与否互不相干，问题：原函数存在，定积分可以不存在吗？答：对于瑕积分，可能存在原函数，但是对某一段的积分不存在（包含瑕点），形状（原函数）存在，但是某一点值无法表示（积分值））
+
+
+
+\subsection{关系：（变上限对上限变量求导）}\index{不定积分与定积分-概念和关系!关系：（变上限对上限变量求导）}
+
+1、函数在闭区间$[a,b]$上连续，则$\left(\int_{a}^{x} f(t) \mathrm{d} t\right)^{\prime}{ }_{x}=f(x), x \in[a, b]$，由此可知$\int_{a}^{x} f(t) \mathrm{d} t$是$f(x)$的一个原函数，从而$\int f(x) \mathrm{d} x=\int_{a}^{x} f(t) \mathrm{d} t+C$
+
+备注：原函数都含有常数C！！！
+
+
+
+\subsection{分段函数不定积分}\index{不定积分与定积分-概念和关系!分段函数不定积分}
+
+1、将积分函数写成分段表达式（分段表达式必须是连续的）
+
+2、将此分段函数按照分段求解原函数，并使其在分界点处连续（即所有的分段使用同一个C来表示常数部分）（这样得到的原函数在分界点不但连续（由同一个C表示原函数的所有分段的常数部分决定的），并且使可导的（由被积分函数连续决定的），所以是原函数）
+
+注意：拆分时不要忘记累计量前边的因子（$x \int_{0}^{x} f(u) \mathrm{d} u=x\left[\int_{0}^{\frac{\pi}{2}} f(u) \mathrm{d} u+\int_{\frac{\pi}{2}}^{x} f(u) \mathrm{d} u\right]$）
+
+注意：所有的分段使用同一个$C$来表示常数部分
+
+\section{定积分与原函数}\index{定积分与原函数}
+
+
+
+\subsection{存在性}\index{定积分与原函数!存在性}
+
+1、原函数存在定理：被积分函数存在原函数 ⇒ 被积分函数连续；被积分函数有跳跃间断点，则原函数一定不存在
+
+2、定积分的存在定理：被积分函数连续或者仅有有限个间断点
+
+
+
+\subsection{奇偶函数、周期函数的原函数性质}\index{定积分与原函数!奇偶函数、周期函数的原函数性质}
+
+1、由原函数推断$f(x)$的性质，需要用到微分学的性质
+
+2、由$f(x)$的奇偶性、周期性来推断$F(x)$的性质，需要用到变上限函数$\int_{-\infty}^{x}f(t)dt$来表示$f(x)$的某一个原函数（$F(x)=F(0)+\int_{0}^{x} f(t) \mathrm{d} t$，这种形式讨论奇偶性很方便），用它来讨论原函数的性质（因为不定积分只能用来计算，并不能用来讨论性质）
+
+\section{积分的方法-汇总}\index{积分的方法-汇总}
+
+
+
+\subsection{不定积分和定积分}\index{积分的方法-汇总!不定积分和定积分}
+
+1、基本积分公式形式
+
+2、不定积分的性质：对积分进行拆分求解
+
+3、不定积分的凑微分求积分法（第一换元法）：$\int f(\varphi(x)) \varphi^{\prime}(x) \mathrm{d} x =\int f(\varphi(x)) \mathrm{d} \varphi(x) $，命$\varphi(x)=u$，得$\int f(u) \mathrm{d} u $，如果$F(u)+C $，则$F(\varphi(x))+C$（换元积分之后，最后又换回了原来的变量）（变量不换回去就是标准的零分）
+
+4、不定积分的换元积分法（第二换元法）：$\int f(x) \mathrm{d} x \stackrel{x=\varphi(t)}{=}\left(\int f(\varphi(t)) \varphi^{\prime}(t) \mathrm{d} t\right)_{t=\psi(x)}$
+
+5、常见的几种求解不定积分的方法
+
+7、不定积分的分部积分法
+
+注意：不定积分不加C，标准的零分
+
+
+
+\subsection{定积分的积分}\index{积分的方法-汇总!定积分的积分}
+
+1、不定积分的积分方法+牛顿-莱布尼茨定理
+
+2、定积分的性质：对积分进行拆分求解（包括对函数的拆分，与不定积分一致；和对区间的拆分，处理对称性和奇偶性）
+
+3、定积分的换元积分法：上下限注意同步变换
+
+4、定积分的分部积分法：常见的几种分部的类型
+
+5、几个十分有用的定积分公式：偶函数，奇函数、周期函数的积分、华里士公式（用分布积分推导的）
+
+其它求解方法：（骚操作思路）
+
+1、部分分式展开：
+
+2、凑的方法拆项：分子拆分或者拆项得到的两项与分母的部分有相似的形式
+
+3、含有高次方的：将低次方的合并到d中（类似于$xdx$变为$\frac{1}{2}dx^2$）
+
+4、三角函数对称1：（$sin$或者$cos^2$在$(0,\pi)$区间内的对称性）对于积分$A=\int_{0}^{\pi} \frac{x \sin x}{1+\cos ^{2} x} \mathrm{~d} x$，作积分变量代换$x=\pi-t$，于是有$A=\int_{0}^{\pi} \frac{\pi \sin t}{1+\cos ^{2} t} \mathrm{~d} t-\int_{0}^{\pi} \frac{t \sin t}{1+\cos ^{2} t} \mathrm{~d} t=\int_{0}^{\pi} \frac{\pi \sin t}{1+\cos ^{2} t} \mathrm{~d} t-A$，所以$A=\int_{0}^{\pi} \frac{\pi \sin t}{1+\cos ^{2} t} \mathrm{~d} t$
+
+5、三角函数对称2：（$cos$与$sin$对称）对于积分$I=\int_{0}^{\frac{\pi}{2}} \frac{\cos t}{\sin t+\cos t} \mathrm{~d} t$，令$t=\frac{\pi}{2}-u, t=0 \leftrightarrow u=\frac{\pi}{2}, t=\frac{\pi}{2} \leftrightarrow u=0$，所以就有$I=\int_{\frac{\pi}{2}}^{0} \frac{\sin u}{\cos u+\sin u}(-\mathrm{d} u)=\int_{0}^{\frac{\pi}{2}} \frac{\sin u}{\cos u+\sin u} \mathrm{~d} u$，然后由$2 I=\int_{0}^{\frac{\pi}{2}} \frac{\cos t+\sin t}{\cos t+\sin t} \mathrm{~d} t=\frac{\pi}{2}$就可以求出来$I$
+
+6、三角加绝对值：利用三角函数的在区间上的正负性，将整个区间拆分为单个区间的求和形式（在求解这样的函数的极限时，利用区间范围对原积分进行放缩）
+
+7、分子分母均含$sin$和$cos$三角函数：$\frac{C \sin x+D \cos x}{A \sin x+B \cos x}=\frac{h(A \cos x-B \sin x)}{A \sin x+B \cos x}+\frac{k(A \sin x+B \cos x)}{A \sin x+B \cos x}$，转换成$\int \frac{C \sin x+D \cos x}{A \sin x+B \cos x} \mathrm{~d} x=h \ln |A \sin x+B \cos x|+k x+C_{1}$
+
+8、指数函数增补：$\int_{0}^{1} \frac{\mathrm{d} x}{\mathrm{e}^{x}-1}=\lim _{a \rightarrow 0^{+}} \int_{a}^{1} \frac{\mathrm{d} x}{\mathrm{e}^{x}-1}=\lim _{a \rightarrow 0^{+}} \int_{a}^{1} \frac{\mathrm{e}^{-x}}{1-\mathrm{e}^{-x}} \mathrm{~d} x$
+
+\section{积分与换元基础}\index{积分与换元基础}
+
+
+
+\subsection{基本积分公式}\index{积分与换元基础!基本积分公式}
+
+1、$\int a^{x} \mathrm{~d} x=\frac{a^{x}}{\ln a}+C(a>0, a \neq 1)$
+
+2、$\int \tan x \mathrm{~d} x=-\ln |\cos x|+C$
+
+3、$\int \cot x \mathrm{~d} x=\ln |\sin x|+C$
+
+4、$\int \csc x \mathrm{~d} x=\ln |\csc x-\cot x|+C$
+
+5、$\int \sec x \mathrm{~d} x=\ln |\sec x+\tan x|+C$
+
+6、$\int \sec ^{2} x \mathrm{~d} x=\tan x+C$
+
+7、$\int \csc ^{2} x \mathrm{~d} x=-\cot x+C$
+
+8、$\int \frac{1}{a^{2}+x^{2}} \mathrm{~d} x=\frac{1}{a} \arctan \frac{x}{a}+C$
+
+9、$\int \frac{1}{a^{2}-x^{2}} \mathrm{~d} x=\frac{1}{2 a} \ln \mid \frac{a+x}{a-x} \mid+C$
+
+10、$\int \frac{1}{\sqrt{a^{2}-x^{2}}} \mathrm{~d} x=\arcsin \frac{x}{a}+C$
+
+11、$\int \frac{\mathrm{d} x}{\sqrt{x^{2} \pm a^{2}}}=\ln \mid x+\sqrt{x^{2} \pm a^{2}} \mid+ C$
+
+备注：理解记忆推导
+
+
+
+\subsection{常见的换元法}\index{积分与换元基础!常见的换元法}
+
+1、$\int R\left(x, \sqrt{a^{2}-x^{2}}\right) \mathrm{d} x, \int R\left(x, \sqrt{x^{2} \pm a^{2}}\right) \mathrm{d} x \text { 型, } a>0$（根号型的处理，或者相似的，根号中配成平方之后的）
+
+1.1、$\sqrt{a^{2}-x^{2}}$型，令$x=a \sin t, \mathrm{~d} x=a \cos t \mathrm{~d} t$
+
+1.2、$\sqrt{x^{2}+a^{2}}$型，令$x=a \tan t, \mathrm{~d} x=a \sec ^{2} t \mathrm{~d} t$
+
+1.3、$\sqrt{x^{2}-a^{2}}$型，令$x=a \sec t, \mathrm{~d} x=a \sec t \tan t \mathrm{~d} t$
+
+2、$\int R(x, \sqrt[n]{a x+b}, \sqrt[m]{a x+b}) \mathrm{d} x$型，令$\sqrt[n n]{a x+b}=t, x=\frac{t^{m n}-b}{a}, \mathrm{~d} x=\frac{m n}{a} t^{m n-1} \mathrm{~d} t$（分数幂，无分数）
+
+3、$\int R\left(x, \sqrt{\frac{a x+b}{c x+d}}\right) \mathrm{d} x$型，令$\sqrt{\frac{a x+b}{c x+d}}=t, x=\frac{d t^{2}-b}{a-c t^{2}}, \mathrm{~d} x=\frac{2(a d-b c) t}{\left(a-c t^{2}\right)^{2}} \mathrm{~d} t .$其中设$a d-b c \neq 0$（分数幂，有分数）
+
+4、$\int R(\sin x, \cos x) \mathrm{d} x$型，令$\tan({\frac{x}{2}})=t$，则$\sin x=\frac{2 t}{1+t^{2}}, \cos x=\frac{1}{1+t^{2}}, \mathrm{~d} x=\frac{2}{1+t^{2}} \mathrm{~d} t$（万能代换）
+
+
+
+\subsection{几个十分有用的定积分公式}\index{积分与换元基础!几个十分有用的定积分公式}
+
+1、积分区间关于$y$轴对称，被积分函数是奇函数或者偶函数（对积分区间和被积分函数的要求）
+
+2、周期函数的积分：$\int_{a}^{a+T} f(x) \mathrm{d} x=\int_{0}^{T} f(x) \mathrm{d} x$
+
+3、华里士公式：$\int_{0}^{\frac{\pi}{2}} \sin ^{n} x \mathrm{~d} x=\int_{0}^{\frac{\pi}{2}} \cos ^{n} x \mathrm{~d} x=\left\{\begin{array}{l}\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \cdots \frac{1}{2} \cdot \frac{\pi}{2}, \quad \text { 当 } n \text { 为正偶数 } \\\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \cdots \cdot \frac{2}{3} \cdot 1, \quad \text { 当 } n \text { 为大于 } 1 \text { 的正奇数 }\end{array}\right.$
+
+问题：华里士公式的推导
+
+\section{积分的方法-详述}\index{积分的方法-详述}
+
+
+
+\subsection{分部积分：（不定积分和定积分）（重点）}\index{积分的方法-详述!分部积分：（不定积分和定积分）（重点）}
+
+1、不定积分：$\int u(x) v^{\prime}(x) \mathrm{d} x=u(x) v(x)-\int v(x) u^{\prime}(x) \mathrm{d} x$或者$\int u(x) \mathrm{d} v(x)=u(x) v(x)-\int v(x) \mathrm{d} u(x)$
+
+2、定积分：$\int_{a}^{b} u(x) v^{\prime}(x) \mathrm{d} x=\left.u(x) v(x)\right|_{a} ^{b}-\int_{a}^{b} v(x) u^{\prime}(x) \mathrm{d} x$或者$\int_{a}^{b} u(x) \mathrm{d} v(x)=\left.u(x) v(x)\right|_{a} ^{b}-\int_{a}^{b} v(x) \mathrm{d} u(x)$
+
+
+
+\subsection{用分部积分法的题型}\index{积分的方法-详述!用分部积分法的题型}
+
+1、幂与指数，三角函数相乘的：$\int x^{n} \mathrm{e}^{x} \mathrm{~d} x=\int x^{n} \mathrm{~d} \mathrm{e}^{x}$，$\int x^{n} \sin x \mathrm{~d} x=-\int x^{n} \mathrm{~d} \cos x$，$\int x^{n} \cos x \mathrm{~d} x=\int x^{n} \mathrm{~d} \sin x$
+
+2、幂与对数、反三角函数相乘的：$\int x^{n} \ln x \mathrm{~d} x=\frac{1}{n+1} \int \ln x \mathrm{~d} x^{n+1}$，$\int x^{n} \arctan x \mathrm{~d} x=\frac{1}{n+1} \int \arctan x \mathrm{~d} x^{n+1}$，$\int x^{n} \arcsin x \mathrm{~d} x=\frac{1}{n+1} \int \arcsin x \mathrm{~d} x^{n+1}$
+
+3、连用两次的（指数与三角相乘）：$\int \mathrm{e}^{x} \sin x \mathrm{~d} x$，$\int \mathrm{e}^{x} \cos x \mathrm{~d} x$
+
+4、两种不同类型函数相乘的积分（常考类型）包括以上的几种类型，其余类型需要尝试来确定$u,v$（将被积分函数按照类型分类，分成$u,v$两部分）
+
+5、一定形式的积分，将其中一个因式分解成两式相乘，也许可以用分部积分
+
+6、被积函数中含有导数或者变限函数的积分，也可以用分部积分（变限函数积分也可以用二重积分来做）
+
+
+
+\subsection{换元积分法：（定积分）}\index{积分的方法-详述!换元积分法：（定积分）}
+
+1、公式：$\int_{a}^{b} f(x) \mathrm{d} x=\int_{\alpha}^{\beta} f(\varphi(t)) \varphi^{\prime}(t) \mathrm{d} t$
+
+2、前提1：$f(x)$在闭区间上连续
+
+3、前提2：$x=\varphi(t)$满足$a=\varphi(\alpha)$，$b=\varphi(\beta)$，并且$t$在$[{\alpha},{\beta}]$上变动时，$a \leqslant \varphi(t) \leqslant b, \varphi^{\prime}(t)$连续
+
+注意：换元时，上下限需要跟着换
+
+\section{积分注意事项}\index{积分注意事项}
+
+1、加绝对值：当定积分或者不定积分的原函数包含$ln$类型函数，如果在定义域上$ln$内部的值有小于零的部分，则$ln$内部需要加上绝对值；根号下的换元，在开完根号之后需要加上绝对值（如果开完根号之后的东西在积分域上大于零可以不加）
+
+2、不定积分换元，等积分完之后，还要将变量换回去
+
+3、求不出来的部分可以往后求一求看能不能化简掉（分部积分中得到了原积分的形式）
+
+注意：不定积分换元一定要将变量换回去！！
+
+\section{积分的类型}\index{积分的类型}
+
+1、简单有理式的积分：如果分母可以因式分解，拆分成两个一次式的分式求积分；因式不可以分解，将被积函数拆分成两项，一项是分母的导数（$ln$），一项的分子只有常数（积分是$tan$之类的）（注意：当定积分或者不定积分的原函数包含ln类型函数，如果在定义域上$ln$内部的值有小于零的部分，则$ln$内部需要加绝对值）
+
+2、三角函数有理式的积分：化成同角；尽量约分；分母化成单项式；利用1的代换
+
+3、简单无理式的积分：变量替换去掉根式
+
+4、使用分部积分处理的几种类型
+
+5、对称区间，周期函数的积分：拆分，并项处理
+
+6、含有参变量带绝对值的积分：如果是仅带绝对值的积分，按照定积分的上下限去掉绝对值的符号即可；如果含有参变量$x$（积分变量是$t$，含有参变量$x$），需要讨论$x$的上下限所决定的绝对值符号内的符号来去掉绝对值符号
+
+7、积分杂例处理方案：凑项并拆分；函数含有一个定积分值（设值求解即可）；带绝对值三角函数的积分将区间进行划分（划分成大于0的部分和小于0的部分，对于无穷区间也是如此）
+
+\section{反常积分类型与辨别}\index{反常积分类型与辨别}
+
+
+
+\subsection{无穷区间上的反常积分}\index{反常积分类型与辨别!无穷区间上的反常积分}
+
+1、单边无穷：转换成定积分的极限形式（$\int_{a}^{+\infty} f(x) \mathrm{d} x=\lim _{b \rightarrow+\infty} \int_{a}^{b} f(x) \mathrm{d} x$或者$\int_{-\infty}^{b} f(x) \mathrm{d} x=\lim _{a \rightarrow-\infty} \int_{a}^{b} f(x) \mathrm{d} x$），如果反常积分不存在，则说反常积分发散
+
+2、双边无穷：转换成两个单边无穷（$\int_{-\infty}^{+\infty} f(x) \mathrm{d} x=\int_{-\infty}^{c} f(x) \mathrm{d} x+\int_{c}^{+\infty} f(x) \mathrm{d} x$），如果至少有一个反常积分不存在，则说反常积分发散
+
+
+
+\subsection{无界函数的反常积分：（瑕积分）}\index{反常积分类型与辨别!无界函数的反常积分：（瑕积分）}
+
+1、一边是开区间的无界函数的积分：开区间的一边的终点称为奇点，转为极限形式（$\int_{a}^{b} f(x) \mathrm{d} x=\lim _{\beta \rightarrow b^{-}} \int_{a}^{\beta} f(x) \mathrm{d} x$或者$\int_{a}^{b} f(x) \mathrm{d} x=\lim _{a \rightarrow a^{+}} \int_{a}^{b} f(x) \mathrm{d} x$），如果反常积分不存在，则说反常积分发散
+
+2、两边是开区间的无界函数的积分：找中间一点，转换成两个单边的无界函数的积分，转为极限形式（$\int_{a}^{b} f(x) \mathrm{d} x=\int_{a}^{x_{0}} f(x) \mathrm{d} x+\int_{x_{0}}^{b} f(x) \mathrm{d} x, a<x_{0}<b$），如果至少有一个不存在，则说反常积分发散
+
+3、如果闭区间的中间有一个不存在的点：从中间不存在的点处拆分成两个单边的无界函数的积分，转为极限形式（$\int_{a}^{b} f(x) \mathrm{d} x=\int_{a}^{c} f(x) \mathrm{d} x+\int_{c}^{b} f(x) \mathrm{d} x$），如果至少有一个不存在，则说反常积分发散
+
+
+
+\subsection{无穷区间上的反常积分辨别}\index{反常积分类型与辨别!无穷区间上的反常积分辨别}
+
+1、积分上下限包含无穷：
+
+
+
+\subsection{无界函数的反常积分辨别}\index{反常积分类型与辨别!无界函数的反常积分辨别}
+
+1、被积分函数的值在区间内有使函数值为无穷的点：分母为零的点；定义域的边界；必要时（无穷点在多个地方存在）借助极限进行判定（如果分母或者分子是0/0，必须需要借助极限进行判别函数在该点值是否是无穷的）
+
+注意：虽然有的像反常点的但经过极限求值不是反常点，则按照正常的积分计算；经过变量代换之后，反常积分也可以成为定积分
+
+注意：在进行积分时（没有说明是反常积分）留意区间内部是否存在使得被积分函数值为无穷的点
+
+
+
+\subsection{反常积分性质}\index{反常积分类型与辨别!反常积分性质}
+
+1、保号性：
+
+\section{反常积分计算}\index{反常积分计算}
+
+
+
+\subsection{对称区间上的反常积分}\index{反常积分计算!对称区间上的反常积分}
+
+1、奇函数的反常积分在对称区间上为0（无穷或者无界类型的反常积分）
+
+2、偶函数的反常积分在对称区间可以转换成两倍的单边积分（无穷或者无界类型的反常积分）
+
+备注：上述求解的前提是反常积分收敛，当反常积分发散时，不能认为被积函数是奇函数或者偶函数
+
+
+
+\subsection{反常积分的计算}\index{反常积分计算!反常积分的计算}
+
+1、找反常点：如果是单边的直接计算；如果是双边的或者反常点在中间的分成两个积分式计算
+
+2、计算：计算过程中用极限表示积分式
+
+备注：反常积分可以像积分一样做变量替换，有时做过变量替换之后，反常积分变成定积分，就不需要按照反常积分的形式计算了
+
+
+
+\subsection{两个重要的反常积分}\index{反常积分计算!两个重要的反常积分}
+
+1、正态分布：$\int_{-\infty}^{+\infty} \mathrm{e}^{-x^{2}} \mathrm{~d} x=2 \int_{0}^{+\infty} \mathrm{e}^{-x^{2}} \mathrm{~d} x=\sqrt{\pi}$
+
+2、幂与对数：设$a$与$p$都是常数,且$a>1$则$\int_{a}^{+\infty} \frac{\mathrm{d} x}{x \ln ^{p} x} \begin{cases}\text { 收敛, } & \text { 当 } p>1 \\ \text { 发散, } & \text { 当 } p \leqslant 1\end{cases}$（直接积分即可证明）
+
+\section{反常积分的敛散性判别}\index{反常积分的敛散性判别}
+
+
+
+\subsection{通过计算得知反常积分的敛散性}\index{反常积分的敛散性判别!通过计算得知反常积分的敛散性}
+
+1、反常积分不存在 等价于 发散
+
+
+
+\subsection{不可计算时判别反常积分的敛散性（要学会证明）}\index{反常积分的敛散性判别!不可计算时判别反常积分的敛散性（要学会证明）}
+
+1、极限审敛法1（无穷反常）：$f(x)$在$\left[\mathrm{a}_{1}+\infty\right)$上连续, 且$f(x) \geqslant 0$。若存在常数$p>1$, 使得$ \lim_{x \rightarrow+\infty} x^{p} f(x)=c<+\infty$, 则反常积分$\int_{a}^{+\infty} f(x) d x$收敛；如果在$p \leqslant 1$时，有$\lim_{x \rightarrow+\infty} x^{p} f(x)=d>0$（或者$=+\infty$）,那么反常积分$\int_{a}^{+\infty} f({x}) dx$发散（证明：令$x^{p} f(x)$在$(q-\varepsilon,q+\varepsilon)$范围进行放缩（其中$q$是收敛的值，即$d$或者$c$），讨论p的值对反常积分的影响（发散时的等号和非等号部分分开处理））
+
+1.1、极限审敛法1推论：设$f(x)$在$[a,+\infty)$上连续, 且$f(x) \geqslant 0$，若有$\lim_{x \rightarrow+\infty} x^{p} f(x)=d>0$，则反常积分$\int_{a}^{+\infty} f(x) \mathrm{d} x$在$p>1$时收敛,在$p \leqslant 1$时发散（证明：和极限审敛法1（无穷反常）证明方法一致）
+
+2、极限审敛法2（瑕积分）：设函数在区间$(a,b]$上连续，且$f(x) \geqslant 0$，$x=a$为$f(x)$的瑕点，若存在常数$0<p<1$, 使得$\lim_{x \rightarrow a^{+}}(x-a)^{p} f(x) =c<+\infty$ , 则反常积分$\int_{a}^{b} f(x) \mathrm{d} x$ 收敛; 如果在$p \geqslant 1$时，有$\lim _{x \rightarrow a^{+}}(x-a)^{p} f(x)=d>0$（或$=+\infty$）则反常积分$\int_{a}^{b} f(x) \mathrm{d} x$发散（对右端点：设函数在区间$[a,b)$上连续，且$f(x) \gt 0$，$x=b$为$f(x)$的瑕玷，若存在常数$0<p<1$, 使得$\lim_{x \rightarrow b^{-}}(b-x)^{p} f(x)$ 存在, 则反常积分$\int_{a}^{b} f(x) \mathrm{d} x$ 收敛; 如果在$p \geqslant 1$时，有$\lim _{x \rightarrow b^{-}}(b-x)^{p} f(x)=d>0$（或$=+\infty$）则反常积分$\int_{a}^{b} f(x) \mathrm{d} x$发散）（证明：令$x^{p} f(x)$在$(q-\varepsilon,q+\varepsilon)$范围进行放缩（其中$q$是收敛的值，即$d$或者$c$），讨论p的值对反常积分的影响（发散时的等号和非等号部分分开处理））
+
+2.1、极限审敛法2推论：设$f(x)$在$(a, b]$上连续,且$f(x) \geqslant 0$，$ x=a$为$f(x)$的瑕点. 若$\lim_{x \rightarrow a^{+}}(x-a)^{q} f(x)=d>0$，则反常积分$\int_{a}^{b} f(x) \mathrm{d} x$在$0<q<1$时收敛,在$q \geqslant 1$时发散（证明：和极限审敛法2（瑕积分）证明方法一致）
+
+3、比较审敛定理：设函数$f(x), g(x)$在区间$[a,+\infty]$上连续.如果$0 \leqslant f(x) \leqslant g(x)(a \leqslant x<+\infty)$，并且$\int_{a}^{+\infty} g(x) d x$收敛，那么$\int_{a}^{+\infty} f(x) \mathrm{d} x$也收敛；如果$0 \leq g(x) \leq f(x)(a \leq x<+\infty)$并且$\int_{a}^{+\infty} g(x) d x$发散,那么$\int_{a}^{+\infty} f(x) d x$也发散（这里是和级数的性质是一样的，对于积分利用放缩的方法就可以证明）
+
+4、比较审敛法1（无穷反常）：设$f(x)$在$[a,+\infty)(a>0)$上连续, 且$f(x) \geqslant 0$，若存在常数$M>0, p>1$，使得$f(x) \leqslant \frac{M}{x^{p}}$，则$\int_{a}^{+\infty} f(x) \mathrm{d} x$收敛；若存在常数$N>0$，使得$f(x) \geqslant \frac{N}{x}$，则$ \int_{a}^{+\infty} f(x) \mathrm{d} x$发散（证明：直接计算$\frac{M}{x^{p}}$或者$\frac{N}{x}$的敛散性，再利用比较审敛定理证明（发散时的等号和非等号部分分开处理），这里与极限审敛法1（无穷反常）中的收敛可相互推导，对于发散应用了p=1的特殊形式）（从这里看出，极限审敛法适用于原函数$f(x)$形式复杂的情况，比较审敛法适用于原函数与幂函数类似，可进行放缩的情况，同时可放缩的情况也可用极限审敛法）
+
+5、比较审敛法2（瑕积分）：设$f(x)$在$(a, b]$上连续, 且$f(x) \geqslant 0, x=a$为$f(x)$的瑕点，若存在常数$M>0, q<1$，使得$f(x) \leqslant \frac{M}{(x-a)^{q}}$，则$\int_{a}^{b} f(x) \mathrm{d} x$收敛；存在常数$N>0$，使得$f(x) \geqslant \frac{N}{x-a}$，则$\int_{a}^{b} f(x) \mathrm{d} x$发散（证明：直接计算$\frac{M}{x^{p}}$或者$\frac{N}{x}$的敛散性，再利用比较审敛定理证明（发散时的等号和非等号部分分开处理），这里与极限审敛法2（瑕积分）中的收敛可相互推导，对于发散应用了$p=1$的特殊形式）
+
+6、比值审敛法的极限形式（无穷反常）：对于无穷限反常积分$\int_{a}^{+\infty} f(x) d x$，其中$f(x)$在$[{a},+\infty)$上连续，且$f(x) \geqslant 0$，若$\lim_{x \rightarrow+\infty} \frac{f(x)}{g(x)}=l$，则当$l=0$时，$\int_{a}^{+\infty} g(x) d x$收敛，则$\int_{a}^{+\infty} f(x) d x$收敛（大收小必收)；当$l=+\infty$时，$\int_{a}^{+\infty} g(x) d x$发散，则$\int_{a}^{+\infty} f(x) d x$发散 (小发大必发)；当$0<l<+\infty$时，$\int_{a}^{+\infty} g(x) d x,\int_{a}^{+\infty} f(x) d x$具有相同敛散性（证明：令$\frac{f(x)}{g(x)}$在$(l-\varepsilon,l+\varepsilon)$以范围进行放缩（其中$l$是极限的值）（敛或散是只用到一边放缩，同敛散用到了两边放缩），再利用比较审敛定理证明）（从这里可以看出，比值审敛法的极限形式适用于两个函数的比较，并且已知其中一个函数的敛散情况，这是对极限审敛法和比较审敛法中用幂函数来进行比较的进一步推广）（到这里可以看出极限审敛法和比值审敛法的极限形式最后都转到了比较审敛法上，极限审敛法是用幂函数比较的，比较审敛法的极限形式是用已知函数进行比较的）
+
+7、比值审敛法的极限形式（瑕积分）：对于瑕积分$\int_{a}^{b} f(x) d x$，其中$a$为瑕点，$f(x)$在$({a}, {b}]$上连续, 且非负，若$\lim_{x \rightarrow a^{+}} \frac{f(x)}{g(x)}=l$，则：当$l=0$时, 且 $\int_{a}^{b} g(x) d x$收敛，则$\int_{a}^{b} f(x) d x$收敛；当$l =+\infty$时，且$\int_{a}^{b} g(x) d x$发散，则$\int_{a}^{b} f(x) d x$发散；$0<l<+\infty$时，$\int_{a}^{b} g(x) d x, \int_{a}^{b} f(x) d x$具有相同敛散性（证明：令$\frac{f(x)}{g(x)}$在$(l-\varepsilon,l+\varepsilon)$以范围进行放缩（其中$l$是极限的值）（敛或散是只用到一边放缩，同敛散用到了两边放缩），再利用比较审敛定理证明）
+
+8、绝对值的判别：设函数$f(x)$在区间$[a,+\infty)$上连续，如果反常积分$\int_{a}^{+\infty}|f(x)| d x$收敛，那么反常积分$\int_{a}^{+ \infty} f(x) \mathrm{d} x$也收敛（积分为有限值即为收敛）
+
+9、其它情况：对式子进行放缩，利用单调有界定理证明积分的值是有限值（当需要证明放缩的式子的收敛性与参数无关，可以采用参数部分去除的形式进行放缩）
+
+备注：敛散判别可能用到的极限$\lim _{x \rightarrow 0^{+}} x^{\alpha} \ln ^{\beta} x=0$，其中${\alpha},{\beta}$均大于0（证明：分成上ln下幂，洛必达就行）
+
+备注：有限区间上的极限审敛散性法的关键是找到一个$0<q<1$，使得$\lim_{x \rightarrow a^{+}}(x-a)^{q} f(x)$或者$\lim_{x \rightarrow b^{-}}(b-x)^{q} f(x)$存在
+
+注意：极限审敛判别法证明，有一些证明参考<详细步骤：复习全书 119页 注>
+
+
+
+\subsection{重要积分的敛散性}\index{反常积分的敛散性判别!重要积分的敛散性}
+
+1、设$a>0$，则反常积分$\int_{a}^{+\infty} \frac{\mathrm{d} x}{x^{p}}$当$p>1$时收敛, 当$p \leqslant 1$时发散（证明：求解原函数，反常积分求值）
+
+2、反常积分$\int_{a}^{b} \frac{\mathrm{d} x}{(x-a)^{q}}$当$0<q<1$时收敛, 当$q \geqslant 1$时发散( 注意当$q \leqslant 0$时，$\int_{a}^{b} \frac{\mathrm{d} x}{(x-a)^{q}}$为正常积分,没有瑕点）（证明：求解原函数，反常积分求值）
+
+\section{定积分的应用}\index{定积分的应用}
+
+关键：微元的取法
+
+1、平面图形的面积：直角坐标系可以先积分不规则方向，再积分规则方向；极坐标系下方程$r=r(\theta)$，在两射线$\theta=\alpha$与$\theta=\beta(0<\beta-\alpha \leqslant 2 \pi)$之间面积为$A=\frac{1}{2} \int_{a}^{\beta} r^{2}(\theta) \mathrm{d} \theta$
+
+2、平面曲线的弧长：参数坐标系下的弧长为$s=\int_{a}^{\beta} \sqrt{x^{\prime 2}(t)+y^{\prime 2}(t)} \mathrm{d} t$；直角坐标系下的弧长为$s=\int_{a}^{b} \sqrt{1+y^{\prime 2}(x)} \mathrm{d} x$（弧长上一小段微元的长度为$\sqrt{1+y^{\prime 2}(x)} \mathrm{d} x$）；极坐标系下的弧长为$s=\int_{a}^{\beta} \sqrt{r^{2}(\theta)+r^{\prime 2}(\theta)} \mathrm{d} \theta$（注意：弧长的计算有时需要用到弧线的对称性，否则计算结果为0）（极坐标系下所有的变量都用$\theta$表示）
+
+3、旋转体的体积：曲线$y=y(x)$与$x=a, x=b, x$轴围成的曲边梯形绕$x$轴旋转一周所围成的体积为$V=\pi \int_{a}^{b} y^{2}(x) \mathrm{d} x, a<b$（圆面的微元，圆面积乘厚度微元）；曲线$y=y_{2}(x), y=y_{1}(x), x=a, x=b\left(y_{2}(x) \geqslant y_{1}(x) \geqslant 0\right)$绕$x$轴旋转围成的旋转体体积为$V=\pi \int_{a}^{b}\left[y_{2}^{2}(x)-y_{1}^{2}(x)\right] \mathrm{d} x, a<b$（两圆相减的面的微元，两圆面相减的面积乘厚度微元）；曲线$y=y_{2}(x), y=y_{1}(x), x=a, x=b\left(b>a \geqslant 0, y_{2}(x) \geqslant y_{1}(x)\right)$绕$y$轴旋转所成的旋转体体积为$V=2 \pi \int_{a}^{b} x\left(y_{2}(x)-y_{1}(x)\right) \mathrm{d} x$（圆筒状的微元，周长乘高乘厚度微元）
+
+4、旋转曲面面积：在直角坐标系上曲线$y=y(x)$绕$x$轴旋转，所形成的曲面面积为$S=2 \pi \int_{a}^{b}|y| \sqrt{1+f^{\prime 2}(x)} \mathrm{d} x, a<b$（圆周与倾斜度的微元，对曲面纵向切分，先求解圆环（注意圆环是带斜率的，所以圆环宽度微元为$\sqrt{1+f^{\prime 2}(x)} \mathrm{d} x$），圆周乘圆环宽度微元）；在参数坐标系下有$S=2 \pi \int_{a}^{\beta}|y(t)| \sqrt{x^{\prime 2}(t)+y^{\prime 2}(t)} \mathrm{d} t$
+
+5、在区间上平行截面面积为已知$A(x)$的立体体积：$V=\int_{a}^{b} A(x) \mathrm{d} x, a<b$
+
+6、函数的平均值：$\bar{f}=\frac{1}{b-a} \int_{a}^{b} f(x) \mathrm{d} x$
+
+7、物理应用公式：功、引力、压力、形心、质心（步骤：建立坐标系，根据物理原始公式建立所求量的微元，确定上下限，求解定积分），在质心时注意对质量矩的理解
+
+注意：当实际的图形在坐标轴上不规则时，可以将坐标系进行平移旋转对图形进行重新定位
+
+注意：当对一定图形转换成的积分进行求解时，如果积分上下限不是对称的，可以转换成对称的并利用对成性来化简
+
+备注：有一些适用条件没有标注
+
+\section{变限积分函数}\index{变限积分函数}
+
+性质判断：
+
+1、奇偶性判断：复杂的式子直接套奇偶性的定义，没必要展开分析
+
+2、单调性判断：使用导数判断（带有绝对值的先去掉绝对值）
+
+\section{积分与极限}\index{积分与极限}
+
+由积分的定义求解极限：
+
+<复习全书 P132 例4>
+
+1、夹逼定理放缩：对积分内的被积函数使用放缩法化简，保留起作用的高次项
+
+注意：此处应用积分中值定理要注意，对积分使用积分中值定理时只是针对某一个极限位置，在极限趋近的过程中，会产生多个积分中值的$\xi_n$，导致每一个极限位置都使用了微分中值定理，可能会发生错误
+
+\section{定积分或变限积分的不等式证明}\index{定积分或变限积分的不等式证明}
+
+1、方法一：将要证的某某$\gt 0$(或 $\ge 0$)的一边看成变限函数（变限法），用微分学的办法证此不等式（例如用单调性，最值，拉格朗日中值定理，拉格朗日余项泰勒公式等），这是考研中经常用到的方法
+
+2、方法二：设要证的是$\int_{a}^{b} f(x) \mathrm{d} x \geqslant \int_{a}^{b} g(x) \mathrm{d} x,(a<b)$，先去证当$a \leqslant x \leqslant b$时$f(x) \geqslant g(x)$，那么由积分不等式的性质便有 $\int_{a}^{b} f(x) \mathrm{d} x \geqslant \int_{a}^{b} g(x) \mathrm{d} x$；如果要证的是$\int_{a}^{b} f(x) \mathrm{d} x>\int_{a}^{b} g(x) \mathrm{d} x,(a<b)$, 先去证当$a \leqslant x \leqslant b$时$f(x)$与$g(x)$都连续，且$f(x) \geqslant g(x)$，并且至少存在一点$x_{1} \in[a, b]$使$f\left(x_{1}\right)>g\left(x_{1}\right)$，则有$\int_{a}^{b} f(x) \mathrm{d} x>\int_{a}^{b} g(x) \mathrm{d} x$，考试中常见的是严格不等式情形
+
+3、方法三：利用积分性质，例如积分中值定理、积分变量代换、分部积分等方法，经变形并计算（带有积分号和不带积分号的合并处理：如果一个式子有积分号，一个没有积分号，要比较它们的大小，可以将有积分号的那一个用积分中值定理化成没有积分号的，或者将没有积分号的套上积分号，在积分号里面比较大小；有时两个积分的积分区间不一样，是否能通过变量代换将它们变成一样（积分换元）或者对其中一个区间进行拆分（拆分得到两个积分区间一样的积分和一个区间不一样的积分），从而比较被积函数的大小）
+
+备注：应用泰勒公式展开时，找特殊点进行展开（一阶导为零，可以根据罗尔定理找一阶导为零的点）
+
+备注：当泰勒公式在区间内的一点展开时，这一点在左边范围还是在右边范围是可以进行讨论的
+
+注意：由二阶导数的估值证明函数的估值，要想到用泰勒公式（拉格朗日余项）
+
+\section{定积分或变限积分的零点问题}\index{定积分或变限积分的零点问题}
+
+1、转变限函数：将积分转成变限积分看成变限的函数，用微分学中的方法
+
+2、积分中值定理：
+
+3、拉格朗日中值定理：双中值问题，找中间的一点作为跳板，两边分别应用拉格朗日中值定理，然后将跳板消掉
+
+\section{定积分的简化计算}\index{定积分的简化计算}
+
+
+
+\subsection{含自变量带绝对值的定积分}\index{定积分的简化计算!含自变量带绝对值的定积分}
+
+1、仅有绝对值：按照定积分的上下限去掉绝对值符号
+
+2、含有自变量：讨论自变量的值相对于上下限所决定的绝对值号内的符号去掉绝对值号
+
+
+
+\subsection{对称区间或者周期函数的积分}\index{定积分的简化计算!对称区间或者周期函数的积分}
+
+1、对称区间：对称区间上常拆分为两项之和，然后并项处理
+
+2、周期函数：周期函数的积分可以转换到对称区间上求解
+
+备注：周期函数的积分比上$x$的极限可以先将周期函数积分标准化<详细步骤：复习全书 106页 例 16>
+
+
+
+\subsection{积分的比较和估计}\index{定积分的简化计算!积分的比较和估计}
+
+1、比较定理：两个函数的比较转移到积分的比较$\int_{a}^{b} f(x) \mathrm{d} x \leqslant \int_{a}^{b} g(x) \mathrm{d} x$（特别的当存在一点不相等时可以把式子的等号去掉$\int_{a}^{b} f(x) \mathrm{d} x<\int_{a}^{b} g(x) \mathrm{d} x$）
+
+2、积分中值定理：函数在闭区间$[a,b]$上连续，则至少存在开区间内一点$\xi \in (a,b)$，使得$\int_{a}^{b} f(x) \mathrm{d} x=f(\xi)(b-a)$
+
+注意：对于积分的比较只有定积分才能进行（不定积分是不能比较的，$\int f(x) \mathrm{d} x,\int_{a}^{x} f(t) \mathrm{d}x$都不可以比较）
+
+
+
+\subsection{常用的积分处理方式：（证明题）}\index{定积分的简化计算!常用的积分处理方式：（证明题）}
+
+1、规范化：对于条件$\int_{0}^{1} f(x) \mathrm{d} x=c \neq 0$，构造函数$F(x)=\frac{1}{c} \int_{0}^{x} f(t) \mathrm{d} t, x \in(0,1] . F(0)=0, F(1)=1$
+
