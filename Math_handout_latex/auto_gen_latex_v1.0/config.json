@@ -4,7 +4,8 @@
     "handout_file": [
         "handout_0.csv",
         "handout_1.csv",
-        "handout_2.csv"
+        "handout_2.csv",
+        "handout_3.csv"
     ],
     "csv_src_format": [
         "topic",
