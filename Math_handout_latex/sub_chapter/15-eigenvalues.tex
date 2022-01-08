@@ -15,6 +15,72 @@
 
 注意：特征向量必须是非零向量，在大题中如果出现抽象特征向量需要对其进行讨论
 
+\section{特征值和特征向量应用}\index{特征值和特征向量应用}
+
+
+
+\subsection{由特征值和特征向量反求矩阵}\index{特征值和特征向量应用!由特征值和特征向量反求矩阵}
+
+1、利用对角化公式$P^{-1}AP=\Lambda$，根据特征向量凑可逆矩阵$P$（注意一一对应和对应关系（$A=P\Lambda P^{-1}$））
+
+2、上述方法中构造可逆矩阵P时，如果可以构造成正交矩阵的形式，则可以利用$A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$，可以简化计算（利用了正交矩阵的性质）
+
+备注：相同特征值的特征向量线性无关；不同特征值的特征向量具有正交的性质（该正交性质并不是实对称矩阵才有的）
+
+
+
+\subsection{利用特征值，特征向量及相似矩阵确定参数}\index{特征值和特征向量应用!利用特征值，特征向量及相似矩阵确定参数}
+
+1、定义：利用特征值的定义代入矩阵方程$A\alpha=\lambda \alpha$，使得对应分量相等
+
+
+
+\subsection{求解$A^n$与特征向量或者特征向量组合相乘的问题}\index{特征值和特征向量应用!求解$A^n$与特征向量或者特征向量组合相乘的问题}
+
+1、矩阵变换后的特征值：$\begin{array}{c|c|c|c|c|c|c}\hline \text { 矩阵 } & \boldsymbol{A} & k \boldsymbol{A}+\boldsymbol{E} & \boldsymbol{A}+k \boldsymbol{E} & \boldsymbol{A}^{n} & \boldsymbol{A}^{-1}(\boldsymbol{A} \text { 可逆 }) & \boldsymbol{A}^{*}(\boldsymbol{A} \text { 可逆 }) \\\hline \text { 特征值 } & \lambda & k \lambda+1 & \lambda+k & \lambda^{n} & \frac{1}{\lambda} & \frac{|\boldsymbol{A}|}{\lambda} \\\hline\end{array}$
+
+2、由特征值的定义转换成$A\alpha=\lambda \alpha$形式
+
+\section{实对称阵}\index{实对称阵}
+
+
+
+\subsection{实对称阵的性质}\index{实对称阵!实对称阵的性质}
+
+1、特征值全部都是实数，并且对应的对角阵的对角线上就是所有的特征值，非零特征值的个数等于矩阵的秩（对于非实对称矩阵的非零特征值个数不一定等于矩阵的秩）
+
+2、属于不同特征值对应的特征向量互相正交（这是由于实对称性质带来的）（怎么证明）
+
+3、实对称阵必相似于对角阵，即必存在可逆阵$P$，使得$P^{-1}AP=\Lambda$，且存在正交阵$Q$使得$Q^{-1}AQ=Q^{T}AQ=\Lambda$，即$P$就是正交阵（正交阵定义：$AA^T=A^TA=E$，即单位阵的各个向量是标准化之后的），所以$P^T=P^{-1}=Q^T=Q^{-1}$（这里将相似与合同关联了起来），所以由特征向量阵$Q$和对角阵求$A$时，$A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$（使用正交阵的变换可以将逆运算替换为转置运算）
+
+
+
+\subsection{实对称阵正交相似于对角阵的步骤}\index{实对称阵!实对称阵正交相似于对角阵的步骤}
+
+1、求解所有的特征值和特征向量（尽量使得各个向量刚好正交，不同特征值的特征向量已经正交，在求解同一个特征值对应的特征向量时就尽量保证不同的特征向量正交（避免正交化：求出第一个特征向量之后，其它特征向量设未知数，利用正交关系求解未知量即可））
+
+2、对应特征值的所有特征向量正交化（不同特征值的特征向量已正交）（备注：取正交的基础解系，跳过施密特正交化，设自由变量让第二个解向量与第一个解向量正交，把第二个解向量代入方程，确定自由变量）
+
+3、全部特征向量标准化
+
+4、将n个单位正交向量合并成正交矩阵（即待求解的量），对应的特征值组成对角矩阵（即待求解的量）
+
+注意：前提必须是实对称矩阵
+
+
+
+\subsection{线性无关向量得到标准正交向量组的方法}\index{实对称阵!线性无关向量得到标准正交向量组的方法}
+
+1、设向量组$\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}$线性无关
+
+2、令$\boldsymbol{\beta}_{1}=\boldsymbol{\alpha}_{1}$；$\boldsymbol{\beta}_{2}=\boldsymbol{\alpha}_{2}-\frac{\left(\boldsymbol{\alpha}_{2}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}$；$\boldsymbol{\beta}_{3}=\boldsymbol{\alpha}_{3}-\frac{\left(\boldsymbol{\alpha}{3}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}-\frac{\left(\boldsymbol{\alpha}_{3}, \boldsymbol{\beta}_{2}\right)}{\left(\boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{2}\right)} \boldsymbol{\beta}_{2}$
+
+3、则$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$两两正交
+
+4、再将$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$单位化, 取$\boldsymbol{\gamma}_{1}=\frac{\boldsymbol{\beta}_{1}}{\left|\boldsymbol{\beta}_{1}\right|}, \boldsymbol{\gamma}_{2}=\frac{\boldsymbol{\beta}_{2}}{\left|\boldsymbol{\beta}_{2}\right|}, \boldsymbol{\gamma}_{3}=\frac{\boldsymbol{\beta}_{3}}{\left|\boldsymbol{\beta}_{3}\right|}$
+
+
+
 \section{求解特征值和特征向量}\index{求解特征值和特征向量}
 
 
@@ -58,32 +124,6 @@
 注意：对于特征向量的表示，全体特征向量为带有常系数$k$的一个向量，即其个数是无限的；如果一个特征值具有两个特征向量，则用$k_1$和$k_2$表示常系数，并且需要在后边说明$k_1$和$k_2$不同时为0（即先求出来一个特征向量，然后加上常数就扩展到了全体特征向量上）
 
 注意：对于特征值和特征向量的描述，要一一对应，并且特征向量描述为全体特征向量
-
-\section{特征值和特征向量应用}\index{特征值和特征向量应用}
-
-
-
-\subsection{由特征值和特征向量反求矩阵}\index{特征值和特征向量应用!由特征值和特征向量反求矩阵}
-
-1、利用对角化公式$P^{-1}AP=\Lambda$，根据特征向量凑可逆矩阵$P$（注意一一对应和对应关系（$A=P\Lambda P^{-1}$））
-
-2、上述方法中构造可逆矩阵P时，如果可以构造成正交矩阵的形式，则可以利用$A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$，可以简化计算（利用了正交矩阵的性质）
-
-备注：相同特征值的特征向量线性无关；不同特征值的特征向量具有正交的性质（该正交性质并不是实对称矩阵才有的）
-
-
-
-\subsection{利用特征值，特征向量及相似矩阵确定参数}\index{特征值和特征向量应用!利用特征值，特征向量及相似矩阵确定参数}
-
-1、定义：利用特征值的定义代入矩阵方程$A\alpha=\lambda \alpha$，使得对应分量相等
-
-
-
-\subsection{求解$A^n$与特征向量或者特征向量组合相乘的问题}\index{特征值和特征向量应用!求解$A^n$与特征向量或者特征向量组合相乘的问题}
-
-1、矩阵变换后的特征值：$\begin{array}{c|c|c|c|c|c|c}\hline \text { 矩阵 } & \boldsymbol{A} & k \boldsymbol{A}+\boldsymbol{E} & \boldsymbol{A}+k \boldsymbol{E} & \boldsymbol{A}^{n} & \boldsymbol{A}^{-1}(\boldsymbol{A} \text { 可逆 }) & \boldsymbol{A}^{*}(\boldsymbol{A} \text { 可逆 }) \\\hline \text { 特征值 } & \lambda & k \lambda+1 & \lambda+k & \lambda^{n} & \frac{1}{\lambda} & \frac{|\boldsymbol{A}|}{\lambda} \\\hline\end{array}$
-
-2、由特征值的定义转换成$A\alpha=\lambda \alpha$形式
 
 \section{矩阵相似}\index{矩阵相似}
 
@@ -142,44 +182,4 @@
 1、证明$AB \sim BA$：$AB = EAB = B^{-1}BAB = B^{-1}(BA)B$（恒成立的，B可逆是前提）
 
 2、
-
-\section{实对称阵}\index{实对称阵}
-
-
-
-\subsection{实对称阵的性质}\index{实对称阵!实对称阵的性质}
-
-1、特征值全部都是实数，并且对应的对角阵的对角线上就是所有的特征值，非零特征值的个数等于矩阵的秩（对于非实对称矩阵的非零特征值个数不一定等于矩阵的秩）
-
-2、属于不同特征值对应的特征向量互相正交（这是由于实对称性质带来的）（怎么证明）
-
-3、实对称阵必相似于对角阵，即必存在可逆阵$P$，使得$P^{-1}AP=\Lambda$，且存在正交阵$Q$使得$Q^{-1}AQ=Q^{T}AQ=\Lambda$，即$P$就是正交阵（正交阵定义：$AA^T=A^TA=E$，即单位阵的各个向量是标准化之后的），所以$P^T=P^{-1}=Q^T=Q^{-1}$（这里将相似与合同关联了起来），所以由特征向量阵$Q$和对角阵求$A$时，$A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$（使用正交阵的变换可以将逆运算替换为转置运算）
-
-
-
-\subsection{实对称阵正交相似于对角阵的步骤}\index{实对称阵!实对称阵正交相似于对角阵的步骤}
-
-1、求解所有的特征值和特征向量（尽量使得各个向量刚好正交，不同特征值的特征向量已经正交，在求解同一个特征值对应的特征向量时就尽量保证不同的特征向量正交（避免正交化：求出第一个特征向量之后，其它特征向量设未知数，利用正交关系求解未知量即可））
-
-2、对应特征值的所有特征向量正交化（不同特征值的特征向量已正交）（备注：取正交的基础解系，跳过施密特正交化，设自由变量让第二个解向量与第一个解向量正交，把第二个解向量代入方程，确定自由变量）
-
-3、全部特征向量标准化
-
-4、将n个单位正交向量合并成正交矩阵（即待求解的量），对应的特征值组成对角矩阵（即待求解的量）
-
-注意：前提必须是实对称矩阵
-
-
-
-\subsection{线性无关向量得到标准正交向量组的方法}\index{实对称阵!线性无关向量得到标准正交向量组的方法}
-
-1、设向量组$\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}$线性无关
-
-2、令$\boldsymbol{\beta}_{1}=\boldsymbol{\alpha}_{1}$；$\boldsymbol{\beta}_{2}=\boldsymbol{\alpha}_{2}-\frac{\left(\boldsymbol{\alpha}_{2}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}$；$\boldsymbol{\beta}_{3}=\boldsymbol{\alpha}_{3}-\frac{\left(\boldsymbol{\alpha}{3}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}-\frac{\left(\boldsymbol{\alpha}_{3}, \boldsymbol{\beta}_{2}\right)}{\left(\boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{2}\right)} \boldsymbol{\beta}_{2}$
-
-3、则$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$两两正交
-
-4、再将$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$单位化, 取$\boldsymbol{\gamma}_{1}=\frac{\boldsymbol{\beta}_{1}}{\left|\boldsymbol{\beta}_{1}\right|}, \boldsymbol{\gamma}_{2}=\frac{\boldsymbol{\beta}_{2}}{\left|\boldsymbol{\beta}_{2}\right|}, \boldsymbol{\gamma}_{3}=\frac{\boldsymbol{\beta}_{3}}{\left|\boldsymbol{\beta}_{3}\right|}$
-
-
 

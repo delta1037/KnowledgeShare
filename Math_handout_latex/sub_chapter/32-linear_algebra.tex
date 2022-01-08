@@ -1,6 +1,66 @@
 \chapterimage{chapter_head_2.pdf}
 \chapter{线性代数公式}
 
+\section{相似与合同}\index{相似与合同}
+
+
+
+\subsection{相似}\index{相似与合同!相似}
+
+1、关系：$A \sim B$
+
+2、说明：存在可逆矩阵$P$，使得$A=P^{-1}BP$
+
+3、对角化：$P^{-1}AP=\Lambda$；反求$A$，$A=P\Lambda P^{-1}$（根据特征值或者特征向量反求矩阵问题）
+
+
+
+\subsection{合同}\index{相似与合同!合同}
+
+1、关系：$A \simeq B$
+
+2、说明：存在可逆阵$C$，使得$C^TAC=B$
+
+3、对角化：正交对角化$Q^{-1}AQ=Q^TAQ=\Lambda$；反求$A$，$A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$（根据特征值或者特征向量反求矩阵问题）
+
+\section{求正交向量组}\index{求正交向量组}
+
+1、设向量组$\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}$线性无关
+
+2、令$\boldsymbol{\beta}_{1}=\boldsymbol{\alpha}_{1}$；$\boldsymbol{\beta}_{2}=\boldsymbol{\alpha}_{2}-\frac{\left(\boldsymbol{\alpha}_{2}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}$；$\boldsymbol{\beta}_{3}=\boldsymbol{\alpha}_{3}-\frac{\left(\boldsymbol{\alpha}{3}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}-\frac{\left(\boldsymbol{\alpha}_{3}, \boldsymbol{\beta}_{2}\right)}{\left(\boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{2}\right)} \boldsymbol{\beta}_{2}$
+
+3、则$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$两两正交
+
+4、再将$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$单位化, 取$\boldsymbol{\gamma}_{1}=\frac{\boldsymbol{\beta}_{1}}{\left|\boldsymbol{\beta}_{1}\right|}, \boldsymbol{\gamma}_{2}=\frac{\boldsymbol{\beta}_{2}}{\left|\boldsymbol{\beta}_{2}\right|}, \boldsymbol{\gamma}_{3}=\frac{\boldsymbol{\beta}_{3}}{\left|\boldsymbol{\beta}_{3}\right|}$
+
+\section{秩计算公式}\index{秩计算公式}
+
+矩阵的秩的计算：
+
+1、矩阵的乘积：$r(AB) \leqslant min\{r(A),r(B)\}$；$r(AB) \leqslant r(A)+r(B)$（积的秩可能（等号）会变小）（对于两个列向量，有$r\left(\boldsymbol{\beta} \boldsymbol{\alpha}^{\mathrm{T}}\right) \leqslant r(\boldsymbol{\beta})=1$，可以使用方程组来解释，或者向量的相关性判断）
+
+2、矩阵的乘积且结果为$O$：$AB=O \rightarrow r(A)+r(B) \leqslant n$，其中n为中间阶数（$A_{mn}$与$B_{ns}$）（推导：将矩阵相乘转换为方程组的解的问题，$B$是$A$的解构成的矩阵，即可得到$r(B)\leqslant n - r(A) $，其中n是A的列，也是未知数的个数）
+
+3、矩阵的乘积且其中一个可逆：$r(AB)=r(B)$，其中$A$可逆
+
+4、矩阵的和差：$r(A)-r(B)\leqslant r(A\pm B) \leqslant r(A)+r(B)$（矩阵积或者和的秩可能（等号）会小于两个矩阵的秩和）
+
+5、两个矩阵互为转置：$r(A^TA)= r(A)$（$A$不可逆也行：可以利用特征值来证明，$A^TA$与$A$的特征值为平方关系）（$A$不是方阵也成立，如果$A$不是方阵，那么可以得出$A^TA \ne E$，用秩的关系证明）
+
+6、矩阵的组合：$max\{r(A),r(B)\}  \leqslant r(A,B) \leqslant r(A)+r(B)$
+
+7、单个矩阵$A_{mn}$性质为$0 \leqslant A_{mn} \leqslant min\{ m,n \}$（矩阵的秩小于行数或者列数的最小值）
+
+8、伴随矩阵与原矩阵秩的关系：对$n(n \geqslant 2)$阶矩阵$\boldsymbol{A}, r\left(\boldsymbol{A}^{*}\right)= \begin{cases}n, & r(\boldsymbol{A})=n, \\ 1, & r(\boldsymbol{A})=n-1, \\ 0, & r(\boldsymbol{A}) \leqslant n-2 .\end{cases}$
+
+\section{过渡矩阵}\index{过渡矩阵}
+
+1、由$[\alpha_1,\alpha_2,\cdots,\alpha_n]$向$[\beta_1,\beta_2,\cdots,\beta_n]$过渡（列变换）：过渡方程为：$[\alpha_1,\alpha_2,\cdots,\alpha_n]C=[\beta_1,\beta_2,\cdots,\beta_n]$，其中$C$为过渡矩阵（注意：过渡的方向）
+
+2、求解过渡矩阵：利用过渡方程转换你为求逆运算（在$[\alpha_1,\alpha_2,\cdots,\alpha_n]$为可逆矩阵的条件下），即$C=[\alpha_1,\alpha_2,\cdots,\alpha_n]^{-1}[\beta_1,\beta_2,\cdots,\beta_n]$
+
+3、坐标的过渡矩阵：$[\alpha_1,\alpha_2,\cdots,\alpha_n]$下坐标为$[x_1,x_2,\cdots,x_n]$，$[\beta_1,\beta_2,\cdots,\beta_n]$下坐标为$[y_1,y_2,\cdots,y_n]$，$C$为过渡矩阵，则$x=Cy$（证明：1中的过度方程两边同时右乘$y$，与$[\alpha_1,\alpha_2,\cdots,\alpha_n][x_1,x_2,\cdots,x_n]^T=[\beta_1,\beta_2,\cdots,\beta_n][y_1,y_2,\cdots,y_n]^T$对比）
+
 \section{矩阵公式}\index{矩阵公式}
 
 
@@ -33,34 +93,6 @@
 
 5、可交换运算：$"*","-1","T"$是可交换的（仅限于指数运算中），并且对运算$(AB)^x=B^xA^x$将这三种符号代入到$x$均成立；相同的$T$运算合并成1次方运算，相同的$-1$运算合并成$-2$次方运算；相同的*符号可以由$(A^*)^{*}=|A|^{n-2}A$转换成数值与原矩阵的积
 
-\section{秩计算公式}\index{秩计算公式}
-
-矩阵的秩的计算：
-
-1、矩阵的乘积：$r(AB) \leqslant min\{r(A),r(B)\}$；$r(AB) \leqslant r(A)+r(B)$（积的秩可能（等号）会变小）（对于两个列向量，有$r\left(\boldsymbol{\beta} \boldsymbol{\alpha}^{\mathrm{T}}\right) \leqslant r(\boldsymbol{\beta})=1$，可以使用方程组来解释，或者向量的相关性判断）
-
-2、矩阵的乘积且结果为$O$：$AB=O \rightarrow r(A)+r(B) \leqslant n$，其中n为中间阶数（$A_{mn}$与$B_{ns}$）（推导：将矩阵相乘转换为方程组的解的问题，$B$是$A$的解构成的矩阵，即可得到$r(B)\leqslant n - r(A) $，其中n是A的列，也是未知数的个数）
-
-3、矩阵的乘积且其中一个可逆：$r(AB)=r(B)$，其中$A$可逆
-
-4、矩阵的和差：$r(A)-r(B)\leqslant r(A\pm B) \leqslant r(A)+r(B)$（矩阵积或者和的秩可能（等号）会小于两个矩阵的秩和）
-
-5、两个矩阵互为转置：$r(A^TA)= r(A)$（$A$不可逆也行：可以利用特征值来证明，$A^TA$与$A$的特征值为平方关系）（$A$不是方阵也成立，如果$A$不是方阵，那么可以得出$A^TA \ne E$，用秩的关系证明）
-
-6、矩阵的组合：$max\{r(A),r(B)\}  \leqslant r(A,B) \leqslant r(A)+r(B)$
-
-7、单个矩阵$A_{mn}$性质为$0 \leqslant A_{mn} \leqslant min\{ m,n \}$（矩阵的秩小于行数或者列数的最小值）
-
-8、伴随矩阵与原矩阵秩的关系：对$n(n \geqslant 2)$阶矩阵$\boldsymbol{A}, r\left(\boldsymbol{A}^{*}\right)= \begin{cases}n, & r(\boldsymbol{A})=n, \\ 1, & r(\boldsymbol{A})=n-1, \\ 0, & r(\boldsymbol{A}) \leqslant n-2 .\end{cases}$
-
-\section{过渡矩阵}\index{过渡矩阵}
-
-1、由$[\alpha_1,\alpha_2,\cdots,\alpha_n]$向$[\beta_1,\beta_2,\cdots,\beta_n]$过渡（列变换）：过渡方程为：$[\alpha_1,\alpha_2,\cdots,\alpha_n]C=[\beta_1,\beta_2,\cdots,\beta_n]$，其中$C$为过渡矩阵（注意：过渡的方向）
-
-2、求解过渡矩阵：利用过渡方程转换你为求逆运算（在$[\alpha_1,\alpha_2,\cdots,\alpha_n]$为可逆矩阵的条件下），即$C=[\alpha_1,\alpha_2,\cdots,\alpha_n]^{-1}[\beta_1,\beta_2,\cdots,\beta_n]$
-
-3、坐标的过渡矩阵：$[\alpha_1,\alpha_2,\cdots,\alpha_n]$下坐标为$[x_1,x_2,\cdots,x_n]$，$[\beta_1,\beta_2,\cdots,\beta_n]$下坐标为$[y_1,y_2,\cdots,y_n]$，$C$为过渡矩阵，则$x=Cy$（证明：1中的过度方程两边同时右乘$y$，与$[\alpha_1,\alpha_2,\cdots,\alpha_n][x_1,x_2,\cdots,x_n]^T=[\beta_1,\beta_2,\cdots,\beta_n][y_1,y_2,\cdots,y_n]^T$对比）
-
 \section{特征值}\index{特征值}
 
 1、矩阵变换后的特征值：$\begin{array}{c|c|c|c|c|c|c}\hline \text { 矩阵 } & \boldsymbol{A} & k \boldsymbol{A}+\boldsymbol{E} & \boldsymbol{A}+k \boldsymbol{E} & \boldsymbol{A}^{n} & \boldsymbol{A}^{-1}(\boldsymbol{A} \text { 可逆 }) & \boldsymbol{A}^{*}(\boldsymbol{A} \text { 可逆 }) \\\hline \text { 特征值 } & \lambda & k \lambda+1 & \lambda+k & \lambda^{n} & \frac{1}{\lambda} & \frac{|\boldsymbol{A}|}{\lambda} \\\hline\end{array}$
@@ -68,36 +100,4 @@
 2、特征方程：$|\lambda E-A|$
 
 3、
-
-\section{相似与合同}\index{相似与合同}
-
-
-
-\subsection{相似}\index{相似与合同!相似}
-
-1、关系：$A \sim B$
-
-2、说明：存在可逆矩阵$P$，使得$A=P^{-1}BP$
-
-3、对角化：$P^{-1}AP=\Lambda$；反求$A$，$A=P\Lambda P^{-1}$（根据特征值或者特征向量反求矩阵问题）
-
-
-
-\subsection{合同}\index{相似与合同!合同}
-
-1、关系：$A \simeq B$
-
-2、说明：存在可逆阵$C$，使得$C^TAC=B$
-
-3、对角化：正交对角化$Q^{-1}AQ=Q^TAQ=\Lambda$；反求$A$，$A=Q\Lambda Q^{-1}=Q\Lambda Q^{T}$（根据特征值或者特征向量反求矩阵问题）
-
-\section{求正交向量组}\index{求正交向量组}
-
-1、设向量组$\boldsymbol{\alpha}_{1}, \boldsymbol{\alpha}_{2}, \boldsymbol{\alpha}_{3}$线性无关
-
-2、令$\boldsymbol{\beta}_{1}=\boldsymbol{\alpha}_{1}$；$\boldsymbol{\beta}_{2}=\boldsymbol{\alpha}_{2}-\frac{\left(\boldsymbol{\alpha}_{2}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}$；$\boldsymbol{\beta}_{3}=\boldsymbol{\alpha}_{3}-\frac{\left(\boldsymbol{\alpha}{3}, \boldsymbol{\beta}_{1}\right)}{\left(\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{1}\right)} \boldsymbol{\beta}_{1}-\frac{\left(\boldsymbol{\alpha}_{3}, \boldsymbol{\beta}_{2}\right)}{\left(\boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{2}\right)} \boldsymbol{\beta}_{2}$
-
-3、则$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$两两正交
-
-4、再将$\boldsymbol{\beta}_{1}, \boldsymbol{\beta}_{2}, \boldsymbol{\beta}_{3}$单位化, 取$\boldsymbol{\gamma}_{1}=\frac{\boldsymbol{\beta}_{1}}{\left|\boldsymbol{\beta}_{1}\right|}, \boldsymbol{\gamma}_{2}=\frac{\boldsymbol{\beta}_{2}}{\left|\boldsymbol{\beta}_{2}\right|}, \boldsymbol{\gamma}_{3}=\frac{\boldsymbol{\beta}_{3}}{\left|\boldsymbol{\beta}_{3}\right|}$
 

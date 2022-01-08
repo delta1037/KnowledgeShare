@@ -1,54 +1,6 @@
 \chapterimage{chapter_head_2.pdf}
 \chapter{概率论公式}
 
-\section{抽样分布公式}\index{抽样分布公式}
-
-1、卡方：$\chi^{2} = X_1^2+X_2^2+\cdots+X_n^2 \sim \chi^{2}(n)$，$X_1,X_2,\cdots ,X_n$相互独立且服从标准正态分布
-
-2、T分布：$t=\frac{X}{\sqrt{Y/n}} \sim t(n)$，其中$X \sim N(0,1)$，$Y\sim \chi^{2}\left(n\right)$，且$X,Y$相互独立
-
-3、F分布：$F=\frac{U / n_{1}}{V / n_{2}} \sim F\left(n_{1}, n_{2}\right)$，其中$U \sim \chi^{2}\left(n_{1}\right)$，$ V \sim \chi^{2}\left(n_{2}\right)$，且$U,V$相互独立
-
-\section{估计公式}\index{估计公式}
-
-
-
-\subsection{单样本构造}\index{估计公式!单样本构造}
-
-0、前提：设总体$X \sim N\left(\mu, \sigma^{2}\right), X_{1}, X_{2},\cdots, X_{n}$是来自$X$的样本，样本均值$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$, 样本方差$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}$
-
-1、（单）样本均值分布：$\bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right)$，标准化$U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$
-
-2、（单）样本方差构造卡方分布：$\chi^{2}=\frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1)$
-
-3、（单）均值和样本方差构造$T$分布：$T=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)$
-
-4、（单）中心距分布：$\chi^{2}=\frac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-\mu\right)^{2} \sim \chi^{2}(n)$
-
-
-
-\subsection{双样本构造}\index{估计公式!双样本构造}
-
-0、前提：$X_{1}, X_{2}, \cdots, X_{n_{1}}$与$Y_{1}, Y_{2}, \cdots,Y_{n_{2}}$分别是来自正态总体$N\left(\mu_{1}, \sigma_{1}^{2}\right)$和$N\left(\mu_{2}, \sigma_{2}^{2}\right)$的样本,且这两个样本相互独立. 设$\bar{X}=\frac{1}{n_{1}} \sum_{i=1}^{n_{1}} X_{i}$，$\bar{Y}=\frac{1}{n_{2}} \sum_{i=1}^{n_{2}} Y_{i}$分别是这两个样本的样本均值; $S_{1}^{2}=\frac{1}{n_{1}-1} \sum_{i=1}^{n_{1}}\left(X_{i}-\bar{X}\right)^{2}$, $S_{2}^{2}=\frac{1}{n_{2}-1} \sum_{i=1}^{n_{2}}\left(Y_{i}-\bar{Y}\right)^{2}$分别是这两个样本的样本方差
-
-1、（双）均值差构造正态分布：$\bar{X}-\bar{Y} \sim N\left(\mu_{1}-\mu_{2}, \frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}\right)$
-
-2、（双）均值和样本方差构造$T$分布：$\frac{(\bar{X}-\bar{Y})-\left(\mu_{1}-\mu_{2}\right)}{S_{w} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}} \sim t\left(n_{1}+n_{2}-2\right)$，$S_{w}^{2}=\frac{\left(n_{1}-1\right) S_{1}^{2}+\left(n_{2}-1\right) S_{2}^{2}}{n_{1}+n_{2}-2}, \quad S_{w}=\sqrt{S_{w}^{2}}$
-
-3、（双）样本方差构造$F$分布：$\frac{S_{1}^{2} / S_{2}^{2}}{\sigma_{1}^{2} / \sigma_{2}^{2}} \sim F\left(n_{1}-1, n_{2}-1\right)$
-
-\section{数字特征}\index{数字特征}
-
-1、样本均值：$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$
-
-2、样本方差：$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\frac{1}{n-1}\left(\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right)$
-
-3、标准差：$S$
-
-4、样本$k$阶(原点) 矩：$A_{k}=\frac{1}{n} \sum_{i=1}^{n} X_{i}^{k}, k=1,2, \cdots$
-
-5、样本k阶中心矩：$B_{k}=\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}, k=2,3, \cdots$（中心是根据样本均值来定的）
-
 \section{大数定律}\index{大数定律}
 
 （变量自解释，不赘述）（注意有些公式需要变量独立性，一般用这种公式题目自然会给定）
@@ -62,152 +14,6 @@
 4、辛钦大数定律：$\lim_{n \rightarrow \infty} P\left\{\left|\frac{1}{n} \sum_{k=1}^{n} X_{k}-\mu\right|<\varepsilon\right\}=1$（独立同分布的序列）
 
 5、伯努利大数定律：$\lim_{n \rightarrow \infty} P\left\{\left|\frac{X_n}{n}-p\right|<\varepsilon\right\}=1$或者$\lim_{n \rightarrow \infty} P\left\{\left|\frac{X_n}{n}-p\right| \geqslant \varepsilon\right\}=0$，任意$\varepsilon>0$（$n$次独立重复试验中事件发生的次数$X_n$）
-
-\section{中心极限定理}\index{中心极限定理}
-
-（变量自解释，不赘述）（注意公式需要变量独立性，一般用这种公式题目自然会给定）
-
-1、棣莫弗一拉普拉斯定理：$\lim _{n \rightarrow \infty} P\left\{\frac{X_{n}-n p}{\sqrt{n p(1-p)}} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}} \mathrm{~d} t=\Phi(x)$（二项分布）
-
-2、列维一林德伯格定理：$\lim_{n \rightarrow \infty} F_{n}(x)=\lim_{n \rightarrow \infty} P\left\{\frac{\sum_{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}} \mathrm{~d} t=\Phi(x)$（独立同分布）
-
-\section{期望}\index{期望}
-
-
-
-\subsection{离散}\index{期望!离散}
-
-1、一维：$\sum_{k=1}^{\infty}x_kp_k$
-
-2、一维函数：$E(Y)=E[g(X)]=\sum_{k=1}^{+\infty} g\left(x_{k}\right) p_{k}$
-
-3、二维函数：$E(Z)=E[g(X, Y)]=\sum_{i=1}^{+\infty} \sum_{j=1}^{+\infty} g\left(x_{i}, y_{j}\right) p_{i j}$
-
-
-
-\subsection{连续}\index{期望!连续}
-
-1、一维：$E(X)=\int_{-\infty}^{+\infty} x f(x) \mathrm{d} x$
-
-2、一维函数：$E(Y)=E[g(X)]=\int_{-\infty}^{+\infty} g(x) f(x) \mathrm{d} x$
-
-3、二维函数：$E(Z)=E[g(X, Y)]=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} g(x, y) f(x, y) \mathrm{d} x \mathrm{~d} y$
-
-
-
-\subsection{矩的定义}\index{期望!矩的定义}
-
-1、$k$阶原点矩：$E\left(X^{k}\right), \quad k=1,2, \cdots $
-
-2、$k$阶中心距：$E\left\{[X-E(X)]^{k}\right\}, \quad k=1,2, \cdots$
-
-3、$k+l$阶混合原点矩：$E\left(X^{k} Y^{l}\right), \quad k, l=1,2, \cdots$
-
-4、$k+l$阶混合中心矩：$E\left\{[X-E(X)]^{k}[Y-E(Y)]^{\iota}\right\}, \quad k, l=1,2, \cdots$
-
-
-
-\subsection{性质}\index{期望!性质}
-
-1、性质1：$E(a_1X_1+a_2X_2+\cdots+a_nX_n+b_1+b_2+\cdots+b_m)=a_1E(X_1)+a_2E(X_2)+\cdots+a_nE(X_n)+b_1+b_2+\cdots+b_m$（无论变量之间是否独立都成立！这点很重要，可以在有些变量相关的条件下简化计算）
-
-2、若$X$、$Y$不相关，则$E ( X Y ) = E ( X ) E ( Y )$（推导：$C o v ( X , Y ) = E ( X Y ) - E ( X ) E ( Y ) =0$）
-
-\section{方差}\index{方差}
-
-
-
-\subsection{定义}\index{方差!定义}
-
-1、方差定义：$D(X)=E\left\{[X-E(X)]^{2}\right\}$
-
-1、标准差/均方差表示：$\sigma(X)=\sqrt{D(X)}$
-
-2、推论1：$D(X)=E\left(X^{2}\right)-[E(X)]^{2}$（定义公式展开）（方差的一般求解方法）
-
-3、推论2：$E\left(X^{2}\right) \geqslant[E(X)]^{2}$（因为对任何随机变量$X, D(X) \geqslant 0$）
-
-
-
-\subsection{性质}\index{方差!性质}
-
-1、性质1（可推广）：$D(a X+b)=a^{2} D(X) $
-
-2、性质2（前提条件：$X,Y$相互独立/不相关）：$D(X \pm Y)=D(X)+D(Y)$
-
-3、性质2（前提条件：$X,Y$关系未知）：$D ( X \pm Y ) = D ( X ) + D ( Y ) \pm 2 Cov ( X , Y )  $（方差展开公式）（其中协方差可以用相关系数与协方差的关系替换）
-
-\section{协方差与相关系数}\index{协方差与相关系数}
-
-
-
-\subsection{定义}\index{协方差与相关系数!定义}
-
-1、协方差定义：$\operatorname{Cov}(X, Y)=E\{[X-E(X)][Y-E(Y)]\}$
-
-2、相关系数定义：$\rho_{X Y}=\frac{\operatorname{Cov}(X, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}$
-
-
-
-\subsection{协方差性质}\index{协方差与相关系数!协方差性质}
-
-1、协方差公式1：$C o v ( X , Y ) = E ( X Y ) - E ( X ) E ( Y ) $（公式展开）
-
-2、协方差公式2：$D ( X \pm Y ) = D ( X ) + D ( Y ) \pm 2 Cov ( X , Y )  $（方差展开公式）
-
-3、协方差性质1：$Cov(X, Y)=Cov(Y, X)$
-
-4、协方差性质2：$\operatorname{Cov}(a X, b Y)=a b \operatorname{Cov}(X, Y)$，其中$a,b$为常数（协方差简化计算）
-
-5、协方差性质3：$\operatorname{Cov}\left(X_{1}\pm X_{2}, Y\right)=\operatorname{Cov}\left(X_{1}, Y\right)\pm \operatorname{Cov}\left(X_{2}, Y\right)$（协方差简化计算）
-
-
-
-\subsection{相关系数性质}\index{协方差与相关系数!相关系数性质}
-
-1、相关系数性质1：$\left|\rho_{X Y}\right| \leqslant 1$
-
-2、相关系数性质2：$\mid \rho_{X Y} \mid=1$的充分必要条件是存在常数$a$和$b$，其中$a \neq 0$, 使得$P\{Y=a X+b\}=1$（即相关是两个变量存在线性关系，相反如果完全没有线性关系，那么相关系数就是0）
-
-\section{独立判断}\index{独立判断}
-
-1、独立定义：$P\{X \le a, Y \le a\} = P\{X \le a\}P\{Y \le a\}$，$a$、$b$可以取具体值
-
-2、正态分布相关系数为0
-
-\section{二维分布}\index{二维分布}
-
-
-
-\subsection{二维均匀分布}\index{二维分布!二维均匀分布}
-
-1、公式：$f(x, y)=\left\{\begin{array}{lc}
-
-\frac{1}{A}, & (x, y) \in G, \\
-
-0, & \text { 其他 },
-
-\end{array}\right.$其中A是平面有界区域$G$的面积，则称$(X,Y)$服从区域$G$上的均匀分布
-
-
-
-\subsection{二维正态分布}\index{二维分布!二维正态分布}
-
-公式：$f(x, y)=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \exp \left\{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-\frac{2 \rho\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]\right\},-\infty<x<+\infty,-\infty<y<+\infty$，其中$\mu_{1}, \mu_{2}, \sigma_{1}>0, \sigma_{2}>0,-1<\rho<1$ 均为常数, 则称 $(X, Y) $服从参数为$\mu_{1}, \mu_{2}, \sigma_{1}, \sigma_{2}$和$\rho$的二维正态分布,记作$(X, Y) \sim N\left(\mu_{1}, \mu_{2} ; \sigma_{1}^{2}, \sigma_{2}^{2} ; \rho\right)$
-
-
-
-\subsection{二维正态分布性质}\index{二维分布!二维正态分布性质}
-
-1、$\left(X, Y\right) \sim N\left(\mu_{1}, \mu_{2} ; \sigma_{1}^{2}, \sigma_{2}^{2} ; \rho\right)$时, $X$与$Y$均服从一维正态：$X \sim{N}\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right)$
-
-2、$(X, Y) \sim N\left(\mu_{1}, \mu_{2} ; \sigma_{1}^{2}, \sigma_{2}^{2} ; \rho\right)$时, $X$与$Y$相互独立的充分必要条件是$\rho=0$（正态的独立与不相关是一致的）
-
-3、$(X, Y)$服从二维正态时,行列式$\left|\begin{array}{ll}a & b \\ c & d\end{array}\right| \neq 0$时$(a X+b Y, c X+d Y)$也服从二维正态（二维正态的满足特定条件（即两个新变量没有常数倍关系，如果有会发生什么）的组合还是二维正态）； $ a X+b Y$服从一维正态$\left(a^{2}+b^{2} \neq 0\right)$（这是由性质1得出的，需要相互独立条件）
-
-4、约定: 当$X$与$Y$均服从一维正态，且相互独立，就是指$(X, Y)$服从二维正态
-
-5、如果$X$与$Y$均服从一维正态, 不能保证$(X, Y)$服从二维正态, 也不能保证$a X+b Y$服从一维正态（两个一维正态推不出来组合是一维的，也不能保证能组合出来二维的（需要相互独立的条件））
 
 \section{求解分布函数}\index{求解分布函数}
 
@@ -227,23 +33,57 @@
 
 6、独立的正态分布：$X \sim{N}\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right)$，$Z \sim N\left(a\mu_{1}+b\mu_{2}, a^2\sigma_{1}^{2}+b^2\sigma_{2}^{2}\right)$
 
-\section{条件概率}\index{条件概率}
+\section{概率计算}\index{概率计算}
 
-1、连续：$P\{X>x|Y>y\} = \frac {P\{X>x,Y>y\}}{P\{Y>y\}}$
 
-2、离散：$P\{X=x|Y=y\} = \frac {P\{X=x,Y=y\}}{P\{Y=y\}} = \frac {p_{ij}}{p_{\cdot j}}$
 
-3、离散条件密度：$P\{X=x|Y=y\} = \frac {P\{X=x,Y=y\}}{P\{Y=y\}}$
+\subsection{加法公式}\index{概率计算!加法公式}
 
-4、连续条件分布定义：$F_{X \mid Y}(x \mid y)=\int_{-\infty}^{x} \frac{f(s, y)}{f_{Y}(y)} \mathrm{d} s$
+1、$P(A\cup B) = P(A)+P(B)-P(AB)$
 
-5、连续条件密度定义：$f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_{Y}(y)}, f_{Y}(y)>0$
+2、$P(A\cup B \cup C) = P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$
 
-\section{边缘相关}\index{边缘相关}
 
-1、边缘概率密度：$f_{X}(x)=\int_{-\infty}^{+\infty} f(x, y) \mathrm{d} y$）；关于$Y$的边缘概率密度类似
 
-2、边缘分布函数：$F_{X}(x)=F(x,+\infty)=\int_{-\infty}^{x}\left[\int_{-\infty}^{+\infty} f(x, y) \mathrm{d} y\right] \mathrm{d} x$）；关于$Y$的边缘分布函数类似
+\subsection{减法公式}\index{概率计算!减法公式}
+
+1、$P(A - B) = P(A)-P(AB)$
+
+2、$A-B=A\overline B \rightarrow P(A-B) = P(A\overline B)$ （注意：如果AB互相独立，则$P(A-B) = P(A\overline B)=P(A)P(\overline B)$，利用了相互独立的公式）
+
+
+
+\subsection{乘法公式}\index{概率计算!乘法公式}
+
+1、$P(A)>0 \rightarrow P(AB)=P(A)P(B|A)$（非独立时乘法运算）
+
+2、$P(A_1A_2\cdots A_n) > 0 \rightarrow P(A_1A_2\cdots A_n)=P(A_1)P(A_2|A_1)\cdots P(A_n|A_1A_2\cdots A_{n-1})$
+
+3、推论：$P(AB) \le P(A)$
+
+
+
+\subsection{全概率公式}\index{概率计算!全概率公式}
+
+1、条件：$\mathop{ \bigcup }\limits_{{k=1}}^{{n}}\mathop{{B}}\nolimits_{{k}}=\Omega \ \& \ \mathop{{B}}\nolimits_{{i}}\mathop{{B}}\nolimits_{{j}}= \emptyset { \left( {i \neq j,i,j=1,2,3, \cdots n} \right) } \ \& \ P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } > 0{ \left( {k=1,2,3, \cdots n} \right) }$；（称$B_1,B_2,\cdots B_n$为$\Omega$的一个完备事件组）
+
+2、结论：$P{ \left( {A} \right) }=\mathop{ \sum }\limits_{{k=1}}^{{n}}P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } \cdot P{ \left( {A \left| \mathop{{B}}\nolimits_{{k}}\right. } \right) }$
+
+
+
+\subsection{贝叶斯公式}\index{概率计算!贝叶斯公式}
+
+1、条件：$\mathop{ \bigcup }\limits_{{k=1}}^{{n}}\mathop{{B}}\nolimits_{{k}}=\Omega \ \& \ \mathop{{B}}\nolimits_{{i}}\mathop{{B}}\nolimits_{{j}}= \emptyset { \left( {i \neq j,i,j=1,2,3, \cdots n} \right) } \ \& \ P(A) > 0,P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } > 0{ \left( {k=1,2,3, \cdots n} \right) }$
+
+2、结论：$P{ \left( {\mathop{{B}}\nolimits_{{k}} \left| A\right. } \right) }=\frac{{P \left( {\mathop{{B}}\nolimits_{{k}}} \left) \cdot P{ \left( {A \left| {\mathop{{B}}\nolimits_{{k}}}\right. } \right) }\right. \right. }}{{\mathop{ \sum }\limits_{{i=1}}^{{n}}P{ \left( {\mathop{{B}}\nolimits_{{i}}} \right) } \cdot P{ \left( {A \left| \mathop{{B}}\nolimits_{{i}}\right. } \right) }}}=\frac{{P \left( {\mathop{{B}}\nolimits_{{k}}} \left) \cdot P{ \left( {A \left| {\mathop{{B}}\nolimits_{{k}}}\right. } \right) }\right. \right. }}{P(A)}$，换算得到$P(B|A)=P(B)\cdot \frac{P(A|B)}{P(A)}$
+
+3、作用：新信息出现后的B概率=B概率 X 新信息带来的调整（理解调整式子$\frac{P(A|B)}{P(A)}$的计算，依据代数来理解，无法理解，记住公式）
+
+\section{独立判断}\index{独立判断}
+
+1、独立定义：$P\{X \le a, Y \le a\} = P\{X \le a\}P\{Y \le a\}$，$a$、$b$可以取具体值
+
+2、正态分布相关系数为0
 
 \section{一维分布}\index{一维分布}
 
@@ -299,51 +139,37 @@
 
 1、转换关系：$\lim_{n \rightarrow \infty}np_n=\lambda, n\ge1000,p\le0.1 \rightarrow \lim _{n \rightarrow \infty} C_{n}^{k} p_{n}^{k}\left(1-p_{n}\right)^{n-k}=\frac{\lambda^{k}}{k !} \mathrm{e}^{-\lambda}$
 
-\section{概率计算}\index{概率计算}
+\section{协方差与相关系数}\index{协方差与相关系数}
 
 
 
-\subsection{加法公式}\index{概率计算!加法公式}
+\subsection{定义}\index{协方差与相关系数!定义}
 
-1、$P(A\cup B) = P(A)+P(B)-P(AB)$
+1、协方差定义：$\operatorname{Cov}(X, Y)=E\{[X-E(X)][Y-E(Y)]\}$
 
-2、$P(A\cup B \cup C) = P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$
-
-
-
-\subsection{减法公式}\index{概率计算!减法公式}
-
-1、$P(A - B) = P(A)-P(AB)$
-
-2、$A-B=A\overline B \rightarrow P(A-B) = P(A\overline B)$ （注意：如果AB互相独立，则$P(A-B) = P(A\overline B)=P(A)P(\overline B)$，利用了相互独立的公式）
+2、相关系数定义：$\rho_{X Y}=\frac{\operatorname{Cov}(X, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}$
 
 
 
-\subsection{乘法公式}\index{概率计算!乘法公式}
+\subsection{协方差性质}\index{协方差与相关系数!协方差性质}
 
-1、$P(A)>0 \rightarrow P(AB)=P(A)P(B|A)$（非独立时乘法运算）
+1、协方差公式1：$C o v ( X , Y ) = E ( X Y ) - E ( X ) E ( Y ) $（公式展开）
 
-2、$P(A_1A_2\cdots A_n) > 0 \rightarrow P(A_1A_2\cdots A_n)=P(A_1)P(A_2|A_1)\cdots P(A_n|A_1A_2\cdots A_{n-1})$
+2、协方差公式2：$D ( X \pm Y ) = D ( X ) + D ( Y ) \pm 2 Cov ( X , Y )  $（方差展开公式）
 
-3、推论：$P(AB) \le P(A)$
+3、协方差性质1：$Cov(X, Y)=Cov(Y, X)$
 
+4、协方差性质2：$\operatorname{Cov}(a X, b Y)=a b \operatorname{Cov}(X, Y)$，其中$a,b$为常数（协方差简化计算）
 
-
-\subsection{全概率公式}\index{概率计算!全概率公式}
-
-1、条件：$\mathop{ \bigcup }\limits_{{k=1}}^{{n}}\mathop{{B}}\nolimits_{{k}}=\Omega \ \& \ \mathop{{B}}\nolimits_{{i}}\mathop{{B}}\nolimits_{{j}}= \emptyset { \left( {i \neq j,i,j=1,2,3, \cdots n} \right) } \ \& \ P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } > 0{ \left( {k=1,2,3, \cdots n} \right) }$；（称$B_1,B_2,\cdots B_n$为$\Omega$的一个完备事件组）
-
-2、结论：$P{ \left( {A} \right) }=\mathop{ \sum }\limits_{{k=1}}^{{n}}P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } \cdot P{ \left( {A \left| \mathop{{B}}\nolimits_{{k}}\right. } \right) }$
+5、协方差性质3：$\operatorname{Cov}\left(X_{1}\pm X_{2}, Y\right)=\operatorname{Cov}\left(X_{1}, Y\right)\pm \operatorname{Cov}\left(X_{2}, Y\right)$（协方差简化计算）
 
 
 
-\subsection{贝叶斯公式}\index{概率计算!贝叶斯公式}
+\subsection{相关系数性质}\index{协方差与相关系数!相关系数性质}
 
-1、条件：$\mathop{ \bigcup }\limits_{{k=1}}^{{n}}\mathop{{B}}\nolimits_{{k}}=\Omega \ \& \ \mathop{{B}}\nolimits_{{i}}\mathop{{B}}\nolimits_{{j}}= \emptyset { \left( {i \neq j,i,j=1,2,3, \cdots n} \right) } \ \& \ P(A) > 0,P{ \left( {\mathop{{B}}\nolimits_{{k}}} \right) } > 0{ \left( {k=1,2,3, \cdots n} \right) }$
+1、相关系数性质1：$\left|\rho_{X Y}\right| \leqslant 1$
 
-2、结论：$P{ \left( {\mathop{{B}}\nolimits_{{k}} \left| A\right. } \right) }=\frac{{P \left( {\mathop{{B}}\nolimits_{{k}}} \left) \cdot P{ \left( {A \left| {\mathop{{B}}\nolimits_{{k}}}\right. } \right) }\right. \right. }}{{\mathop{ \sum }\limits_{{i=1}}^{{n}}P{ \left( {\mathop{{B}}\nolimits_{{i}}} \right) } \cdot P{ \left( {A \left| \mathop{{B}}\nolimits_{{i}}\right. } \right) }}}=\frac{{P \left( {\mathop{{B}}\nolimits_{{k}}} \left) \cdot P{ \left( {A \left| {\mathop{{B}}\nolimits_{{k}}}\right. } \right) }\right. \right. }}{P(A)}$，换算得到$P(B|A)=P(B)\cdot \frac{P(A|B)}{P(A)}$
-
-3、作用：新信息出现后的B概率=B概率 X 新信息带来的调整（理解调整式子$\frac{P(A|B)}{P(A)}$的计算，依据代数来理解，无法理解，记住公式）
+2、相关系数性质2：$\mid \rho_{X Y} \mid=1$的充分必要条件是存在常数$a$和$b$，其中$a \neq 0$, 使得$P\{Y=a X+b\}=1$（即相关是两个变量存在线性关系，相反如果完全没有线性关系，那么相关系数就是0）
 
 \section{零碎公式}\index{零碎公式}
 
@@ -376,4 +202,178 @@
 3、不相容计算：$P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=\sum_{i=1}^{n} P\left(A_{i}\right)$
 
 4、$A \subset B\rightarrow P(A) \leqslant P(B)$
+
+\section{数字特征}\index{数字特征}
+
+1、样本均值：$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$
+
+2、样本方差：$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\frac{1}{n-1}\left(\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right)$
+
+3、标准差：$S$
+
+4、样本$k$阶(原点) 矩：$A_{k}=\frac{1}{n} \sum_{i=1}^{n} X_{i}^{k}, k=1,2, \cdots$
+
+5、样本k阶中心矩：$B_{k}=\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}, k=2,3, \cdots$（中心是根据样本均值来定的）
+
+\section{抽样分布公式}\index{抽样分布公式}
+
+1、卡方：$\chi^{2} = X_1^2+X_2^2+\cdots+X_n^2 \sim \chi^{2}(n)$，$X_1,X_2,\cdots ,X_n$相互独立且服从标准正态分布
+
+2、T分布：$t=\frac{X}{\sqrt{Y/n}} \sim t(n)$，其中$X \sim N(0,1)$，$Y\sim \chi^{2}\left(n\right)$，且$X,Y$相互独立
+
+3、F分布：$F=\frac{U / n_{1}}{V / n_{2}} \sim F\left(n_{1}, n_{2}\right)$，其中$U \sim \chi^{2}\left(n_{1}\right)$，$ V \sim \chi^{2}\left(n_{2}\right)$，且$U,V$相互独立（delta1037）
+
+\section{边缘相关}\index{边缘相关}
+
+1、边缘概率密度：$f_{X}(x)=\int_{-\infty}^{+\infty} f(x, y) \mathrm{d} y$）；关于$Y$的边缘概率密度类似
+
+2、边缘分布函数：$F_{X}(x)=F(x,+\infty)=\int_{-\infty}^{x}\left[\int_{-\infty}^{+\infty} f(x, y) \mathrm{d} y\right] \mathrm{d} x$）；关于$Y$的边缘分布函数类似
+
+\section{期望}\index{期望}
+
+
+
+\subsection{离散}\index{期望!离散}
+
+1、一维：$\sum_{k=1}^{\infty}x_kp_k$
+
+2、一维函数：$E(Y)=E[g(X)]=\sum_{k=1}^{+\infty} g\left(x_{k}\right) p_{k}$
+
+3、二维函数：$E(Z)=E[g(X, Y)]=\sum_{i=1}^{+\infty} \sum_{j=1}^{+\infty} g\left(x_{i}, y_{j}\right) p_{i j}$
+
+
+
+\subsection{连续}\index{期望!连续}
+
+1、一维：$E(X)=\int_{-\infty}^{+\infty} x f(x) \mathrm{d} x$
+
+2、一维函数：$E(Y)=E[g(X)]=\int_{-\infty}^{+\infty} g(x) f(x) \mathrm{d} x$
+
+3、二维函数：$E(Z)=E[g(X, Y)]=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} g(x, y) f(x, y) \mathrm{d} x \mathrm{~d} y$
+
+
+
+\subsection{矩的定义}\index{期望!矩的定义}
+
+1、$k$阶原点矩：$E\left(X^{k}\right), \quad k=1,2, \cdots $
+
+2、$k$阶中心距：$E\left\{[X-E(X)]^{k}\right\}, \quad k=1,2, \cdots$
+
+3、$k+l$阶混合原点矩：$E\left(X^{k} Y^{l}\right), \quad k, l=1,2, \cdots$
+
+4、$k+l$阶混合中心矩：$E\left\{[X-E(X)]^{k}[Y-E(Y)]^{\iota}\right\}, \quad k, l=1,2, \cdots$
+
+
+
+\subsection{性质}\index{期望!性质}
+
+1、性质1：$E(a_1X_1+a_2X_2+\cdots+a_nX_n+b_1+b_2+\cdots+b_m)=a_1E(X_1)+a_2E(X_2)+\cdots+a_nE(X_n)+b_1+b_2+\cdots+b_m$（无论变量之间是否独立都成立！这点很重要，可以在有些变量相关的条件下简化计算）
+
+2、若$X$、$Y$不相关，则$E ( X Y ) = E ( X ) E ( Y )$（推导：$C o v ( X , Y ) = E ( X Y ) - E ( X ) E ( Y ) =0$）
+
+\section{条件概率}\index{条件概率}
+
+1、连续：$P\{X>x|Y>y\} = \frac {P\{X>x,Y>y\}}{P\{Y>y\}}$
+
+2、离散：$P\{X=x|Y=y\} = \frac {P\{X=x,Y=y\}}{P\{Y=y\}} = \frac {p_{ij}}{p_{\cdot j}}$
+
+3、离散条件密度：$P\{X=x|Y=y\} = \frac {P\{X=x,Y=y\}}{P\{Y=y\}}$
+
+4、连续条件分布定义：$F_{X \mid Y}(x \mid y)=\int_{-\infty}^{x} \frac{f(s, y)}{f_{Y}(y)} \mathrm{d} s$
+
+5、连续条件密度定义：$f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_{Y}(y)}, f_{Y}(y)>0$
+
+\section{方差}\index{方差}
+
+
+
+\subsection{定义}\index{方差!定义}
+
+1、方差定义：$D(X)=E\left\{[X-E(X)]^{2}\right\}$
+
+1、标准差/均方差表示：$\sigma(X)=\sqrt{D(X)}$
+
+2、推论1：$D(X)=E\left(X^{2}\right)-[E(X)]^{2}$（定义公式展开）（方差的一般求解方法）
+
+3、推论2：$E\left(X^{2}\right) \geqslant[E(X)]^{2}$（因为对任何随机变量$X, D(X) \geqslant 0$）
+
+
+
+\subsection{性质}\index{方差!性质}
+
+1、性质1（可推广）：$D(a X+b)=a^{2} D(X) $
+
+2、性质2（前提条件：$X,Y$相互独立/不相关）：$D(X \pm Y)=D(X)+D(Y)$
+
+3、性质2（前提条件：$X,Y$关系未知）：$D ( X \pm Y ) = D ( X ) + D ( Y ) \pm 2 Cov ( X , Y )  $（方差展开公式）（其中协方差可以用相关系数与协方差的关系替换）
+
+\section{估计公式}\index{估计公式}
+
+
+
+\subsection{单样本构造}\index{估计公式!单样本构造}
+
+0、前提：设总体$X \sim N\left(\mu, \sigma^{2}\right), X_{1}, X_{2},\cdots, X_{n}$是来自$X$的样本，样本均值$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$, 样本方差$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}$
+
+1、（单）样本均值分布：$\bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right)$，标准化$U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$
+
+2、（单）样本方差构造卡方分布：$\chi^{2}=\frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1)$
+
+3、（单）均值和样本方差构造$T$分布：$T=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)$
+
+4、（单）中心距分布：$\chi^{2}=\frac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-\mu\right)^{2} \sim \chi^{2}(n)$
+
+
+
+\subsection{双样本构造}\index{估计公式!双样本构造}
+
+0、前提：$X_{1}, X_{2}, \cdots, X_{n_{1}}$与$Y_{1}, Y_{2}, \cdots,Y_{n_{2}}$分别是来自正态总体$N\left(\mu_{1}, \sigma_{1}^{2}\right)$和$N\left(\mu_{2}, \sigma_{2}^{2}\right)$的样本,且这两个样本相互独立. 设$\bar{X}=\frac{1}{n_{1}} \sum_{i=1}^{n_{1}} X_{i}$，$\bar{Y}=\frac{1}{n_{2}} \sum_{i=1}^{n_{2}} Y_{i}$分别是这两个样本的样本均值; $S_{1}^{2}=\frac{1}{n_{1}-1} \sum_{i=1}^{n_{1}}\left(X_{i}-\bar{X}\right)^{2}$, $S_{2}^{2}=\frac{1}{n_{2}-1} \sum_{i=1}^{n_{2}}\left(Y_{i}-\bar{Y}\right)^{2}$分别是这两个样本的样本方差
+
+1、（双）均值差构造正态分布：$\bar{X}-\bar{Y} \sim N\left(\mu_{1}-\mu_{2}, \frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}\right)$
+
+2、（双）均值和样本方差构造$T$分布：$\frac{(\bar{X}-\bar{Y})-\left(\mu_{1}-\mu_{2}\right)}{S_{w} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}} \sim t\left(n_{1}+n_{2}-2\right)$，$S_{w}^{2}=\frac{\left(n_{1}-1\right) S_{1}^{2}+\left(n_{2}-1\right) S_{2}^{2}}{n_{1}+n_{2}-2}, \quad S_{w}=\sqrt{S_{w}^{2}}$
+
+3、（双）样本方差构造$F$分布：$\frac{S_{1}^{2} / S_{2}^{2}}{\sigma_{1}^{2} / \sigma_{2}^{2}} \sim F\left(n_{1}-1, n_{2}-1\right)$
+
+\section{中心极限定理}\index{中心极限定理}
+
+（变量自解释，不赘述）（注意公式需要变量独立性，一般用这种公式题目自然会给定）
+
+1、棣莫弗一拉普拉斯定理：$\lim _{n \rightarrow \infty} P\left\{\frac{X_{n}-n p}{\sqrt{n p(1-p)}} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}} \mathrm{~d} t=\Phi(x)$（二项分布）
+
+2、列维一林德伯格定理：$\lim_{n \rightarrow \infty} F_{n}(x)=\lim_{n \rightarrow \infty} P\left\{\frac{\sum_{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}} \mathrm{~d} t=\Phi(x)$（独立同分布）
+
+\section{二维分布}\index{二维分布}
+
+
+
+\subsection{二维均匀分布}\index{二维分布!二维均匀分布}
+
+1、公式：$f(x, y)=\left\{\begin{array}{lc}
+
+\frac{1}{A}, & (x, y) \in G, \\
+
+0, & \text { 其他 },
+
+\end{array}\right.$其中A是平面有界区域$G$的面积，则称$(X,Y)$服从区域$G$上的均匀分布
+
+
+
+\subsection{二维正态分布}\index{二维分布!二维正态分布}
+
+公式：$f(x, y)=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \exp \left\{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-\frac{2 \rho\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]\right\},-\infty<x<+\infty,-\infty<y<+\infty$，其中$\mu_{1}, \mu_{2}, \sigma_{1}>0, \sigma_{2}>0,-1<\rho<1$ 均为常数, 则称 $(X, Y) $服从参数为$\mu_{1}, \mu_{2}, \sigma_{1}, \sigma_{2}$和$\rho$的二维正态分布,记作$(X, Y) \sim N\left(\mu_{1}, \mu_{2} ; \sigma_{1}^{2}, \sigma_{2}^{2} ; \rho\right)$
+
+
+
+\subsection{二维正态分布性质}\index{二维分布!二维正态分布性质}
+
+1、$\left(X, Y\right) \sim N\left(\mu_{1}, \mu_{2} ; \sigma_{1}^{2}, \sigma_{2}^{2} ; \rho\right)$时, $X$与$Y$均服从一维正态：$X \sim{N}\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right)$
+
+2、$(X, Y) \sim N\left(\mu_{1}, \mu_{2} ; \sigma_{1}^{2}, \sigma_{2}^{2} ; \rho\right)$时, $X$与$Y$相互独立的充分必要条件是$\rho=0$（正态的独立与不相关是一致的）
+
+3、$(X, Y)$服从二维正态时,行列式$\left|\begin{array}{ll}a & b \\ c & d\end{array}\right| \neq 0$时$(a X+b Y, c X+d Y)$也服从二维正态（二维正态的满足特定条件（即两个新变量没有常数倍关系，如果有会发生什么）的组合还是二维正态）； $ a X+b Y$服从一维正态$\left(a^{2}+b^{2} \neq 0\right)$（这是由性质1得出的，需要相互独立条件）
+
+4、约定: 当$X$与$Y$均服从一维正态，且相互独立，就是指$(X, Y)$服从二维正态
+
+5、如果$X$与$Y$均服从一维正态, 不能保证$(X, Y)$服从二维正态, 也不能保证$a X+b Y$服从一维正态（两个一维正态推不出来组合是一维的，也不能保证能组合出来二维的（需要相互独立的条件））
 

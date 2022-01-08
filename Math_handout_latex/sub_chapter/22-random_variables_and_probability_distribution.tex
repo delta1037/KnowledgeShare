@@ -57,44 +57,6 @@
 
 
 
-\section{常用的分布}\index{常用的分布}
-
-
-
-\subsection{常见的分布}\index{常用的分布!常见的分布}
-
-1、0-1分布：1重伯努利试验
-
-2、二项分布：n重伯努利试验，$n$次独立重复试验中成功的次数；$X \sim B(n,p)$
-
-3、几何分布：独立重复试验，每次试验成功率为$p$，则在k次试验时首次试验才成功的概率，$P\{X=k\}=p q^{k-1}, k=1,2, \cdots$
-
-4、超几何分布：N件产品含有M件次品，从中取$n$件（不放回抽取），令事件$X$为抽取的$n$件产品含有的次品个数，则$X$服从参数为$n$，$M$，$N$的超几何分布，$P\{X=k\}=\frac{\mathrm{C}_{M}^{k} \mathrm{C}_{N-M}^{n-k}}{\mathrm{C}_{N}^{n}}, k=l_{1}, \cdots, l_{2}$
-
-5、泊松分布：$P(x) = \frac{\lambda^k}{k!}e^{-\lambda},X \sim P(\lambda)$ ：（k的范围是0,1,2...）一段时间内电话总机接到的次数，候车的旅客数，保险索赔次数
-
-6、均匀分布：$X \sim U(a,b)$
-
-7、指数分布：$f(x) = \begin{cases} \lambda e^{-\lambda x}, & x > 0, \\[5ex] 0, & x \le 0, \end{cases} \ \ \lambda >0$；$X \sim E(\lambda)$
-
-8、正态分布：$f(x)=\frac{1}{\sqrt{{2\pi}}\times\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$；$X \sim N(\mu,\sigma^2)$
-
-
-
-备注：所有的表达式与表示方法要记牢
-
-
-
-\subsection{二项分布和泊松分布和之间的联系：（泊松定理，按照大概了解即可）}\index{常用的分布!二项分布和泊松分布和之间的联系：（泊松定理，按照大概了解即可）}
-
-1、$\lim_{n \rightarrow \infty}np_n=\lambda, n\ge1000,p\le0.1 \rightarrow \lim _{n \rightarrow \infty} C_{n}^{k} p_{n}^{k}\left(1-p_{n}\right)^{n-k}=\frac{\lambda^{k}}{k !} \mathrm{e}^{-\lambda}$，即二项分布转换成泊松分布的条件和形式（对于$\lim_{n \rightarrow \infty}np_n=\lambda$中$p_n$是一个事件A在实验中出现的概率，它与实验的总数$n$有关）
-
-2、应用条件：n比较大，$\lambda$比较小（$n\ge1000,p\le0.1$）
-
-注意：分布之间关联参数的关系
-
-
-
 \section{常见的分布的性质}\index{常见的分布的性质}
 
 
@@ -140,6 +102,44 @@
 2、将相同的Y值得概率合并
 
 3、得到新的Y和对应得概率值
+
+\section{常用的分布}\index{常用的分布}
+
+
+
+\subsection{常见的分布}\index{常用的分布!常见的分布}
+
+1、0-1分布：1重伯努利试验
+
+2、二项分布：n重伯努利试验，$n$次独立重复试验中成功的次数；$X \sim B(n,p)$
+
+3、几何分布：独立重复试验，每次试验成功率为$p$，则在k次试验时首次试验才成功的概率，$P\{X=k\}=p q^{k-1}, k=1,2, \cdots$
+
+4、超几何分布：N件产品含有M件次品，从中取$n$件（不放回抽取），令事件$X$为抽取的$n$件产品含有的次品个数，则$X$服从参数为$n$，$M$，$N$的超几何分布，$P\{X=k\}=\frac{\mathrm{C}_{M}^{k} \mathrm{C}_{N-M}^{n-k}}{\mathrm{C}_{N}^{n}}, k=l_{1}, \cdots, l_{2}$
+
+5、泊松分布：$P(x) = \frac{\lambda^k}{k!}e^{-\lambda},X \sim P(\lambda)$ ：（k的范围是0,1,2...）一段时间内电话总机接到的次数，候车的旅客数，保险索赔次数
+
+6、均匀分布：$X \sim U(a,b)$
+
+7、指数分布：$f(x) = \begin{cases} \lambda e^{-\lambda x}, & x > 0, \\[5ex] 0, & x \le 0, \end{cases} \ \ \lambda >0$；$X \sim E(\lambda)$
+
+8、正态分布：$f(x)=\frac{1}{\sqrt{{2\pi}}\times\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$；$X \sim N(\mu,\sigma^2)$
+
+
+
+备注：所有的表达式与表示方法要记牢
+
+
+
+\subsection{二项分布和泊松分布和之间的联系：（泊松定理，按照大概了解即可）}\index{常用的分布!二项分布和泊松分布和之间的联系：（泊松定理，按照大概了解即可）}
+
+1、$\lim_{n \rightarrow \infty}np_n=\lambda, n\ge1000,p\le0.1 \rightarrow \lim _{n \rightarrow \infty} C_{n}^{k} p_{n}^{k}\left(1-p_{n}\right)^{n-k}=\frac{\lambda^{k}}{k !} \mathrm{e}^{-\lambda}$，即二项分布转换成泊松分布的条件和形式（对于$\lim_{n \rightarrow \infty}np_n=\lambda$中$p_n$是一个事件A在实验中出现的概率，它与实验的总数$n$有关）
+
+2、应用条件：n比较大，$\lambda$比较小（$n\ge1000,p\le0.1$）
+
+注意：分布之间关联参数的关系
+
+
 
 \section{连续型随机变量的函数分布}\index{连续型随机变量的函数分布}
 

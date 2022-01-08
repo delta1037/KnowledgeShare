@@ -1,25 +1,35 @@
 \chapterimage{chapter_head_2.pdf}
 \chapter{常微分方程}
 
-\section{微分方程基本概念}\index{微分方程基本概念}
+\section{欧拉方程求解}\index{欧拉方程求解}
 
-1、微分方程：含有未知函数，未知函数的导数与自变量之间的关系的方程，叫做微分方程，简称方程
+1、形式：$x^{n} y^{(n)}+p_{1} x^{n-1} y^{(n-1)}+\cdots+p_{n-1} x y^{\prime}+p_{n} y=f(x)$（其中$p_{1}, p_{2}, \cdots, p_{n}$是常数）
 
-2、微分方程的阶：微分方程中未知函数导数的最高阶数
+2、求解：令$x=\mathrm{e}^{t}$，则$t=\ln x$，从而$\frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x}$，所以$y^{\prime} =\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{\mathrm{d} y}{\mathrm{~d} t} \cdot \frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}$，$y^{\prime \prime} =\frac{\mathrm{d}^{2} y}{\mathrm{~d} x^{2}}=\frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}\right)=-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x} \frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{\mathrm{d} y}{\mathrm{~d} t}\right) =-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x^{2}} \frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}$，则$x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}$，引入微分算子$D=\frac{\mathrm{d}}{\mathrm{d} t}$，从而有$x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}=D y, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}=D^{2} y-D y=D(D-1) y$，从而将欧拉方程化为线性常系数方程求解
 
-3、微分方程的解：代入微分方程能使方程成为恒等式的函数
+\section{方程解构造方程}\index{方程解构造方程}
 
-4、微分方程的通解：含有与微分方程阶数同个数的独立的任意常数的解（常数可以通过定解条件求解）
 
-5、微分方程的特解：不含任意常数的解（通过代入到微分方程中可以求解待定系数）
 
-6、微分方程的定解条件：用来确定通解中任意常数的条件称为微分方程的定解条件或者初始条件
+\subsection{由方程的特解构造方程：（形式已知，是常系数的，或者可以看出来具有常系数方程解的形式）}\index{方程解构造方程!由方程的特解构造方程：（形式已知，是常系数的，或者可以看出来具有常系数方程解的形式）}
 
-7、微分方程的积分曲线：微分方程的解$y=f(x)$所表示的曲线
+1、判断方程的阶数，由此得到方程齐次解和特解的个数
 
-注意：区分齐次方程的通解（就是通解）和非齐次方程通解（对应齐次方程的通解+非齐次方程特解）
+2、先由方程的特解互相组合（相减）求解方程的齐次解（求得几个线性无关的齐次解）
 
-注意：对方程的求解注意标注自变量的范围（$x$）、任意常数的范围（即$C$为任意常数或$C>0$）、$ln$函数中该加绝对值的要加绝对值
+3、由齐次解的形式得到方程特征方程的根，由此得到方程的左边形式，等号右边设为$f(x)$的形式
+
+4、将不包含齐次解的特解代入得到$f(x)$
+
+
+
+\subsection{由方程的特解构造方程：（形式未知，不知道是不是常系数，或者无法明显看出来是常系数的）}\index{方程解构造方程!由方程的特解构造方程：（形式未知，不知道是不是常系数，或者无法明显看出来是常系数的）}
+
+1、判断方程的阶数，由此得到方程齐次解和特解的个数
+
+2、先由方程的特解互相组合（相减）求解方程的齐次解（求得几个线性无关的齐次解），构造出方程的通解形式（包含未知数）
+
+3、对通解形式求一阶导和二阶导，联立并消去其中的未知数，得到的式子就是方程
 
 \section{一般微分方程}\index{一般微分方程}
 
@@ -54,6 +64,26 @@
 \subsection{常见的微分方程化简方式}\index{一般微分方程!常见的微分方程化简方式}
 
 1、形如$\frac{\mathrm{d} y}{\mathrm{~d} x}=f\left(\frac{a_{1} x+b_{1} y+c_{1}}{a_{2} x+b_{2} y+c_{2}}\right)$：令$x=X+h, y=Y+k$，代入到方程求解$h$和$k$的值，将原分式变成齐次方程形式（去掉常数项）
+
+\section{微分方程基本概念}\index{微分方程基本概念}
+
+1、微分方程：含有未知函数，未知函数的导数与自变量之间的关系的方程，叫做微分方程，简称方程
+
+2、微分方程的阶：微分方程中未知函数导数的最高阶数
+
+3、微分方程的解：代入微分方程能使方程成为恒等式的函数
+
+4、微分方程的通解：含有与微分方程阶数同个数的独立的任意常数的解（常数可以通过定解条件求解）
+
+5、微分方程的特解：不含任意常数的解（通过代入到微分方程中可以求解待定系数）
+
+6、微分方程的定解条件：用来确定通解中任意常数的条件称为微分方程的定解条件或者初始条件
+
+7、微分方程的积分曲线：微分方程的解$y=f(x)$所表示的曲线
+
+注意：区分齐次方程的通解（就是通解）和非齐次方程通解（对应齐次方程的通解+非齐次方程特解）
+
+注意：对方程的求解注意标注自变量的范围（$x$）、任意常数的范围（即$C$为任意常数或$C>0$）、$ln$函数中该加绝对值的要加绝对值
 
 \section{线性常系数齐次方程求解}\index{线性常系数齐次方程求解}
 
@@ -102,34 +132,4 @@
 注意：齐次形式的解与根有关，且解形式固定；非齐次方程的形式还与齐次中的特征方程根重数有关（构造前边的$x^{k}$部分，与原来的$x$幂次项$Q_{m}(x)$的构造不冲突）
 
 注意：特解带回到方程求未知数时不要忘记方程中的系数
-
-\section{方程解构造方程}\index{方程解构造方程}
-
-
-
-\subsection{由方程的特解构造方程：（形式已知，是常系数的，或者可以看出来具有常系数方程解的形式）}\index{方程解构造方程!由方程的特解构造方程：（形式已知，是常系数的，或者可以看出来具有常系数方程解的形式）}
-
-1、判断方程的阶数，由此得到方程齐次解和特解的个数
-
-2、先由方程的特解互相组合（相减）求解方程的齐次解（求得几个线性无关的齐次解）
-
-3、由齐次解的形式得到方程特征方程的根，由此得到方程的左边形式，等号右边设为$f(x)$的形式
-
-4、将不包含齐次解的特解代入得到$f(x)$
-
-
-
-\subsection{由方程的特解构造方程：（形式未知，不知道是不是常系数，或者无法明显看出来是常系数的）}\index{方程解构造方程!由方程的特解构造方程：（形式未知，不知道是不是常系数，或者无法明显看出来是常系数的）}
-
-1、判断方程的阶数，由此得到方程齐次解和特解的个数
-
-2、先由方程的特解互相组合（相减）求解方程的齐次解（求得几个线性无关的齐次解），构造出方程的通解形式（包含未知数）
-
-3、对通解形式求一阶导和二阶导，联立并消去其中的未知数，得到的式子就是方程
-
-\section{欧拉方程求解}\index{欧拉方程求解}
-
-1、形式：$x^{n} y^{(n)}+p_{1} x^{n-1} y^{(n-1)}+\cdots+p_{n-1} x y^{\prime}+p_{n} y=f(x)$（其中$p_{1}, p_{2}, \cdots, p_{n}$是常数）
-
-2、求解：令$x=\mathrm{e}^{t}$，则$t=\ln x$，从而$\frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x}$，所以$y^{\prime} =\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{\mathrm{d} y}{\mathrm{~d} t} \cdot \frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}$，$y^{\prime \prime} =\frac{\mathrm{d}^{2} y}{\mathrm{~d} x^{2}}=\frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}\right)=-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x} \frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{\mathrm{d} y}{\mathrm{~d} t}\right) =-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x^{2}} \frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}$，则$x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}$，引入微分算子$D=\frac{\mathrm{d}}{\mathrm{d} t}$，从而有$x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}=D y, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}=D^{2} y-D y=D(D-1) y$，从而将欧拉方程化为线性常系数方程求解
 

@@ -1,6 +1,148 @@
 \chapterimage{chapter_head_2.pdf}
 \chapter{多元微分}
 
+\section{函数的特征}\index{函数的特征}
+
+
+
+\subsection{连续性}\index{函数的特征!连续性}
+
+1、求解二元函数在一点的极限值（参考求解二重极限）
+
+
+
+\subsection{偏导存在与连续}\index{函数的特征!偏导存在与连续}
+
+1、一点处偏导的存在性：定义法判断偏导数存在性
+
+2、偏导在一点的连续性：求偏导在一点的极限，与定义值相比较判断偏导数在此点的偏导连续性
+
+
+
+\subsection{可微性}\index{函数的特征!可微性}
+
+1、利用可微的定义：考察$f_{x}^{\prime}\left(x_{0}, y_{0}\right)和f_{y}^{\prime}\left(x_{0}, y_{0}\right)$是否都存在，如果$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$和$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$中至少有一 个不存在，则函数$f(x, y)$在$\left(x_{0}, y_{0}\right)$不可微；如果$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$和$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$都存在，考察$\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{\left[f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)\right]-\left[f_{x}^{\prime}\left(x_{0}, y_{0}\right) \Delta x+f_{y}^{\prime}\left(x_{0}, y_{0}\right) \Delta y\right]}{\rho}=0$（可微定义式）是否成立，其中$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$，如果该式成立，则称函数$f(x, y)$在点$(x_0, y_0)$处可微（可微的充要条件）（可微的定义可以将微分的概念（$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$或者$\Delta z=A \Delta x+B \Delta y+o(\rho)$）和偏导即可微的必要条件（$\mathrm{d} z=\frac{\partial z}{\partial x} \mathrm{~d} x+\frac{\partial z}{\partial y} \mathrm{~d} y$）关联起来，这里好像就有$A=\frac{\partial z}{\partial x},B=\frac{\partial z}{\partial y}$的嫌疑）
+
+2、利用可微的必要条件：可微函数必可导，换言之，不可导的函数一定不可微（点处导数定义不存在）（判断二元函数不可微）
+
+3、利用可微的充分条件：有连续一阶偏导数的函数一定可微（点处偏导数定义值等于偏导在该点的极限值）（判断二元函数可微）
+
+4、利用微分的概念：函数$z=f(x, y)$在点$(x, y)$处的全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$可以表示为$\Delta z=A \Delta x+B \Delta y+o(\rho)$，其中$A,B$不依赖于$\Delta x, \Delta y$，而仅与$x, y$有关，$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$（也可以证明全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$是$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$的无穷小量，即$\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\rho}=0$，此时$A=0,B=0$）
+
+
+
+\subsection{极值与驻点的定义}\index{函数的特征!极值与驻点的定义}
+
+1、多元函数极值点定义：类似于领域内$f(x, y) \leqslant f\left(x_{0}, y_{0}\right)$（极大值）（注意可以取等号）（极值点除了需要考虑驻点外，还要考虑导数不存在的点）
+
+2、多元函数驻点定义：使$f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0$同时成立的点$(x, y)$称为函数$f(x, y)$的驻点（驻点不一定是极值点；极值点不一定是驻点）
+
+3、多元函数极值的必要条件：设函数$f(x, y)$在点$M_{0}\left(x_{0}, y_{0}\right)$的一阶偏导数存在，且在$\left(x_{0}, y_{0}\right)$取得极值，则$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0$（由此可见具有一阶偏导数的函数的极值点一定是驻点，但驻点不一定是极值点）
+
+
+
+\subsection{求解最大最小值}\index{函数的特征!求解最大最小值}
+
+1、求出所有的极值点（求驻点判断极值点）和边界上的最大最小值
+
+2、比较这些极值和边界上的最大最小值，其中最大的为最大值，最小的为最小值（废话）
+
+注意：如果区域内不存在驻点，那么最值在边界上取（转换为条件极值问题，条件为边界）
+
+备注：有的最值问题可以从几何上进行考虑，转换为几何关系
+
+备注：对于闭环内的极值就是对应的最值（例如在一个圆环（线）型定义域上，如果在线上取得极大值或者极小值，那么该极大值或者极小值就是对应的最大值和最小值，这是由于圆线型定义域上函数光滑（处处可导）得到的）
+
+\section{一些几何证明问题}\index{一些几何证明问题}
+
+1、证明曲面为柱面：只需证明曲面上任一点的切平面平行于一条定直线，即证明曲面上任一点的法向量垂直于定向量（设定向量的值，并与曲面法向量相乘，得到利用对应参数相等求解的方程）（即求解这个定向量即可）
+
+\section{泰勒定理}\index{泰勒定理}
+
+1、拉格朗日余项泰勒展开式：$f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+R_{1}$，其中余项$R_{1}=\frac{1}{2 !}[\frac{\partial^{2} f\left(P_{1}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(P_{1}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(P_{1}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]$，点$P_{1}$为$\left(x_{0}+\theta\left(x-x_{0}\right), y_{0}+\theta\left(y-y_{0}\right)\right)$
+
+2、佩亚诺型余 项的二阶泰勒公式展开式：$f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+\frac{1}{2 !}[\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]+o\left(\rho^{2}\right)$，其中$\rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}$
+
+\section{隐函数的偏导数}\index{隐函数的偏导数}
+
+1、由一个方程确定的隐函数（一元函数）求导：设$F(x, y)$有连续一阶偏导数，且$F_{y}^{\prime} \neq 0$ ，则由方程$F(x, y)=0$确定的函数$y=y(x)$可导，且$\frac{\mathrm{d} y}{\mathrm{~d} x}=-\frac{F_{x}^{\prime}}{F_{y}^{\prime}}$
+
+2、由一个方程确定的隐函数（二元函数）求导：设$F(x, y, z)$有连续一阶偏导数，且$F_{z}^{\prime} \neq 0, z=z(x, y)$由方程$F(x, y, z)=0$所确定，则$\frac{\partial z}{\partial x}=-\frac{F_{x}^{\prime}}{F_{z}^{\prime}}, \quad \frac{\partial z}{\partial y}=-\frac{F_{y}^{\prime}}{F_{z}^{\prime}}$
+
+3、由方程组确定的隐函数（一元函数）求导：设$u=u(x), v=v(x)$由方程组$\left\{\begin{array}{l}F(x, u, v)=0,  \\ G(x, u, v)=0\end{array}\right. $所确定，$\frac{\mathrm{d} u}{\mathrm{~d} x}$和$\frac{\mathrm{d} v}{\mathrm{~d} x}$, 可通过原方程组两端对$x$求导得到，即$\left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+F_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+G_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \end{array}\right.$，从中解出$\frac{\mathrm{d} u}{\mathrm{~d} x}$和$\frac{\mathrm{d} v}{\mathrm{~d} x}$，这里假设由形式解出的$\frac{\mathrm{d} u}{\mathrm{~d} x}$与$\frac{\mathrm{d} v}{\mathrm{~d} x}$中的分母不为零（对$x$求偏导得方程组）
+
+4、由方程组确定的隐函数（二元函数）求导：设$u=u(x, y), v=v(x, y)$由方程组$\left\{\begin{array}{l}F(x, y, u, v)=0, \\ G(x, y, u, v)=0\end{array}\right.$所确定，若要求$\frac{\partial u}{\partial x}$和$\frac{\partial v}{\partial x}$，可先对 原方程组两端对$x$求偏导得到, 即$\left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\partial u}{\partial x}+F_{v}^{\prime} \frac{\partial v}{\partial x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\partial u}{\partial x}+G_{v}^{\prime} \frac{\partial v}{\partial x}=0 \end{array}\right.$，然后从中解出$\frac{\partial u}{\partial x}$和$\frac{\partial v}{\partial x}$；同理可求得$\frac{\partial u}{\partial y}$和$\frac{\partial v}{\partial y}$，这里假设由形式解出的式子中的分母不为零（对$x$求偏导得方程组求解关于$x$的偏导；对$y$求偏导得方程组求解关于$y$的偏导）
+
+注意：在求解$F^{\prime}_x$时，对$x$求导过程中，即使遇到$z$，也不求$z^{\prime}_x$（不深入求导），仅求导与$x$相关的变量，其它视为常数；求解$F^{\prime}_y$和$F^{\prime}_z$时也是如此，非求导变量均为常数，即使存在$z=z(x, y)$
+
+备注：将函数关系代入可以得到明确的变量关系（循环迭代式关系函数：$z$是$x,y$的函数，$y$是$x,z$的函数，可以得到$z$是$x$的一元函数）
+
+备注：隐函数求导的常用的三种方法，利用隐函数求导公式；对方程两端求导，解出偏导数；利用微分形式不变性，方程两端求微分
+
+\section{极值与条件极值}\index{极值与条件极值}
+
+
+
+\subsection{二元极值的判断条件：（充分条件）}\index{极值与条件极值!二元极值的判断条件：（充分条件）}
+
+设函数$z=f(x, y)$在点$\left(x_{0}, y_{0}\right)$的某邻域内有连续的二阶偏导数，且$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0$。令$f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right)=A, f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right)=B, f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)=C$，则
+
+(1)$A C-B^{2}>0$时，$f(x, y)$在点$\left(x_{0}, y_{0}\right)$取极值,且$\left\{\begin{array}{l}\text { 当 } A>0 \text { 时取极小值, } \\ \text { 当 } A<0 \text { 时取极大值. }\end{array}\right.$
+
+(2)$A C-B^{2}<0$时，$f(x, y)$在点$\left(x_{0}, y_{0}\right)$无极值
+
+(3)$A C-B^{2}=0$时，不能确定$f(x, y)$在点$\left(x_{0}, y_{0}\right)$是否有极值，还需进一步讨论（一般用 极值定义)
+
+
+
+\subsection{二元极值的判断步骤：（前提：二元函数$z=f(x, y)$有连续二阶偏导数）}\index{极值与条件极值!二元极值的判断步骤：（前提：二元函数$z=f(x, y)$有连续二阶偏导数）}
+
+1、令$f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0$同时成立，求得所有驻点
+
+2、对每个驻点求出二阶偏导数$A=f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right), B=f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right), C=f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)$
+
+3、利用极值充分条件,通过$A C-B^{2}$的正负对驻点$\left(x_{0}, y_{0}\right)$作判定
+
+
+
+\subsection{二元极值特殊的判断方法}\index{极值与条件极值!二元极值特殊的判断方法}
+
+1、代入特殊路径（反证法/定义法）：如果在某个点附近代入曲线（$y=x,y=-x$）后，函数值出现了可正可负的情况，则函数不存在极值（常用于极限表示式中）
+
+备注：在求某一点的二阶导时，对于无关的变量可以提前代入化简
+
+
+
+\subsection{条件极值求解-化为无条件极值}\index{极值与条件极值!条件极值求解-化为无条件极值}
+
+1、若从条件$\varphi(x, y)=0$中可解出$y=y(x)$或$x=x(y)$
+
+2、代人$z=f(x, y)$化简成无条件极值问题
+
+注意：化为无条件极值适合单条件的情况
+
+
+
+\subsection{条件极值求解-拉格朗日乘数法：（多个条件的也是类似的）}\index{极值与条件极值!条件极值求解-拉格朗日乘数法：（多个条件的也是类似的）}
+
+1、函数$f(x, y)$在条件$\varphi(x, y)=0$下的极值的必要条件，先构造拉格朗日函数$F(x, y, \lambda)=f(x, y)+\lambda \varphi(x, y)$
+
+2、解方程组$\left\{\begin{array}{l} \frac{\partial F}{\partial x}=\frac{\partial f}{\partial x}+\lambda \frac{\partial \varphi}{\partial x}=0 \\ \frac{\partial F}{\partial y}=\frac{\partial f}{\partial y}+\lambda \frac{\partial \varphi}{\partial y}=0 \\ \frac{\partial F}{\partial \lambda}=\varphi(x, y)=0 \end{array}\right.$
+
+3、所有满足此方程组的解$(x, y, \lambda)$中$(x, y)$是函数$f(x, y)$在条件$\varphi(x, y)=0$下可能的极值点
+
+注意：求解时注意利用方程中变量的对称性（不要过度依赖因为容易漏解，有时间还是按照标准步骤求解，或者根据不等式验证结果或者根据几何进行预分析）
+
+注意：使用拉格朗日乘数法时对原函数进行简化（相乘的转化为对数和，带根号的可以去掉根号）
+
+备注：对于三元函数的条件极值的求解类似
+
+备注：对于实际条件极值的问题求解，注意区分条件和函数（函数可能需要根据实际情况进行构造，或者做一些问题转化（转化为距离问题等））
+
+备注：对于不等式问题，从不等式中拆出来条件函数（设条件函数为定值）和待求函数，在条件函数为定值的情况下求解待求函数的范围
+
+
+
 \section{二元函数的极限和连续}\index{二元函数的极限和连续}
 
 
@@ -85,138 +227,6 @@
 
 注意：区分整体求导（将一坨式子当作一个整体求导）和部分求导（对某一个自变量求导）
 
-\section{隐函数的偏导数}\index{隐函数的偏导数}
-
-1、由一个方程确定的隐函数（一元函数）求导：设$F(x, y)$有连续一阶偏导数，且$F_{y}^{\prime} \neq 0$ ，则由方程$F(x, y)=0$确定的函数$y=y(x)$可导，且$\frac{\mathrm{d} y}{\mathrm{~d} x}=-\frac{F_{x}^{\prime}}{F_{y}^{\prime}}$
-
-2、由一个方程确定的隐函数（二元函数）求导：设$F(x, y, z)$有连续一阶偏导数，且$F_{z}^{\prime} \neq 0, z=z(x, y)$由方程$F(x, y, z)=0$所确定，则$\frac{\partial z}{\partial x}=-\frac{F_{x}^{\prime}}{F_{z}^{\prime}}, \quad \frac{\partial z}{\partial y}=-\frac{F_{y}^{\prime}}{F_{z}^{\prime}}$
-
-3、由方程组确定的隐函数（一元函数）求导：设$u=u(x), v=v(x)$由方程组$\left\{\begin{array}{l}F(x, u, v)=0,  \\ G(x, u, v)=0\end{array}\right. $所确定，$\frac{\mathrm{d} u}{\mathrm{~d} x}$和$\frac{\mathrm{d} v}{\mathrm{~d} x}$, 可通过原方程组两端对$x$求导得到，即$\left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+F_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+G_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \end{array}\right.$，从中解出$\frac{\mathrm{d} u}{\mathrm{~d} x}$和$\frac{\mathrm{d} v}{\mathrm{~d} x}$，这里假设由形式解出的$\frac{\mathrm{d} u}{\mathrm{~d} x}$与$\frac{\mathrm{d} v}{\mathrm{~d} x}$中的分母不为零（对$x$求偏导得方程组）
-
-4、由方程组确定的隐函数（二元函数）求导：设$u=u(x, y), v=v(x, y)$由方程组$\left\{\begin{array}{l}F(x, y, u, v)=0, \\ G(x, y, u, v)=0\end{array}\right.$所确定，若要求$\frac{\partial u}{\partial x}$和$\frac{\partial v}{\partial x}$，可先对 原方程组两端对$x$求偏导得到, 即$\left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\partial u}{\partial x}+F_{v}^{\prime} \frac{\partial v}{\partial x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\partial u}{\partial x}+G_{v}^{\prime} \frac{\partial v}{\partial x}=0 \end{array}\right.$，然后从中解出$\frac{\partial u}{\partial x}$和$\frac{\partial v}{\partial x}$；同理可求得$\frac{\partial u}{\partial y}$和$\frac{\partial v}{\partial y}$，这里假设由形式解出的式子中的分母不为零（对$x$求偏导得方程组求解关于$x$的偏导；对$y$求偏导得方程组求解关于$y$的偏导）
-
-注意：在求解$F^{\prime}_x$时，对$x$求导过程中，即使遇到$z$，也不求$z^{\prime}_x$（不深入求导），仅求导与$x$相关的变量，其它视为常数；求解$F^{\prime}_y$和$F^{\prime}_z$时也是如此，非求导变量均为常数，即使存在$z=z(x, y)$
-
-备注：将函数关系代入可以得到明确的变量关系（循环迭代式关系函数：$z$是$x,y$的函数，$y$是$x,z$的函数，可以得到$z$是$x$的一元函数）
-
-备注：隐函数求导的常用的三种方法，利用隐函数求导公式；对方程两端求导，解出偏导数；利用微分形式不变性，方程两端求微分
-
-\section{极值与条件极值}\index{极值与条件极值}
-
-
-
-\subsection{二元极值的判断条件：（充分条件）}\index{极值与条件极值!二元极值的判断条件：（充分条件）}
-
-设函数$z=f(x, y)$在点$\left(x_{0}, y_{0}\right)$的某邻域内有连续的二阶偏导数，且$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0$。令$f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right)=A, f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right)=B, f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)=C$，则
-
-(1)$A C-B^{2}>0$时，$f(x, y)$在点$\left(x_{0}, y_{0}\right)$取极值,且$\left\{\begin{array}{l}\text { 当 } A>0 \text { 时取极小值, } \\ \text { 当 } A<0 \text { 时取极大值. }\end{array}\right.$
-
-(2)$A C-B^{2}<0$时，$f(x, y)$在点$\left(x_{0}, y_{0}\right)$无极值
-
-(3)$A C-B^{2}=0$时，不能确定$f(x, y)$在点$\left(x_{0}, y_{0}\right)$是否有极值，还需进一步讨论（一般用 极值定义)
-
-
-
-\subsection{二元极值的判断步骤：（前提：二元函数$z=f(x, y)$有连续二阶偏导数）}\index{极值与条件极值!二元极值的判断步骤：（前提：二元函数$z=f(x, y)$有连续二阶偏导数）}
-
-1、令$f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0$同时成立，求得所有驻点
-
-2、对每个驻点求出二阶偏导数$A=f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right), B=f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right), C=f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)$
-
-3、利用极值充分条件,通过$A C-B^{2}$的正负对驻点$\left(x_{0}, y_{0}\right)$作判定
-
-
-
-\subsection{二元极值特殊的判断方法}\index{极值与条件极值!二元极值特殊的判断方法}
-
-1、代入特殊路径（反证法/定义法）：如果在某个点附近代入曲线（$y=x,y=-x$）后，函数值出现了可正可负的情况，则函数不存在极值（常用于极限表示式中）
-
-备注：在求某一点的二阶导时，对于无关的变量可以提前代入化简
-
-
-
-\subsection{条件极值求解-化为无条件极值}\index{极值与条件极值!条件极值求解-化为无条件极值}
-
-1、若从条件$\varphi(x, y)=0$中可解出$y=y(x)$或$x=x(y)$
-
-2、代人$z=f(x, y)$化简成无条件极值问题
-
-注意：化为无条件极值适合单条件的情况
-
-
-
-\subsection{条件极值求解-拉格朗日乘数法：（多个条件的也是类似的）}\index{极值与条件极值!条件极值求解-拉格朗日乘数法：（多个条件的也是类似的）}
-
-1、函数$f(x, y)$在条件$\varphi(x, y)=0$下的极值的必要条件，先构造拉格朗日函数$F(x, y, \lambda)=f(x, y)+\lambda \varphi(x, y)$
-
-2、解方程组$\left\{\begin{array}{l} \frac{\partial F}{\partial x}=\frac{\partial f}{\partial x}+\lambda \frac{\partial \varphi}{\partial x}=0 \\ \frac{\partial F}{\partial y}=\frac{\partial f}{\partial y}+\lambda \frac{\partial \varphi}{\partial y}=0 \\ \frac{\partial F}{\partial \lambda}=\varphi(x, y)=0 \end{array}\right.$
-
-3、所有满足此方程组的解$(x, y, \lambda)$中$(x, y)$是函数$f(x, y)$在条件$\varphi(x, y)=0$下可能的极值点
-
-注意：求解时注意利用方程中变量的对称性（不要过度依赖因为容易漏解，有时间还是按照标准步骤求解，或者根据不等式验证结果或者根据几何进行预分析）
-
-注意：使用拉格朗日乘数法时对原函数进行简化（相乘的转化为对数和，带根号的可以去掉根号）
-
-备注：对于三元函数的条件极值的求解类似
-
-备注：对于实际条件极值的问题求解，注意区分条件和函数（函数可能需要根据实际情况进行构造，或者做一些问题转化（转化为距离问题等））
-
-备注：对于不等式问题，从不等式中拆出来条件函数（设条件函数为定值）和待求函数，在条件函数为定值的情况下求解待求函数的范围
-
-
-
-\section{函数的特征}\index{函数的特征}
-
-
-
-\subsection{连续性}\index{函数的特征!连续性}
-
-1、求解二元函数在一点的极限值（参考求解二重极限）
-
-
-
-\subsection{偏导存在与连续}\index{函数的特征!偏导存在与连续}
-
-1、一点处偏导的存在性：定义法判断偏导数存在性
-
-2、偏导在一点的连续性：求偏导在一点的极限，与定义值相比较判断偏导数在此点的偏导连续性
-
-
-
-\subsection{可微性}\index{函数的特征!可微性}
-
-1、利用可微的定义：考察$f_{x}^{\prime}\left(x_{0}, y_{0}\right)和f_{y}^{\prime}\left(x_{0}, y_{0}\right)$是否都存在，如果$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$和$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$中至少有一 个不存在，则函数$f(x, y)$在$\left(x_{0}, y_{0}\right)$不可微；如果$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$和$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$都存在，考察$\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{\left[f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)\right]-\left[f_{x}^{\prime}\left(x_{0}, y_{0}\right) \Delta x+f_{y}^{\prime}\left(x_{0}, y_{0}\right) \Delta y\right]}{\rho}=0$（可微定义式）是否成立，其中$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$，如果该式成立，则称函数$f(x, y)$在点$(x_0, y_0)$处可微（可微的充要条件）（可微的定义可以将微分的概念（$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$或者$\Delta z=A \Delta x+B \Delta y+o(\rho)$）和偏导即可微的必要条件（$\mathrm{d} z=\frac{\partial z}{\partial x} \mathrm{~d} x+\frac{\partial z}{\partial y} \mathrm{~d} y$）关联起来，这里好像就有$A=\frac{\partial z}{\partial x},B=\frac{\partial z}{\partial y}$的嫌疑）
-
-2、利用可微的必要条件：可微函数必可导，换言之，不可导的函数一定不可微（点处导数定义不存在）（判断二元函数不可微）
-
-3、利用可微的充分条件：有连续一阶偏导数的函数一定可微（点处偏导数定义值等于偏导在该点的极限值）（判断二元函数可微）
-
-4、利用微分的概念：函数$z=f(x, y)$在点$(x, y)$处的全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$可以表示为$\Delta z=A \Delta x+B \Delta y+o(\rho)$，其中$A,B$不依赖于$\Delta x, \Delta y$，而仅与$x, y$有关，$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$（也可以证明全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$是$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$的无穷小量，即$\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\rho}=0$，此时$A=0,B=0$）
-
-
-
-\subsection{极值与驻点的定义}\index{函数的特征!极值与驻点的定义}
-
-1、多元函数极值点定义：类似于领域内$f(x, y) \leqslant f\left(x_{0}, y_{0}\right)$（极大值）（注意可以取等号）（极值点除了需要考虑驻点外，还要考虑导数不存在的点）
-
-2、多元函数驻点定义：使$f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0$同时成立的点$(x, y)$称为函数$f(x, y)$的驻点（驻点不一定是极值点；极值点不一定是驻点）
-
-3、多元函数极值的必要条件：设函数$f(x, y)$在点$M_{0}\left(x_{0}, y_{0}\right)$的一阶偏导数存在，且在$\left(x_{0}, y_{0}\right)$取得极值，则$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0$（由此可见具有一阶偏导数的函数的极值点一定是驻点，但驻点不一定是极值点）
-
-
-
-\subsection{求解最大最小值}\index{函数的特征!求解最大最小值}
-
-1、求出所有的极值点（求驻点判断极值点）和边界上的最大最小值
-
-2、比较这些极值和边界上的最大最小值，其中最大的为最大值，最小的为最小值（废话）
-
-注意：如果区域内不存在驻点，那么最值在边界上取（转换为条件极值问题，条件为边界）
-
-备注：有的最值问题可以从几何上进行考虑，转换为几何关系
-
-备注：对于闭环内的极值就是对应的最值（例如在一个圆环（线）型定义域上，如果在线上取得极大值或者极小值，那么该极大值或者极小值就是对应的最大值和最小值，这是由于圆线型定义域上函数光滑（处处可导）得到的）
-
 \section{线面的空间特征（切、法）}\index{线面的空间特征（切、法）}
 
 
@@ -264,16 +274,6 @@
 注意：求解与指定面平行的平面时，注意要求解的点是在曲面上的
 
 
-
-\section{一些几何证明问题}\index{一些几何证明问题}
-
-1、证明曲面为柱面：只需证明曲面上任一点的切平面平行于一条定直线，即证明曲面上任一点的法向量垂直于定向量（设定向量的值，并与曲面法向量相乘，得到利用对应参数相等求解的方程）（即求解这个定向量即可）
-
-\section{泰勒定理}\index{泰勒定理}
-
-1、拉格朗日余项泰勒展开式：$f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+R_{1}$，其中余项$R_{1}=\frac{1}{2 !}[\frac{\partial^{2} f\left(P_{1}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(P_{1}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(P_{1}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]$，点$P_{1}$为$\left(x_{0}+\theta\left(x-x_{0}\right), y_{0}+\theta\left(y-y_{0}\right)\right)$
-
-2、佩亚诺型余 项的二阶泰勒公式展开式：$f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+\frac{1}{2 !}[\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]+o\left(\rho^{2}\right)$，其中$\rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}$
 
 \section{方向导数、梯度、散度、旋度}\index{方向导数、梯度、散度、旋度}
 
