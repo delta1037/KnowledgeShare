@@ -1,7 +1,7 @@
 ﻿公式概要,公式,属性,分类
 抽样分布公式,"1、卡方：$\chi^{2} = X_1^2+X_2^2+\cdots+X_n^2 \sim \chi^{2}(n)$，$X_1,X_2,\cdots ,X_n$相互独立且服从标准正态分布
 2、T分布：$t=\frac{X}{\sqrt{Y/n}} \sim t(n)$，其中$X \sim N(0,1)$，$Y\sim \chi^{2}\left(n\right)$，且$X,Y$相互独立
-3、F分布：$F=\frac{U / n_{1}}{V / n_{2}} \sim F\left(n_{1}, n_{2}\right)$，其中$U \sim \chi^{2}\left(n_{1}\right)$，$ V \sim \chi^{2}\left(n_{2}\right)$，且$U,V$相互独立（delta1037）",添加该列方便用脚本处理,概率论公式
+3、F分布：$F=\frac{U / n_{1}}{V / n_{2}} \sim F\left(n_{1}, n_{2}\right)$，其中$U \sim \chi^{2}\left(n_{1}\right)$，$ V \sim \chi^{2}\left(n_{2}\right)$，且$U,V$相互独立",添加该列方便用脚本处理,概率论公式
 估计公式,"单样本构造：
 0、前提：设总体$X \sim N\left(\mu, \sigma^{2}\right), X_{1}, X_{2},\cdots, X_{n}$是来自$X$的样本，样本均值$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$, 样本方差$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}$
 1、（单）样本均值分布：$\bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right)$，标准化$U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$

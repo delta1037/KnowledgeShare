@@ -5,16 +5,18 @@
 import csv
 import logging
 import os.path
-from notion_api.database import Database
 from configuration_service import ConfigurationService
+import NotionDump
+from NotionDump.Dump.database import Database
+from NotionDump.Notion.Notion import NotionQuery
 
 SUBSECTION_SPLIT_STR = "——————————————————————————\n"
 SUBSECTION_SPLIT_STR_WITHOUT_N = "——————————————————————————"
 
 
 class AutoGenLatex:
-    def __init__(self, _token, _database_list, _classify_file, _col_name_dic, _output_dir):
-        self.token = _token
+    def __init__(self, _query_handle: NotionQuery, _database_list, _classify_file, _col_name_dic, _output_dir):
+        self.query_handle = _query_handle
         self.database_path = "./database/"
         if not os.path.exists(self.database_path):
             os.mkdir(self.database_path)
@@ -34,10 +36,13 @@ class AutoGenLatex:
         for database in self.database_list:
             print("get database " + database)
             logging.log(logging.INFO, "get database " + database)
-            db_handle = Database(token=self.token, database_id=database)
             output_file_name = self.database_path + database + ".csv"
-            ret = db_handle.query_database_to_csv(output_file_name, col_name_list=self.col_name_list)
-            if ret is True:
+
+            # 数据库操作句柄，这是个bug，把解析类型当作内部变量了，只能2了
+            db_handle = Database(database_id=database, query_handle=self.query_handle, parser_type=2)
+            # print("export col ", self.col_name_list)
+            ret = db_handle.dump_to_file(file_name=output_file_name, col_name_list=self.col_name_list)
+            if ret != "":
                 logging.log(logging.INFO, "save csv file " + output_file_name)
                 self.csv_list.append(output_file_name)
 
@@ -157,7 +162,10 @@ class AutoGenLatex:
             # 遍历源table文件
             for line in ideas_table:
                 # 过滤不属于本章节的内容，如果属于多个章节按照第一个算
-                if line[self.col_name_dic["classify_col"]].split('\n')[0] != item:
+                # print(line[self.col_name_dic["classify_col"]])
+                chapter_name = line[self.col_name_dic["classify_col"]].split(',')[0]
+                if chapter_name != item:
+                    # print("not line ", chapter_name)
                     continue
 
                 # 解析内容，并写入到文件中
@@ -202,9 +210,15 @@ if __name__ == '__main__':
         logging.exception("no database to process !!!")
         exit(0)
 
+    # 获取Notion查询句柄
+    query_handle = NotionQuery(token=config.get_key("token"))
+    if query_handle is None:
+        logging.exception("query handle init error")
+        exit(-1)
+
     print("Start parser...")
     gen_handle = AutoGenLatex(
-        _token=config.get_key("token"),
+        _query_handle=query_handle,
         _database_list=database_list,
         _classify_file=classify_file,
         _col_name_dic=col_name_dic,

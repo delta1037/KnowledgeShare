@@ -3,9 +3,9 @@
 
 \section{欧拉方程求解}\index{欧拉方程求解}
 
-1、形式：$x^{n} y^{(n)}+p_{1} x^{n-1} y^{(n-1)}+\cdots+p_{n-1} x y^{\prime}+p_{n} y=f(x)$（其中$p_{1}, p_{2}, \cdots, p_{n}$是常数）
+1、形式：$ x^{n} y^{(n)}+p_{1} x^{n-1} y^{(n-1)}+\cdots+p_{n-1} x y^{\prime}+p_{n} y=f(x) $（其中$ p_{1}, p_{2}, \cdots, p_{n} $是常数）
 
-2、求解：令$x=\mathrm{e}^{t}$，则$t=\ln x$，从而$\frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x}$，所以$y^{\prime} =\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{\mathrm{d} y}{\mathrm{~d} t} \cdot \frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}$，$y^{\prime \prime} =\frac{\mathrm{d}^{2} y}{\mathrm{~d} x^{2}}=\frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}\right)=-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x} \frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{\mathrm{d} y}{\mathrm{~d} t}\right) =-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x^{2}} \frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}$，则$x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}$，引入微分算子$D=\frac{\mathrm{d}}{\mathrm{d} t}$，从而有$x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}=D y, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}=D^{2} y-D y=D(D-1) y$，从而将欧拉方程化为线性常系数方程求解
+2、求解：令$ x=\mathrm{e}^{t} $，则$ t=\ln x $，从而$ \frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x} $，所以$ y^{\prime} =\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{\mathrm{d} y}{\mathrm{~d} t} \cdot \frac{\mathrm{d} t}{\mathrm{~d} x}=\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t} $，$ y^{\prime \prime} =\frac{\mathrm{d}^{2} y}{\mathrm{~d} x^{2}}=\frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{1}{x} \frac{\mathrm{d} y}{\mathrm{~d} t}\right)=-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x} \frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{\mathrm{d} y}{\mathrm{~d} t}\right) =-\frac{1}{x^{2}} \frac{\mathrm{d} y}{\mathrm{~d} t}+\frac{1}{x^{2}} \frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}} $，则$ x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t} $，引入微分算子$ D=\frac{\mathrm{d}}{\mathrm{d} t} $，从而有$ x y^{\prime}=\frac{\mathrm{d} y}{\mathrm{~d} t}=D y, x^{2} y^{\prime \prime}=\frac{\mathrm{d}^{2} y}{\mathrm{~d} t^{2}}-\frac{\mathrm{d} y}{\mathrm{~d} t}=D^{2} y-D y=D(D-1) y $，从而将欧拉方程化为线性常系数方程求解
 
 \section{方程解构造方程}\index{方程解构造方程}
 
@@ -17,9 +17,9 @@
 
 2、先由方程的特解互相组合（相减）求解方程的齐次解（求得几个线性无关的齐次解）
 
-3、由齐次解的形式得到方程特征方程的根，由此得到方程的左边形式，等号右边设为$f(x)$的形式
+3、由齐次解的形式得到方程特征方程的根，由此得到方程的左边形式，等号右边设为$ f(x) $的形式
 
-4、将不包含齐次解的特解代入得到$f(x)$
+4、将不包含齐次解的特解代入得到$ f(x) $
 
 
 
@@ -37,33 +37,33 @@
 
 \subsection{常见的几类一阶方程求解}\index{一般微分方程!常见的几类一阶方程求解}
 
-1、可分离变量的方程：形式：$\frac{\mathrm{d} y}{\mathrm{~d} x}=f(x) g(y)$；求解：将原方程改写为$\frac{\mathrm{d} y}{g(y)}=f(x) \mathrm{d} x \quad(g(y) \neq 0)$，然后两端求积分$\int \frac{\mathrm{d} y}{g(y)}=\int f(x) \mathrm{d} x$
+1、可分离变量的方程：形式：$ \frac{\mathrm{d} y}{\mathrm{~d} x}=f(x) g(y) $；求解：将原方程改写为$ \frac{\mathrm{d} y}{g(y)}=f(x) \mathrm{d} x \quad(g(y) \neq 0) $，然后两端求积分$ \int \frac{\mathrm{d} y}{g(y)}=\int f(x) \mathrm{d} x $
 
-2、齐次方程：形式：$\frac{\mathrm{d} y}{\mathrm{~d} x}=f\left(\frac{y}{x}\right)$；求解：作变量代换$\frac{y}{x}=u$，则$y=x u, \frac{\mathrm{d} y}{\mathrm{~d} x}=u+x \frac{\mathrm{d} u}{\mathrm{~d} x}$，代入到原方程化为可分离变量的方程$\frac{\mathrm{d} u}{f(u)-u}=\frac{\mathrm{d} x}{x}$
+2、齐次方程：形式：$ \frac{\mathrm{d} y}{\mathrm{~d} x}=f\left(\frac{y}{x}\right) $；求解：作变量代换$ \frac{y}{x}=u $，则$ y=x u, \frac{\mathrm{d} y}{\mathrm{~d} x}=u+x \frac{\mathrm{d} u}{\mathrm{~d} x} $，代入到原方程化为可分离变量的方程$ \frac{\mathrm{d} u}{f(u)-u}=\frac{\mathrm{d} x}{x} $
 
-3、线性方程：形式：$\frac{\mathrm{d} y}{\mathrm{~d} x}+P(x) y=Q(x)$；求解：通解为$y=\mathrm{e}^{-\int P(x) \mathrm{d} x}\left\{\int \left[Q(x) \mathrm{e}^{\int P(x) \mathrm{d} x} \right]\mathrm{~d} x+C\right\}$（推导：先求齐次方程的解，然后设其中$C=U(x)$，代入求$U(x)$，即求非齐次的解）（如果题目有特殊点代入可以求得常数$C$）（该不定积分只能用来计算，讨论性质需要转换成变上限积分，即以0为下限，x为上限，分离出一个常数）
+3、线性方程：形式：$ \frac{\mathrm{d} y}{\mathrm{~d} x}+P(x) y=Q(x) $；求解：通解为$ y=\mathrm{e}^{-\int P(x) \mathrm{d} x}\left\{\int \left[Q(x) \mathrm{e}^{\int P(x) \mathrm{d} x} \right]\mathrm{~d} x+C\right\} $（推导：先求齐次方程的解，然后设其中$ <font color=orange>C=U(x)</font> $，代入求$ <font color=orange>U(x)</font> $，即求非齐次的解）（如果题目有特殊点代入可以求得常数$ <font color=orange>C</font> $）（该不定积分只能用来计算，讨论性质需要转换成变上限积分，即以0为下限，x为上限，分离出一个常数）
 
-4、伯努利方程：形式：$y^{\prime}+p(x) y=Q(x) y^{n},(n \neq 0,1)$；求解：改写为$y^{-n} y^{\prime}+p(x) y^{1-n}=Q(x)$，令$u=y^{1-n}$，化为一阶线性微分方程$\frac{1}{1-n} \cdot \frac{\mathrm{d} u}{\mathrm{~d} x}+p(x) u=Q(x)$（特征：具有高次方的$y$）
+4、伯努利方程：形式：$ y^{\prime}+p(x) y=Q(x) y^{n},(n \neq 0,1) $；求解：改写为$ y^{-n} y^{\prime}+p(x) y^{1-n}=Q(x) $，令$ u=y^{1-n} $，化为一阶线性微分方程$ \frac{1}{1-n} \cdot \frac{\mathrm{d} u}{\mathrm{~d} x}+p(x) u=Q(x) $（特征：具有高次方的$ <font color=purple>y</font> $）
 
-5、全微分方程：形式：$P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=0$，左端是某个函数的全微分$\mathrm{d} u(x, y)=P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y$；求解：方程通解为$u(x, y)=C$，求解$u(x, y)$可以用偏积分、凑微分、线积分（当$P(x, y), Q(x, y)$在单连通域$G$内具有一阶连续偏导数时，方程$P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=0$是全微分方程的充要条件是$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$）
+5、全微分方程：形式：$ P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=0 $，左端是某个函数的全微分$ \mathrm{d} u(x, y)=P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y $；求解：方程通解为$ u(x, y)=C $，求解$ u(x, y) $可以用偏积分、凑微分、线积分（当$ P(x, y), Q(x, y) $在单连通域$ G $内具有一阶连续偏导数时，方程$ P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=0 $是全微分方程的充要条件是$ \frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x} $）
 
-备注：如果给定一阶微分方程不属于上述五种，（可能的预处理方式）首先考虑$x,y$对调（即认为$x$是$y$的函数），再判断新方程类型；或者利用简单的变量代换；对于积分式，求导可获得微分方程（如果求导后函数变量不是$x$形式，可以利用更高阶导进行化简），将其化为五种类型之一求解
+备注：如果给定一阶微分方程不属于上述五种，（可能的预处理方式）首先考虑$ <font color=orange>x,y</font> $对调（即认为$ <font color=orange>x</font> $是$ <font color=orange>y</font> $的函数），再判断新方程类型；或者利用简单的变量代换；对于积分式，求导可获得微分方程（如果求导后函数变量不是$ <font color=orange>x</font> $形式，可以利用更高阶导进行化简），将其化为五种类型之一求解
 
 
 
 \subsection{可降阶的高阶微分方程求解：（核心点都是降阶，针对不同类型降阶方法不同）}\index{一般微分方程!可降阶的高阶微分方程求解：（核心点都是降阶，针对不同类型降阶方法不同）}
 
-1、${y}^{(n)}={f}({x})$类型：原方程两端反复对$x$积分，便可求得原方程的解
+1、$ {y}^{(n)}={f}({x}) $类型：原方程两端反复对$ x $积分，便可求得原方程的解
 
-2、${y}^{\prime \prime}={f}\left({x}, {y}^{\prime}\right)$类型（不显含${y}$）：作变换$y^{\prime}=p$，则$y^{\prime \prime}=\frac{\mathrm{d} p}{\mathrm{~d} x}$，代人原方程得$\frac{\mathrm{d} p}{\mathrm{~d} x}=f(x, p)$，解此一阶方程（特征：跨阶）
+2、$ {y}^{\prime \prime}={f}\left({x}, {y}^{\prime}\right) $类型（不显含$ {y} $）：作变换$ y^{\prime}=p $，则$ y^{\prime \prime}=\frac{\mathrm{d} p}{\mathrm{~d} x} $，代人原方程得$ \frac{\mathrm{d} p}{\mathrm{~d} x}=f(x, p) $，解此一阶方程（特征：跨阶）
 
-3、${y}^{\prime \prime}={f}\left({y}, {y}^{\prime}\right)$类型（不显含$x$）：作变换$y^{\prime}=p$，则$y^{\prime \prime}=\frac{\mathrm{d} p}{\mathrm{~d} y} \frac{\mathrm{d} y}{\mathrm{~d} x}=p \frac{\mathrm{d} p}{\mathrm{~d} y}$，代入方程得$p \frac{\mathrm{d} p}{\mathrm{~d} y}=f(y, p)$，解此一阶方程（特征：只有$y$）
+3、$ {y}^{\prime \prime}={f}\left({y}, {y}^{\prime}\right) $类型（不显含$ x $）：作变换$ y^{\prime}=p $，则$ y^{\prime \prime}=\frac{\mathrm{d} p}{\mathrm{~d} y} \frac{\mathrm{d} y}{\mathrm{~d} x}=p \frac{\mathrm{d} p}{\mathrm{~d} y} $，代入方程得$ p \frac{\mathrm{d} p}{\mathrm{~d} y}=f(y, p) $，解此一阶方程（特征：只有$ <font color=purple>y</font> $）
 
 
 
 \subsection{常见的微分方程化简方式}\index{一般微分方程!常见的微分方程化简方式}
 
-1、形如$\frac{\mathrm{d} y}{\mathrm{~d} x}=f\left(\frac{a_{1} x+b_{1} y+c_{1}}{a_{2} x+b_{2} y+c_{2}}\right)$：令$x=X+h, y=Y+k$，代入到方程求解$h$和$k$的值，将原分式变成齐次方程形式（去掉常数项）
+1、形如$ \frac{\mathrm{d} y}{\mathrm{~d} x}=f\left(\frac{a_{1} x+b_{1} y+c_{1}}{a_{2} x+b_{2} y+c_{2}}\right) $：令$ x=X+h, y=Y+k $，代入到方程求解$ h $和$ k $的值，将原分式变成齐次方程形式（去掉常数项）
 
 \section{微分方程基本概念}\index{微分方程基本概念}
 
@@ -79,11 +79,11 @@
 
 6、微分方程的定解条件：用来确定通解中任意常数的条件称为微分方程的定解条件或者初始条件
 
-7、微分方程的积分曲线：微分方程的解$y=f(x)$所表示的曲线
+7、微分方程的积分曲线：微分方程的解$ y=f(x) $所表示的曲线
 
 注意：区分齐次方程的通解（就是通解）和非齐次方程通解（对应齐次方程的通解+非齐次方程特解）
 
-注意：对方程的求解注意标注自变量的范围（$x$）、任意常数的范围（即$C$为任意常数或$C>0$）、$ln$函数中该加绝对值的要加绝对值
+注意：对方程的求解注意标注自变量的范围（$ <font color=purple>**x**</font> $）、任意常数的范围（即$ <font color=purple>**C**</font> $为任意常数或$ <font color=purple>**C>0**</font> $）、$ <font color=purple>**ln**</font> $函数中该加绝对值的要加绝对值
 
 \section{线性常系数齐次方程求解}\index{线性常系数齐次方程求解}
 
@@ -91,45 +91,45 @@
 
 \subsection{线性方程解的结构与叠加原理：（可以由方程的解构造方程）}\index{线性常系数齐次方程求解!线性方程解的结构与叠加原理：（可以由方程的解构造方程）}
 
-1、齐次方程解的结构：齐次方程$y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=0$的通解为$y=C_{1} y_{1}(x)+C_{2} y_{2}(x)$（其中$y_{1}(x)$和$y_{2}(x)$是齐次方程两个线性无关的特解，$C_{1}$与$C_{2}$是两个任意常数）
+1、齐次方程解的结构：齐次方程$ y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=0 $的通解为$ y=C_{1} y_{1}(x)+C_{2} y_{2}(x) $（其中$ y_{1}(x) $和$ y_{2}(x) $是齐次方程两个线性无关的特解，$ C_{1} $与$ C_{2} $是两个任意常数）
 
-2、非齐次方程解的结构：非齐次方程$y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f(x)$的通解为$y=Y(x)+y^{*}(x)$（其中$Y(x)$是该非齐次方程对应的齐次方程的通解，$y^{*}(x)$为该非齐次方程的一个特解）
+2、非齐次方程解的结构：非齐次方程$ y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f(x) $的通解为$ y=Y(x)+y^{*}(x) $（其中$ Y(x) $是该非齐次方程对应的齐次方程的通解，$ y^{*}(x) $为该非齐次方程的一个特解）
 
-3、线性方程解的叠加原理：若$y_{1}^{*}(x)$和$y_{2}^{*}(x)$分别是方程组$\begin{aligned} &y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f_{1}(x) \\ &y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f_{2}(x) \end{aligned}$的特解，那么$y_{1}^{*}(x)+y_{2}^{*}(x)$是方程$y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f_{1}(x)+f_{2}(x)$的一个特解
+3、线性方程解的叠加原理：若$ y_{1}^{*}(x) $和$ y_{2}^{*}(x) $分别是方程组$ \begin{aligned} &y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f_{1}(x) \\ &y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f_{2}(x) \end{aligned} $的特解，那么$ y_{1}^{*}(x)+y_{2}^{*}(x) $是方程$ y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=f_{1}(x)+f_{2}(x) $的一个特解
 
-备注：以上结论可以推广到$n$阶方程
-
-
-
-\subsection{二阶常系数齐次线性方程（$y^{\prime \prime}+p y^{\prime}+q y=0$）的通解：对于特征方程$r^{2}+p r+q=0$的两个根$ r_{1}, r_{2} $}\index{线性常系数齐次方程求解!二阶常系数齐次线性方程（$y^{\prime \prime}+p y^{\prime}+q y=0$）的通解：对于特征方程$r^{2}+p r+q=0$的两个根$ r_{1}, r_{2} $}
-
-1、两个不相等的实根$r_{1}, r_{2}$：方程通解为$ y=C_{1} \mathrm{e}^{r_1 x}+C_{2} \mathrm{e}^{r_2 x}$
-
-2、两个相等的实根$r_{1}=r_{2}$：方程通解为$y=\left(C_{1}+C_{2} x\right) \mathrm{e}^{r_1 x}$
-
-3、一对共轭复根$r_{1,2}=\alpha \pm \mathrm{i} \beta$：方程通解为$y=\mathrm{e}^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$
+备注：以上结论可以推广到$ <font color=orange>n</font> $阶方程
 
 
 
-\subsection{$n$阶常系数齐次线性方程（$y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0$）的通解：对于特征方程的根}\index{线性常系数齐次方程求解!$n$阶常系数齐次线性方程（$y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0$）的通解：对于特征方程的根}
+\subsection{二阶常系数齐次线性方程（$ y^{\prime \prime}+p y^{\prime}+q y=0 $）的通解：对于特征方程$ r^{2}+p r+q=0 $的两个根$  r_{1}, r_{2}  $}\index{线性常系数齐次方程求解!二阶常系数齐次线性方程（$ y^{\prime \prime}+p y^{\prime}+q y=0 $）的通解：对于特征方程$ r^{2}+p r+q=0 $的两个根$  r_{1}, r_{2}  $}
 
-1、单实根$r$：方程通解对应一项$ C \mathrm{e}^{rx}$
+1、两个不相等的实根$ r_{1}, r_{2} $：方程通解为$  y=C_{1} \mathrm{e}^{r_1 x}+C_{2} \mathrm{e}^{r_2 x} $
 
-2、$k$重实根$r$：方程通解对应k项${e}^{r x}\left(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}\right)$
+2、两个相等的实根$ r_{1}=r_{2} $：方程通解为$ y=\left(C_{1}+C_{2} x\right) \mathrm{e}^{r_1 x} $
 
-3、一对单复根$r_{1,2}=\alpha \pm \mathrm{i} \beta$：方程通解对应两项${e}^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$
+3、一对共轭复根$ r_{1,2}=\alpha \pm \mathrm{i} \beta $：方程通解为$ y=\mathrm{e}^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right) $
 
-4、一对$k$重单复根$r_{1,2}=\alpha \pm \mathrm{i} \beta$：方程通解为对应$2k$项${e}^{{ax}}[(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}) \cos \beta x+(D_{1}+D_{2} x+\cdots+D_{k} x^{k-1}) \sin \beta x]$
+
+
+\subsection{$ **n** $阶常系数齐次线性方程（$ y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0 $）的通解：对于特征方程的根}\index{线性常系数齐次方程求解!$ **n** $阶常系数齐次线性方程（$ y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0 $）的通解：对于特征方程的根}
+
+1、单实根$ r $：方程通解对应一项$  C \mathrm{e}^{rx} $
+
+2、$ <u>k</u> $重实根$ r $：方程通解对应k项$ {e}^{r x}\left(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}\right) $
+
+3、一对单复根$ r_{1,2}=\alpha \pm \mathrm{i} \beta $：方程通解对应两项$ {e}^{a x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right) $
+
+4、一对$ <u>k</u> $重单复根$ r_{1,2}=\alpha \pm \mathrm{i} \beta $：方程通解为对应$ 2k $项$ {e}^{{ax}}[(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}) \cos \beta x+(D_{1}+D_{2} x+\cdots+D_{k} x^{k-1}) \sin \beta x] $
 
 
 
 \subsection{线性常系数非齐次方程特解}\index{线性常系数齐次方程求解!线性常系数非齐次方程特解}
 
-1、$f(x)=\mathrm{e}^{\lambda x} P_{m}(x)$型（$\lambda$为已知常数，$P_{m}(x)$为$x$的$m$次已知多项式）：待定特解设为$y^{}=x^{k} \mathrm{e}^{\lambda x} Q_{m}(x)$（$k$是特征方程根$\lambda$的重数，$Q_{m}(x)$为系数待定的$x$的$m$次多项式）
+1、$ f(x)=\mathrm{e}^{\lambda x} P_{m}(x) $型（$ \lambda $为已知常数，$ P_{m}(x) $为$ x $的$ m $次已知多项式）：待定特解设为$ y^{}=x^{k} \mathrm{e}^{\lambda x} Q_{m}(x) $（$ k $是特征方程根$ \lambda $的重数，$ Q_{m}(x) $为系数待定的$ x $的$ m $次多项式）
 
-2、$f(x)=\mathrm{e}^{\lambda x}\left[P_{l}(x) \cos w x+P_{n}(x) \sin w x\right]$型（$\lambda$为已知常数，$P_{l}(x)$与$P_{n}(x)$分别为$x$的$l$次、$x$的$n$次的已知多项式）：待定特解设为$y^{}=x^{k} \mathrm{e}^{\lambda x}\left[R_{m}^{(1)}(x) \cos w x+R_{m}^{(2)}(x) \sin w x\right]$（$k$是特征方程根$\lambda+\mathrm{i} w\left(\right.$或$\lambda-\mathrm{i} w$) 的重数，$R_{m}^{(1)}(x)$与$R_{m}^{(2)}(x)$为系数待定的$m$次多项式，$m=\max \{l, n\}$）
+2、$ f(x)=\mathrm{e}^{\lambda x}\left[P_{l}(x) \cos w x+P_{n}(x) \sin w x\right] $型（$ <font color=purple>\lambda</font> $为已知常数，$ <font color=purple>P_{l}(x)</font> $与$ <font color=purple>P_{n}(x)</font> $分别为$ <font color=purple>x</font> $的$ <font color=purple>l</font> $次、$ <font color=purple>x</font> $的$ <font color=purple>n</font> $次的已知多项式）：待定特解设为$ y^{}=x^{k} \mathrm{e}^{\lambda x}\left[R_{m}^{(1)}(x) \cos w x+R_{m}^{(2)}(x) \sin w x\right] $（$ <font color=purple>k</font> $是特征方程根$ <font color=purple>\lambda+\mathrm{i} w\left(\right.</font> $或$ <font color=purple>\lambda-\mathrm{i} w</font> $) 的重数，$ <font color=purple>R_{m}^{(1)}(x)</font> $与$ <font color=purple>R_{m}^{(2)}(x)</font> $为系数待定的$ <font color=purple>m</font> $次多项式，$ <font color=purple>m=\max \{l, n\}</font> $）
 
-注意：齐次形式的解与根有关，且解形式固定；非齐次方程的形式还与齐次中的特征方程根重数有关（构造前边的$x^{k}$部分，与原来的$x$幂次项$Q_{m}(x)$的构造不冲突）
+注意：齐次形式的解与根有关，且解形式固定；非齐次方程的形式还与齐次中的特征方程根重数有关（构造前边的$ <font color=purple>x^{k}</font> $部分，与原来的$ <font color=purple>x</font> $幂次项$ <font color=purple>Q_{m}(x)</font> $的构造不冲突）
 
 注意：特解带回到方程求未知数时不要忘记方程中的系数
 

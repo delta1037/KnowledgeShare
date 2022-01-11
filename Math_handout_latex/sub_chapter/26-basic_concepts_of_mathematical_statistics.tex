@@ -7,15 +7,15 @@
 
 \subsection{卡方分布}\index{常用统计抽样分布-卡方、T、F!卡方分布}
 
-0、定义：$\chi^{2} = X_1^2+X_2^2+\cdots+X_n^2 \sim \chi^{2}(n)$，自由度为$n$，$X_1,X_2,\cdots ,X_n$相互独立且服从标准正态分布
+0、定义：$ \chi^{2} = X_1^2+X_2^2+\cdots+X_n^2 \sim \chi^{2}(n) $，自由度为$ n $，$ X_1,X_2,\cdots ,X_n $相互独立且服从标准正态分布
 
-1、上侧$\alpha$分位数定义：$P\left\{\chi^{2}>\chi_{\alpha}^{2}(n)\right\}=\int_{\chi_{\alpha}^{2}(n)}^{+\infty} f(t) \mathrm{d} t=\alpha$
+1、上侧$ \alpha $分位数定义：$ P\left\{\chi^{2}>\chi_{\alpha}^{2}(n)\right\}=\int_{\chi_{\alpha}^{2}(n)}^{+\infty} f(t) \mathrm{d} t=\alpha $
 
-2、卡方均值：$E\left(\chi^{2}\right)=n$
+2、卡方均值：$ E\left(\chi^{2}\right)=n $
 
-3、卡方方差：$D\left(\chi^{2}\right)=2 n$
+3、卡方方差：$ D\left(\chi^{2}\right)=2 n $
 
-4、可加性：$\chi_{1}^{2}+\chi_{2}^{2} \sim \chi^{2}\left(n_{1}+n_{2}\right)$，其中$\chi_{1}^{2}, \chi_{2}^{2}$相互独立，$\chi_{1}^{2} \sim \chi^{2}\left(n_{1}\right)$，$\chi_{2}^{2} \sim \chi^{2}\left(n_{2}\right)$
+4、可加性：$ \chi_{1}^{2}+\chi_{2}^{2} \sim \chi^{2}\left(n_{1}+n_{2}\right) $，其中$ \chi_{1}^{2}, \chi_{2}^{2} $相互独立，$ \chi_{1}^{2} \sim \chi^{2}\left(n_{1}\right) $，$ \chi_{2}^{2} \sim \chi^{2}\left(n_{2}\right) $
 
 注意：分位数是将面积（概率）与x轴的坐标对应了起来，卡方分布只有右边
 
@@ -23,11 +23,11 @@
 
 \subsection{T分布}\index{常用统计抽样分布-卡方、T、F!T分布}
 
-0、定义：$t=\frac{X}{\sqrt{Y/n}} \sim t(n)$，其中$X \sim N(0,1)$，$Y\sim \chi^{2}\left(n\right)$，且$X,Y$相互独立
+0、定义：$ t=\frac{X}{\sqrt{Y/n}} \sim t(n) $，其中$ X \sim N(0,1) $，$ Y\sim \chi^{2}\left(n\right) $，且$ **X,Y** $相互独立
 
-1、上侧$\alpha$分位数定义：$P\left\{t>t_{\alpha}(n)\right\}=\int_{t_{\alpha}(n)}^{+\infty} f(t) \mathrm{d} t=\alpha$，
+1、上侧$ \alpha $分位数定义：$ P\left\{t>t_{\alpha}(n)\right\}=\int_{t_{\alpha}(n)}^{+\infty} f(t) \mathrm{d} t=\alpha $，
 
-2、分位数性质：$t$分布具有对称性，$t_{1-\alpha}(n)=t_{\alpha}(n)$
+2、分位数性质：$ t $分布具有对称性，$ t_{1-\alpha}(n)=t_{\alpha}(n) $
 
 注意：分位数是将面积（概率）与x轴的坐标对应了起来，T分布是关于X轴对称的
 
@@ -35,11 +35,11 @@
 
 \subsection{F分布}\index{常用统计抽样分布-卡方、T、F!F分布}
 
-0、定义：$F=\frac{U / n_{1}}{V / n_{2}} \sim F\left(n_{1}, n_{2}\right)$，其中$U \sim \chi^{2}\left(n_{1}\right)$，$ V \sim \chi^{2}\left(n_{2}\right)$，且$U,V$相互独立；并且由定义可知$\frac{1}{F} \sim F\left(n_{2}, n_{1}\right)$
+0、定义：$ F=\frac{U / n_{1}}{V / n_{2}} \sim F\left(n_{1}, n_{2}\right) $，其中$ U \sim \chi^{2}\left(n_{1}\right) $，$  V \sim \chi^{2}\left(n_{2}\right) $，且$ **U,V** $相互独立；并且由定义可知$ \frac{1}{F} \sim F\left(n_{2}, n_{1}\right) $
 
-1、上侧$\alpha$分位数定义：$P\left\{F>F_{\alpha}\left(n_{1}, n_{2}\right)\right\}=\int_{F_{\alpha}\left(n_{1}, n_{2}\right)}^{+\infty} f(t) \mathrm{d} t=\alpha$
+1、上侧$ \alpha $分位数定义：$ P\left\{F>F_{\alpha}\left(n_{1}, n_{2}\right)\right\}=\int_{F_{\alpha}\left(n_{1}, n_{2}\right)}^{+\infty} f(t) \mathrm{d} t=\alpha $
 
-2、分位数性质：$F_{1-\alpha/2}(n_{2},n_{1})=\frac{1}{F_{{\alpha}/{2}}\left(n_{1}, n_{2}\right)}$（三变性质）
+2、分位数性质：$ F_{1-\alpha/2}(n_{2},n_{1})=\frac{1}{F_{{\alpha}/{2}}\left(n_{1}, n_{2}\right)} $（三变性质）
 
 注意：分位数是将面积（概率）与x轴的坐标对应了起来，F分布只有右边
 
@@ -49,27 +49,27 @@
 
 \subsection{数字特征}\index{样本的数字特征!数字特征}
 
-1、样本均值：$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$
+1、样本均值：$ \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i} $
 
-2、样本方差：$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\frac{1}{n-1}\left(\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right)$（样本方差和方差是具有区别的）
+2、样本方差：$ S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\frac{1}{n-1}\left(\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right) $（样本方差和方差是具有区别的）
 
-3、标准差：$S$
+3、标准差：$ S $
 
-4、样本$k$阶(原点) 矩：$A_{k}=\frac{1}{n} \sum_{i=1}^{n} X_{i}^{k}, k=1,2, \cdots$（原点矩的和形式）
+4、样本$ k $阶(原点) 矩：$ A_{k}=\frac{1}{n} \sum_{i=1}^{n} X_{i}^{k}, k=1,2, \cdots $（原点矩的和形式）
 
-5、样本k阶中心矩：$B_{k}=\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}, k=2,3, \cdots$（原点矩的和形式）（中心是根据样本均值来定的）
+5、样本k阶中心矩：$ B_{k}=\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}, k=2,3, \cdots $（原点矩的和形式）（中心是根据样本均值来定的）
 
 
 
 \subsection{数字特征性质}\index{样本的数字特征!数字特征性质}
 
-1、样本均值期望：$E(\bar{X}) = \mu$（样本均值公式代入证明）
+1、样本均值期望：$ E(\bar{X}) = \mu $（样本均值公式代入证明）
 
-2、样本均值方差：$D(\bar{X}) = \frac{\sigma^2}{n}$（样本均值公式代入证明）
+2、样本均值方差：$ D(\bar{X}) = \frac{\sigma^2}{n} $（样本均值公式代入证明）
 
-3、样本方差均值：$E(S^2) = \sigma^2$（样本方差公式代入证明）
+3、样本方差均值：$ E(S^2) = \sigma^2 $（样本方差公式代入证明）
 
-4、样本均值期望推广：若总体$X$的$k$阶原点矩$E(X^k)=\mu_k$存在，当$n$趋近于无穷时，样本的$k$阶原点矩$\frac{1}{n}\sum_{i=1}^{n}X_i^k$依概率收敛于$\mu_k$（样本数量较多时，样本均值收敛于总体均值）
+4、样本均值期望推广：若总体$ X $的$ k $阶原点矩$ E(X^k)=\mu_k $存在，当$ n $趋近于无穷时，样本的$ k $阶原点矩$ \frac{1}{n}\sum_{i=1}^{n}X_i^k $依概率收敛于$ \mu_k $（样本数量较多时，样本均值收敛于总体均值）
 
 \section{常用统计抽样分布-正态（区间估计和假设检验的核心）}\index{常用统计抽样分布-正态（区间估计和假设检验的核心）}
 
@@ -77,31 +77,31 @@
 
 \subsection{单个正态总体}\index{常用统计抽样分布-正态（区间估计和假设检验的核心）!单个正态总体}
 
-1、定义：设总体$X \sim N\left(\mu, \sigma^{2}\right), X_{1}, X_{2},\cdots, X_{n}$是来自$X$的样本，样本均值$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$, 样本方差$S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}$
+1、定义：设总体$ X \sim N\left(\mu, \sigma^{2}\right), X_{1}, X_{2},\cdots, X_{n} $是来自$ X $的样本，样本均值$ \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i} $, 样本方差$ S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2} $
 
 2、性质
 
-2.1 样本均值分布：$\bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right)$，标准化之后为$U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$
+2.1 样本均值分布：$ \bar{X} \sim N\left(\mu, \frac{\sigma^{2}}{n}\right) $，标准化之后为$ U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1) $
 
-2.2 样本方差构造卡方分布：$\chi^{2}=\frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1)$（推导：$\frac{(n-1) s^{2}}{\sigma^{2}} =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}}{\sigma^{2}} =\sum_{i=1}^{n}\left(\frac{x_{i}}{\sigma}-\frac{\bar{x}}{\sigma}\right)^{2} =\sum_{i=1}^{n}\left(\frac{x_{i}-\mu}{\sigma}-\frac{\bar{x}-\mu}{\sigma}\right)^{2} =\sum_{i=1}^{n}\left(Z_{i}-\bar{Z}\right)^{2} =\sum_{i=1}^{n} Z_{i}^{2}-n \bar{Z}^{2}$）
+2.2 样本方差构造卡方分布：$ \chi^{2}=\frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1) $（推导：$ <font color=purple>\frac{(n-1) s^{2}}{\sigma^{2}} =\frac{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}}{\sigma^{2}} =\sum_{i=1}^{n}\left(\frac{x_{i}}{\sigma}-\frac{\bar{x}}{\sigma}\right)^{2} =\sum_{i=1}^{n}\left(\frac{x_{i}-\mu}{\sigma}-\frac{\bar{x}-\mu}{\sigma}\right)^{2} =\sum_{i=1}^{n}\left(Z_{i}-\bar{Z}\right)^{2} =\sum_{i=1}^{n} Z_{i}^{2}-n \bar{Z}^{2}</font> $）
 
-2.3 样本均值和样本方差构造$T$分布：$T=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)$（推导：利用标准化的$U$和满足卡方分布的$\frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1)$构造）
+2.3 样本均值和样本方差构造$ **T** $分布：$ T=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1) $（推导：利用标准化的$ <font color=purple>U</font> $和满足卡方分布的$ <font color=purple>\frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1)</font> $构造）
 
-2.4 中心矩分布：$\chi^{2}=\frac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-\mu\right)^{2} \sim \chi^{2}(n)$（注意与样本方差构造卡方分布的区别）（推导：就是将样本标准化成标准正态分布后的平方和）
+2.4 中心矩分布：$ \chi^{2}=\frac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-\mu\right)^{2} \sim \chi^{2}(n) $（注意与样本方差构造卡方分布的区别）（推导：就是将样本标准化成标准正态分布后的平方和）
 
 
 
 \subsection{两个正态总体}\index{常用统计抽样分布-正态（区间估计和假设检验的核心）!两个正态总体}
 
-1、定义：设$X_{1}, X_{2}, \cdots, X_{n_{1}}$与$Y_{1}, Y_{2}, \cdots,Y_{n_{2}}$分别是来自正态总体$N\left(\mu_{1}, \sigma_{1}^{2}\right)$和$N\left(\mu_{2}, \sigma_{2}^{2}\right)$的样本,且这两个样本相互独立. 设$\bar{X}=\frac{1}{n_{1}} \sum_{i=1}^{n_{1}} X_{i}$，$\bar{Y}=\frac{1}{n_{2}} \sum_{i=1}^{n_{2}} Y_{i}$分别是这两个样本的样本均值; $S_{1}^{2}=\frac{1}{n_{1}-1} \sum_{i=1}^{n_{1}}\left(X_{i}-\bar{X}\right)^{2}$, $S_{2}^{2}=\frac{1}{n_{2}-1} \sum_{i=1}^{n_{2}}\left(Y_{i}-\bar{Y}\right)^{2}$分别是这两个样本的样本方差
+1、定义：设$ X_{1}, X_{2}, \cdots, X_{n_{1}} $与$ Y_{1}, Y_{2}, \cdots,Y_{n_{2}} $分别是来自正态总体$ N\left(\mu_{1}, \sigma_{1}^{2}\right) $和$ N\left(\mu_{2}, \sigma_{2}^{2}\right) $的样本,且这两个样本相互独立. 设$ \bar{X}=\frac{1}{n_{1}} \sum_{i=1}^{n_{1}} X_{i} $，$ \bar{Y}=\frac{1}{n_{2}} \sum_{i=1}^{n_{2}} Y_{i} $分别是这两个样本的样本均值; $ S_{1}^{2}=\frac{1}{n_{1}-1} \sum_{i=1}^{n_{1}}\left(X_{i}-\bar{X}\right)^{2} $, $ S_{2}^{2}=\frac{1}{n_{2}-1} \sum_{i=1}^{n_{2}}\left(Y_{i}-\bar{Y}\right)^{2} $分别是这两个样本的样本方差
 
 2、性质
 
-2.1 均值差构造的正态的分布：$\bar{X}-\bar{Y} \sim N\left(\mu_{1}-\mu_{2}, \frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}\right)$（即正态分布的组合），标准化$ U=\frac{(\bar{X}-\bar{Y})-\left(\mu_{1}-\mu_{2}\right)}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}} \sim N(0,1)$
+2.1 均值差构造的正态的分布：$ \bar{X}-\bar{Y} \sim N\left(\mu_{1}-\mu_{2}, \frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}\right) $（即正态分布的组合），标准化$  U=\frac{(\bar{X}-\bar{Y})-\left(\mu_{1}-\mu_{2}\right)}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}}} \sim N(0,1) $
 
-2.2 均值和样本方差构造$T$分布（需要$\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma^{2}$）：$\frac{(\bar{X}-\bar{Y})-\left(\mu_{1}-\mu_{2}\right)}{S_{w} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}} \sim t\left(n_{1}+n_{2}-2\right)$，$S_{w}^{2}=\frac{\left(n_{1}-1\right) S_{1}^{2}+\left(n_{2}-1\right) S_{2}^{2}}{n_{1}+n_{2}-2}, \quad S_{w}=\sqrt{S_{w}^{2}}$（推导：利用上述标准化的$U$和满足卡方分布的$\frac{(n_1-1) S_1^{2}}{\sigma_1^{2}} \sim \chi^{2}(n_1-1)$和$\frac{(n_2-1) S_2^{2}}{\sigma_2^{2}} \sim \chi^{2}(n_2-1)$，以及卡方分布具有可加性，以及$U$和相加后的卡方分布之间的独立性）
+2.2 均值和样本方差构造$ **T** $分布（需要$ <font color=purple>**\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma^{2}**</font> $）：$ \frac{(\bar{X}-\bar{Y})-\left(\mu_{1}-\mu_{2}\right)}{S_{w} \sqrt{\frac{1}{n_{1}}+\frac{1}{n_{2}}}} \sim t\left(n_{1}+n_{2}-2\right) $，$ S_{w}^{2}=\frac{\left(n_{1}-1\right) S_{1}^{2}+\left(n_{2}-1\right) S_{2}^{2}}{n_{1}+n_{2}-2}, \quad S_{w}=\sqrt{S_{w}^{2}} $（推导：利用上述标准化的$ <font color=purple>U</font> $和满足卡方分布的$ <font color=purple>\frac{(n_1-1) S_1^{2}}{\sigma_1^{2}} \sim \chi^{2}(n_1-1)</font> $和$ <font color=purple>\frac{(n_2-1) S_2^{2}}{\sigma_2^{2}} \sim \chi^{2}(n_2-1)</font> $，以及卡方分布具有可加性，以及$ <font color=purple>U</font> $和相加后的卡方分布之间的独立性）
 
-2.3 样本方差构造$F$分布：$\frac{S_{1}^{2} / S_{2}^{2}}{\sigma_{1}^{2} / \sigma_{2}^{2}} \sim F\left(n_{1}-1, n_{2}-1\right)$（推导：满足卡方分布的$\frac{(n_1-1) S_1^{2}}{\sigma_1^{2}} \sim \chi^{2}(n_1-1)$和$\frac{(n_2-1) S_2^{2}}{\sigma_2^{2}} \sim \chi^{2}(n_2-1)$，以及两个卡方分布之间的独立性）
+2.3 样本方差构造$ **F** $分布：$ \frac{S_{1}^{2} / S_{2}^{2}}{\sigma_{1}^{2} / \sigma_{2}^{2}} \sim F\left(n_{1}-1, n_{2}-1\right) $（推导：满足卡方分布的$ <font color=purple>\frac{(n_1-1) S_1^{2}}{\sigma_1^{2}} \sim \chi^{2}(n_1-1)</font> $和$ <font color=purple>\frac{(n_2-1) S_2^{2}}{\sigma_2^{2}} \sim \chi^{2}(n_2-1)</font> $，以及两个卡方分布之间的独立性）
 
 疑问：对于构造T分布时，标准化的U和相加后的卡方分布为什么具有独立性
 
@@ -127,7 +127,7 @@
 
 1、单个正态总体的统计抽样分布性质
 
-2、函数的拆分组合，依据概率分布的定义求解：$P\{ X_n > max(X_1,X_2,\cdots,X_{n-1})\} = P\{ X_n > X_1,X_n >X_2,\cdots,X_n >X_{n-1})\}$
+2、函数的拆分组合，依据概率分布的定义求解：$ P\{ X_n > max(X_1,X_2,\cdots,X_{n-1})\} = P\{ X_n > X_1,X_n >X_2,\cdots,X_n >X_{n-1})\} $
 
 
 
@@ -143,9 +143,9 @@
 
 \section{总体、样本、统计量定义}\index{总体、样本、统计量定义}
 
-1、总体：研究对象的某项数量指标$X$的全体
+1、总体：研究对象的某项数量指标$ X $的全体
 
-2、样本：$X_1,X_2,\cdots X_n$相互独立且同分布，则称该序列是总体$X$的简单随机样本（样本）
+2、样本：$ X_1,X_2,\cdots X_n $相互独立且同分布，则称该序列是总体$ X $的简单随机样本（样本）
 
 3、统计量：由样本构造的不含未知数的函数
 

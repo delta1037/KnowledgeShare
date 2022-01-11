@@ -37,17 +37,17 @@
 
 \subsection{级数关系的敛散性判别}\index{组合级数判断敛散性!级数关系的敛散性判别}
 
-1、相乘：相乘常用不等式$|u_nv_n| \le \frac{1}{2}(u_n^2+v_n^2)$；
+1、相乘：相乘常用不等式$ |u_nv_n| \le \frac{1}{2}(u_n^2+v_n^2) $；
 
 2、相加：两个发散的正项级数相加还是发散的（如果没有提到正项条件则结果是不确定的）；两个收敛的级数相加减还是收敛的
 
-3、绝对值：如果$\sum_{n=0}^{\infty}u_n$发散，则$\sum_{n=0}^{\infty}|u_n|$发散（反证法：否则绝对收敛会推出原级数收敛）；
+3、绝对值：如果$ \sum_{n=0}^{\infty}u_n $发散，则$ \sum_{n=0}^{\infty}|u_n| $发散（反证法：否则绝对收敛会推出原级数收敛）；
 
-4、代入法：特殊级数（$\sum_{n=0}^{\infty}\frac{1}{n}$或者$\sum_{n=0}^{\infty}(-1)^n·\frac{1}{n}$或者$\sum_{n=0}^{\infty}\frac{1}{2n}$；$\sum_{n=0}^{\infty}\frac{1}{\sqrt n}$）
+4、代入法：特殊级数（$ \sum_{n=0}^{\infty}\frac{1}{n} $或者$ \sum_{n=0}^{\infty}(-1)^n·\frac{1}{n} $或者$ \sum_{n=0}^{\infty}\frac{1}{2n} $；$ \sum_{n=0}^{\infty}\frac{1}{\sqrt n} $）
 
 5、判别法：利用与现有的级数敛散性进行比较判别法
 
-6、其它：当正项级数$\sum_{n=1}^{\infty} u_{n}$收敛时，有$\lim_{n \rightarrow \infty} u_{n}=0$，则当$n$充分大时，$\left|u_{n}\right|=u_{n}<1$(有界)，故$u_{n}^{2}<u_{n}$，由比较审敛法，知$\sum_{n=1}^{\infty} u_{n}^{2}$收敛；若$\sum_{n=1}^{\infty}(-1)^{n-1} u_{n}\left(u_{n}>0\right)$收敛，则$\sum_{n=1}^{\infty}\left(u_{2 n-1}-u_{2 n}\right)$收敛（级数加括号）；若$\sum_{n=1}^{\infty} u_{n}^{2}$收 敛，则$\sum_{n=1}^{\infty}(-1)^{n-1} \frac{u_{n}}{n}$绝对收 敛，因$\left|(-1)^{n-1} \frac{u_{n}}{n}\right| \leqslant \frac{1}{2}\left(u_{n}^{2}+\frac{1}{n^{2}}\right)$，而$\sum_{n=1}^{\infty} \frac{1}{n^{2}}$收敛，由比较审敛法，可知$\sum_{n=1}^{\infty}(-1)^{n-1} \frac{u_{n}}{n}$绝对收敛
+6、其它：当正项级数$ \sum_{n=1}^{\infty} u_{n} $收敛时，有$ \lim_{n \rightarrow \infty} u_{n}=0 $，则当$ n $充分大时，$ \left|u_{n}\right|=u_{n}<1 $(有界)，故$ u_{n}^{2}<u_{n} $，由比较审敛法，知$ \sum_{n=1}^{\infty} u_{n}^{2} $收敛；若$ \sum_{n=1}^{\infty}(-1)^{n-1} u_{n}\left(u_{n}>0\right) $收敛，则$ \sum_{n=1}^{\infty}\left(u_{2 n-1}-u_{2 n}\right) $收敛（级数加括号）；若$ \sum_{n=1}^{\infty} u_{n}^{2} $收 敛，则$ \sum_{n=1}^{\infty}(-1)^{n-1} \frac{u_{n}}{n} $绝对收 敛，因$ \left|(-1)^{n-1} \frac{u_{n}}{n}\right| \leqslant \frac{1}{2}\left(u_{n}^{2}+\frac{1}{n^{2}}\right) $，而$ \sum_{n=1}^{\infty} \frac{1}{n^{2}} $收敛，由比较审敛法，可知$ \sum_{n=1}^{\infty}(-1)^{n-1} \frac{u_{n}}{n} $绝对收敛
 
 
 
@@ -67,7 +67,7 @@
 
 2、比较判别法：寻找有界性条件，对待验证的级数进行放缩，得到可以利用已知条件证明的级数，最后利用比较判别法证明放缩前的级数收敛
 
-3、比较极限判别：将已知极限的式子转换成待求式子与已知敛散性式子相除的形式，利用比较判别法（例子：已知$na_n$收敛，求解${a_n}^2$的极限，将$na_n$转换成$\frac{{a_n}^2}{ 1/n^2 }$）
+3、比较极限判别：将已知极限的式子转换成待求式子与已知敛散性式子相除的形式，利用比较判别法（例子：已知$ na_n $收敛，求解$ {a_n}^2 $的极限，将$ na_n $转换成$ \frac{{a_n}^2}{ 1/n^2 } $）
 
 
 
@@ -91,41 +91,41 @@
 
 1、利用敛散性定理处理边界点和间断点（区分求解和函数和求解傅里叶展开式）
 
-2、敛散性定理：狄里克雷定理：除有限个第一类间断点外都连续；只有有限个极值点，则$f(x)$的傅里叶级数在$[-\pi, \pi]$上处处收敛，且收敛于(1)$f(x)$, 当$x$为$f(x)$的连续点；(2)$ \frac{f\left(x^{-}\right)+f\left(x^{+}\right)}{2}$，当$x$为$f(x)$的间断点；(3)$\frac{f\left(-\pi^{+}\right)+f\left(\pi^{-}\right)}{2}$，当$x=\pm \pi$
+2、敛散性定理：狄里克雷定理：除有限个第一类间断点外都连续；只有有限个极值点，则$ f(x) $的傅里叶级数在$ [-\pi, \pi] $上处处收敛，且收敛于(1)$ f(x) $, 当$ x $为$ f(x) $的连续点；(2)$  \frac{f\left(x^{-}\right)+f\left(x^{+}\right)}{2} $，当$ x $为$ f(x) $的间断点；(3)$ \frac{f\left(-\pi^{+}\right)+f\left(\pi^{-}\right)}{2} $，当$ x=\pm \pi $
 
 
 
 \subsection{傅里叶级数表示}\index{求解函数的傅里叶级数的和函数!傅里叶级数表示}
 
-1、傅里叶级数三角级数：$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right)$
+1、傅里叶级数三角级数：$ f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) $
 
-2、傅里叶级数是一种均方逼近（$f(x) - \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right)$的平方在区间内积分最小）
-
-
-
-\subsection{将函数展开为傅里叶级数：（周期为$2\pi$）}\index{求解函数的傅里叶级数的和函数!将函数展开为傅里叶级数：（周期为$2\pi$）}
-
-1、$[-\pi, \pi]$上展开：$\left\{\begin{array}{l} a_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \mathrm{~d} x, \quad n=0,1,2, \cdots \\ b_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \mathrm{~d} x, \quad n=1,2, \cdots \end{array}\right.$
-
-2、$[-\pi, \pi]$上奇偶函数的情况：$f(x)$为奇函数时$\begin{cases}a_{n}=0, & n=0,1, \cdots \\ b_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \sin n x \mathrm{~d} x, & n=1,2, \cdots\end{cases}$，$f(x)$为偶函数时$\begin{cases}a_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \cos n x \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases}$
-
-3、$[0, \pi]$上展为正弦或展为余弦级数：正弦展开为$\begin{cases}a_{n}=0, & n=0,1,2, \cdots \\ b_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \sin n x \mathrm{~d} x, & n=1,2, \cdots\end{cases}$；余弦展开为$\begin{cases}a_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \cos n x \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases}$（相当于将半区间延拓成奇函数或者偶函数形式，延拓之后与上述2公式一致）
+2、傅里叶级数是一种均方逼近（$ f(x) - \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) $的平方在区间内积分最小）
 
 
 
-\subsection{将函数展开为傅里叶级数：（周期为$2l$）}\index{求解函数的傅里叶级数的和函数!将函数展开为傅里叶级数：（周期为$2l$）}
+\subsection{将函数展开为傅里叶级数：（周期为$ 2\pi $）}\index{求解函数的傅里叶级数的和函数!将函数展开为傅里叶级数：（周期为$ 2\pi $）}
 
-1、$[-l, l]$上展开：$\left\{\begin{array}{l}
+1、$ [-\pi, \pi] $上展开：$ \left\{\begin{array}{l} a_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \mathrm{~d} x, \quad n=0,1,2, \cdots \\ b_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \mathrm{~d} x, \quad n=1,2, \cdots \end{array}\right. $
+
+2、$ [-\pi, \pi] $上奇偶函数的情况：$ f(x) $为奇函数时$ \begin{cases}a_{n}=0, & n=0,1, \cdots \\ b_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \sin n x \mathrm{~d} x, & n=1,2, \cdots\end{cases} $，$ f(x) $为偶函数时$ \begin{cases}a_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \cos n x \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases} $
+
+3、$ [0, \pi] $上展为正弦或展为余弦级数：正弦展开为$ \begin{cases}a_{n}=0, & n=0,1,2, \cdots \\ b_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \sin n x \mathrm{~d} x, & n=1,2, \cdots\end{cases} $；余弦展开为$ \begin{cases}a_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \cos n x \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases} $（相当于将半区间延拓成奇函数或者偶函数形式，延拓之后与上述2公式一致）
+
+
+
+\subsection{将函数展开为傅里叶级数：（周期为$ 2l $）}\index{求解函数的傅里叶级数的和函数!将函数展开为傅里叶级数：（周期为$ 2l $）}
+
+1、$ [-l, l] $上展开：$ \left\{\begin{array}{l}
 
 a_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \cos \frac{n \pi x}{l} \mathrm{~d} x, \quad n=0,1,2, \cdots \\
 
 b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad n=1,2, \cdots
 
-\end{array}\right.$
+\end{array}\right. $
 
-2、$[-l, l]$上奇偶函数的情况：$f(x)$为奇函数时$\begin{cases}a_{n}=0, & n=0,1,2, \cdots \\ b_{n}=\frac{2}{l} \int_{0}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, & n=1,2, \cdots\end{cases}$，$f(x)$为偶函数时$\begin{cases}a_{n}=\frac{2}{l} \int_{0}^{l} f(x) \cos \frac{n \pi x}{l} \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases}$
+2、$ [-l, l] $上奇偶函数的情况：$ f(x) $为奇函数时$ \begin{cases}a_{n}=0, & n=0,1,2, \cdots \\ b_{n}=\frac{2}{l} \int_{0}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, & n=1,2, \cdots\end{cases} $，$ f(x) $为偶函数时$ \begin{cases}a_{n}=\frac{2}{l} \int_{0}^{l} f(x) \cos \frac{n \pi x}{l} \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases} $
 
-3、$[0, l]$上展为正弦或展为余弦级数：正弦展开为$\begin{cases}a_{n}=0, & n=0,1,2, \cdots \\ b_{n}=\frac{2}{l} \int_{0}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, & n=1,2, \cdots\end{cases}$（奇延拓）；余弦展开为$\begin{cases}a_{n}=\frac{2}{l} \int_{0}^{l} f(x) \cos \frac{n \pi x}{l} \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases}$（偶延拓）
+3、$ [0, l] $上展为正弦或展为余弦级数：正弦展开为$ \begin{cases}a_{n}=0, & n=0,1,2, \cdots \\ b_{n}=\frac{2}{l} \int_{0}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, & n=1,2, \cdots\end{cases} $（奇延拓）；余弦展开为$ \begin{cases}a_{n}=\frac{2}{l} \int_{0}^{l} f(x) \cos \frac{n \pi x}{l} \mathrm{~d} x, & n=0,1,2, \cdots \\ b_{n}=0, & n=1,2, \cdots\end{cases} $（偶延拓）
 
 注意：标注定义域
 
@@ -135,17 +135,17 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \subsection{正项级数判别方法}\index{单个级数判断敛散性!正项级数判别方法}
 
-1、比较判别法（两个级数）：若$0 \leqslant u_{n} \leqslant v_{n}$，则$\sum_{n=1}^{\infty} v_{n}$收敛$\Rightarrow \sum_{n=1}^{\infty} u_{n}$收敛；$\sum_{n=1}^{\infty} u_{n}$发散$\Rightarrow \sum_{n=1}^{\infty} v_{n}$发散
+1、比较判别法（两个级数）：若$ 0 \leqslant u_{n} \leqslant v_{n} $，则$ \sum_{n=1}^{\infty} v_{n} $收敛$ \Rightarrow \sum_{n=1}^{\infty} u_{n} $收敛；$ \sum_{n=1}^{\infty} u_{n} $发散$ \Rightarrow \sum_{n=1}^{\infty} v_{n} $发散
 
-2、比较判别法极限形式（两个级数）：设$\lim_{n \rightarrow \infty} \frac{u_{n}}{v_{n}}=l \quad(0 \leqslant l \leqslant+\infty)$，若$0<l<+\infty$，则$\sum_{n=1}^{\infty} u_{n}$与$\sum_{n=1}^{\infty} v_{n}$同敛散；若$l=0$，则$\sum_{n=1}^{\infty} v_{n}$收敛$\Rightarrow \sum_{n=1}^{\infty} u_{n}$收敛；若$l=+\infty$，则$\sum_{n=1}^{\infty} v_{n}$发散$\Rightarrow \sum_{n=1}^{\infty} u_{n}$发散
+2、比较判别法极限形式（两个级数）：设$ \lim_{n \rightarrow \infty} \frac{u_{n}}{v_{n}}=l \quad(0 \leqslant l \leqslant+\infty) $，若$ 0<l<+\infty $，则$ \sum_{n=1}^{\infty} u_{n} $与$ \sum_{n=1}^{\infty} v_{n} $同敛散；若$ l=0 $，则$ \sum_{n=1}^{\infty} v_{n} $收敛$ \Rightarrow \sum_{n=1}^{\infty} u_{n} $收敛；若$ l=+\infty $，则$ \sum_{n=1}^{\infty} v_{n} $发散$ \Rightarrow \sum_{n=1}^{\infty} u_{n} $发散
 
-3、比值判别法：设$\lim_{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho$，则$\sum_{n=1}^{\infty} u_{n} \begin{cases}\text { 收敛, } & \text { 当 } \rho<1 \text { 时, } \\ \text { 发散, } & \text { 当 } \rho>1 \text { 时, } \\ \text { 不确定， } & \text { 当 } \rho=1 \text { 时. }\end{cases}$
+3、比值判别法：设$ \lim_{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho $，则$ \sum_{n=1}^{\infty} u_{n} \begin{cases}\text { 收敛, } & \text { 当 } \rho<1 \text { 时, } \\ \text { 发散, } & \text { 当 } \rho>1 \text { 时, } \\ \text { 不确定， } & \text { 当 } \rho=1 \text { 时. }\end{cases} $
 
-4、根植判别法：设$\lim_{n \rightarrow \infty} \sqrt[n]{u_{n}}=\rho$，则$\sum_{n=1}^{\infty} u_{n} \begin{cases}\text { 收敛, } & \text { 当 } \rho<1 \text { 时, } \\ \text { 发散, } & \text { 当 } \rho>1 \text { 时, } \\ \text { 不确定, } & \text { 当 } \rho=1 \text { 时. }\end{cases}$
+4、根植判别法：设$ \lim_{n \rightarrow \infty} \sqrt[n]{u_{n}}=\rho $，则$ \sum_{n=1}^{\infty} u_{n} \begin{cases}\text { 收敛, } & \text { 当 } \rho<1 \text { 时, } \\ \text { 发散, } & \text { 当 } \rho>1 \text { 时, } \\ \text { 不确定, } & \text { 当 } \rho=1 \text { 时. }\end{cases} $
 
-5、积分判别法：设$f(x)$是$[c,+\infty)$上单调减,非负的连续函数，且$a_{n}=f(n)$，则$\sum_{n=c}^{\infty} a_{n}$与$\int_{c}^{+\infty} f(x) \mathrm{d} x$同敛散（这里将级数直接转换为积分）
+5、积分判别法：设$ f(x) $是$ [c,+\infty) $上单调减,非负的连续函数，且$ a_{n}=f(n) $，则$ \sum_{n=c}^{\infty} a_{n} $与$ \int_{c}^{+\infty} f(x) \mathrm{d} x $同敛散（这里将级数直接转换为积分）
 
-6、使用定义判别：设有数列$\left\{u_{n}\right\}$，则称$\sum_{n=1}^{\infty} u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots$为无穷级数。令$S_{n}=u_{1}+u_{2}+\cdots+u_{n}(n=1,2, \cdots)$，则称数列$\left\{S_{n}\right\}$为级数$\sum_{n=1}^{\infty} u_{n}$的部分和数列，如果部分和数列$ S_{n}$有极限$S$，即$\lim_{n \rightarrow \infty} S_{n}=S$，则称级数$\sum_{n=1}^{\infty} u_{n}$收敛,这时极限$S$叫作级数$\sum_{n=1}^{\infty} u_{n}$的和；如果$\left\{S_{n}\right\}$没有极限,则称级数$\sum_{n=1}^{\infty} u_{n}$发散
+6、使用定义判别：设有数列$ \left\{u_{n}\right\} $，则称$ \sum_{n=1}^{\infty} u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots $为无穷级数。令$ S_{n}=u_{1}+u_{2}+\cdots+u_{n}(n=1,2, \cdots) $，则称数列$ \left\{S_{n}\right\} $为级数$ \sum_{n=1}^{\infty} u_{n} $的部分和数列，如果部分和数列$  S_{n} $有极限$ S $，即$ \lim_{n \rightarrow \infty} S_{n}=S $，则称级数$ \sum_{n=1}^{\infty} u_{n} $收敛,这时极限$ S $叫作级数$ \sum_{n=1}^{\infty} u_{n} $的和；如果$ \left\{S_{n}\right\} $没有极限,则称级数$ \sum_{n=1}^{\infty} u_{n} $发散
 
 注意：比值判别法是充分非必要的
 
@@ -155,11 +155,11 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 0、首先判断通项：如果通项不满足极限收敛的必要条件可直接判定为发散
 
-1、方法选择：当通项中出现$a^n$，$n^n$时一般用根值判别法；当通项中出现$n!$时一般使用比值法；如果通项比较复杂可以用比较判别法（放缩）；比值法判断不出来的可以用根值法判断
+1、方法选择：当通项中出现$ a^n $，$ n^n $时一般用根值判别法；当通项中出现$ n! $时一般使用比值法；如果通项比较复杂可以用比较判别法（放缩）；比值法判断不出来的可以用根值法判断
 
-2、化简方法：无穷小的代换（注：等价等于同敛散性（比较判别法）；当极限不存在时不能用等价）（即极限的求解，或者利用泰勒公式放缩）；去掉前边不规则的项然后进行判断（只考虑n充分大的情况，前边的有限项不影响级数的敛散性）；复杂项先进行放缩（观察各项的特征）；基本不等式$2ab \le a^2 + b^2$放缩变换（两项相乘或者分式形式均可使用，可以将同一个级数分解为两个级数）；
+2、化简方法：无穷小的代换（注：等价等于同敛散性（比较判别法）；当极限不存在时不能用等价）（即极限的求解，或者利用泰勒公式放缩）；去掉前边不规则的项然后进行判断（只考虑n充分大的情况，前边的有限项不影响级数的敛散性）；复杂项先进行放缩（观察各项的特征）；基本不等式$ 2ab \le a^2 + b^2 $放缩变换（两项相乘或者分式形式均可使用，可以将同一个级数分解为两个级数）；
 
-3、与已知对比：常用的p级数（$\sum_{n=1}^{\infty} \frac 1{n^p}$，p大于1时收敛，p小于等于1时发散，转为积分时也成立）（利用积分判别法证明）和等比级数（$\sum_{n=1}^{\infty} a{q^n}$）（利用级数的求解证明）
+3、与已知对比：常用的p级数（$ \sum_{n=1}^{\infty} \frac 1{n^p} $，p大于1时收敛，p小于等于1时发散，转为积分时也成立）（利用积分判别法证明）和等比级数（$ \sum_{n=1}^{\infty} a{q^n} $）（利用级数的求解证明）
 
 4、边界值判断：比值（根值）判别法，当比值（根值）等于1时，根据比值（根值）趋于1的趋势进行判断比值（根值）是大于1还是小于1的<复习全书P270 例2 （2）>
 
@@ -167,9 +167,9 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \subsection{交错级数判断敛散性}\index{单个级数判断敛散性!交错级数判断敛散性}
 
-1、莱布尼茨判别准则：若(1)$u_{n} \geqslant u_{n+1}(n=1,2, \cdots)$（单调递减）；(2)$\lim_{n \rightarrow \infty} u_{n}=0$（趋于零），则级数$\sum_{n=1}^{\infty}(-1)^{n-1} u_{n}$收敛
+1、莱布尼茨判别准则：若(1)$ u_{n} \geqslant u_{n+1}(n=1,2, \cdots) $（单调递减）；(2)$ \lim_{n \rightarrow \infty} u_{n}=0 $（趋于零），则级数$ \sum_{n=1}^{\infty}(-1)^{n-1} u_{n} $收敛
 
-2、偶数项和与奇数项和：考虑极限当n趋近于$\infty$时$S_{2N}$是否等于$S_{2N+1}$，相等就是收敛（还没有遇到实际题目）
+2、偶数项和与奇数项和：考虑极限当n趋近于$ \infty $时$ S_{2N} $是否等于$ S_{2N+1} $，相等就是收敛（还没有遇到实际题目）
 
 3、求绝对收敛：如果级数绝对收敛，则级数收敛
 
@@ -189,7 +189,7 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \subsection{求解幂级数的收敛域-非缺项级数}\index{幂级数求解!求解幂级数的收敛域-非缺项级数}
 
-1、求解收敛区间（比值法和根值法）：比值法，设当$n$充分大时$a_{n} \neq 0$，并设$\lim_{n \rightarrow \infty}\left|\frac{a{n+1}}{a_{n}}\right|=\rho$，则(1)若$\rho=+\infty$，则$R=0$；(2) 若$\rho=0$，则$R=+\infty$；(3) 若$0<\rho<+\infty$，则$R=\frac{1}{\rho}$；根值法，$\lim_{n \rightarrow \infty} \sqrt[n]{\mid a_{n} |}=\rho$，结论同上（当比值法求出不来时可以用根值法（解决一些振荡系数的问题$\sum_{n=1}^{\infty}\left[2-(-1)^{n}\right] x^{n}$），根值法存在推不出来比值法存在，比值法存在可以推出根值法存在）（根据具体级数的情况选择比值法或者根值法，选择方法和正项级数求解敛散性选择方法一致）
+1、求解收敛区间（比值法和根值法）：比值法，设当$ n $充分大时$ a_{n} \neq 0 $，并设$ \lim_{n \rightarrow \infty}\left|\frac{a{n+1}}{a_{n}}\right|=\rho $，则(1)若$ \rho=+\infty $，则$ R=0 $；(2) 若$ \rho=0 $，则$ R=+\infty $；(3) 若$ 0<\rho<+\infty $，则$ R=\frac{1}{\rho} $；根值法，$ \lim_{n \rightarrow \infty} \sqrt[n]{\mid a_{n} |}=\rho $，结论同上（当比值法求出不来时可以用根值法（解决一些振荡系数的问题$ <font color=purple>\sum_{n=1}^{\infty}\left[2-(-1)^{n}\right] x^{n}</font> $），根值法存在推不出来比值法存在，比值法存在可以推出根值法存在）（根据具体级数的情况选择比值法或者根值法，选择方法和正项级数求解敛散性选择方法一致）
 
 2、考虑收敛区间端点处的敛散性，得出收敛域（收敛区间是左右对称的开区间，收敛域是收敛区间加上收敛的端点值组成的区间）
 
@@ -201,7 +201,7 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \subsection{求解幂级数的收敛域-缺项级数}\index{幂级数求解!求解幂级数的收敛域-缺项级数}
 
-1、使用级数的比值判别法，求解相邻两项的比值，即$\lim _{n \rightarrow \infty}\left|\frac{u_{n+1}(x)}{u_{n}(x)}\right|$，并使得其比值小于1的$x$的范围（比值法求不出来试试根值法，与非缺项级数的处理类似）
+1、使用级数的比值判别法，求解相邻两项的比值，即$ \lim _{n \rightarrow \infty}\left|\frac{u_{n+1}(x)}{u_{n}(x)}\right| $，并使得其比值小于1的$ x $的范围（比值法求不出来试试根值法，与非缺项级数的处理类似）
 
 2、考虑收敛区间端点处的敛散性，得出收敛域
 
@@ -223,15 +223,15 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 3、利用常见的函数的麦克劳林展开式
 
-4、先逐项求导, 再利用$S(x)=S(0)+\int_{0}^{x} S^{\prime}(t) \mathrm{d} t$（注意从导数积分回去有一个$S(0)$）
+4、先逐项求导, 再利用$ S(x)=S(0)+\int_{0}^{x} S^{\prime}(t) \mathrm{d} t $（注意从导数积分回去有一个$ <font color=purple>S(0)</font> $）
 
-5、先逐项积分，再利用$S(x)=\left(\int_{0}^{x} S(t) \mathrm{d} t\right)^{\prime}$（先积分再求导；区别上述先求导再积分，即常数的问题）
+5、先逐项积分，再利用$ S(x)=\left(\int_{0}^{x} S(t) \mathrm{d} t\right)^{\prime} $（先积分再求导；区别上述先求导再积分，即常数的问题）
 
-6、先通过幂级数的代数运算、逐项求导、逐项积分等转化为关于和函数$S(x)$的微分方程问题，再求解方程
+6、先通过幂级数的代数运算、逐项求导、逐项积分等转化为关于和函数$ S(x) $的微分方程问题，再求解方程
 
 注意：判断有没有除0造成的简断点（等于0处等）；结果中要包含收敛域的全部范围（可能去掉端点）
 
-注意：对于和函数不存在的点需要额外排除，在0点可能有$0^0=1$；
+注意：对于和函数不存在的点需要额外排除，在0点可能有$ <font color=purple>0^0=1</font> $；
 
 注意：逐项求导和逐项积分均需要在收敛域上讨论
 
@@ -241,7 +241,7 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \subsection{求解幂级数的极限}\index{幂级数求解!求解幂级数的极限}
 
-1、常数项级数求和：利用级数定义求解部分和$S_n$，然后求极限得级数和
+1、常数项级数求和：利用级数定义求解部分和$ S_n $，然后求极限得级数和
 
 2、幂级数求和：求解幂级数的和函数（常见得展开式经过一系列的有理运算、逐项求导和逐项积分）（幂级数和函数操作时注意判断函数的定义域），得出和函数在某点处的值（极限）
 
@@ -249,9 +249,9 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \section{幂级数性质}\index{幂级数性质}
 
-1、四则运算：和差，$\sum_{n=0}^{\infty} a_{n} x^{n} \pm \sum_{n=0}^{\infty} b_{n} x^{n}=\sum_{n=0}^{\infty}\left(a_{n} \pm b_{n}\right) x^{n}=S_{1}(x) \pm S_{2}(x), x \in(-R, R)$；积，$\left(\sum_{n=0}^{\infty} a_{n} x^{n}\right)\left(\sum_{n=0}^{\infty} b_{n} x^{n}\right)=\sum_{n=0}^{\infty}\left(a_{0} b_{n}+a_{1} b_{n-1}+\cdots+a_{n} b_{0}\right) x^{n}=S_{1}(x) S_{2}(x), x \in(-R, R) $；商，设$b_0 \ne 0$，$\frac{S_{1}(x)}{S_{2}(x)}=\frac{\sum_{n=0}^{\infty} a_{n} x^{n}}{\sum_{n=0}^{\infty} b_{n} x^{n}}=c_{0}+c_{1} x+\cdots+c_{n} x^{n}+\cdots$，其中$c_{n}$由$\left(\sum_{n=0}^{\infty} b_{n} x^{n}\right) \cdot\left(\sum_{n=0}^{\infty} c_{n} x^{n}\right)=\sum_{n=0}^{\infty} a_{n} x^{n}$来确定（其中收敛半径$R$为参与运算的级数的收敛半径的最小值）
+1、四则运算：和差，$ \sum_{n=0}^{\infty} a_{n} x^{n} \pm \sum_{n=0}^{\infty} b_{n} x^{n}=\sum_{n=0}^{\infty}\left(a_{n} \pm b_{n}\right) x^{n}=S_{1}(x) \pm S_{2}(x), x \in(-R, R) $；积，$ \left(\sum_{n=0}^{\infty} a_{n} x^{n}\right)\left(\sum_{n=0}^{\infty} b_{n} x^{n}\right)=\sum_{n=0}^{\infty}\left(a_{0} b_{n}+a_{1} b_{n-1}+\cdots+a_{n} b_{0}\right) x^{n}=S_{1}(x) S_{2}(x), x \in(-R, R)  $；商，设$ b_0 \ne 0 $，$ \frac{S_{1}(x)}{S_{2}(x)}=\frac{\sum_{n=0}^{\infty} a_{n} x^{n}}{\sum_{n=0}^{\infty} b_{n} x^{n}}=c_{0}+c_{1} x+\cdots+c_{n} x^{n}+\cdots $，其中$ c_{n} $由$ \left(\sum_{n=0}^{\infty} b_{n} x^{n}\right) \cdot\left(\sum_{n=0}^{\infty} c_{n} x^{n}\right)=\sum_{n=0}^{\infty} a_{n} x^{n} $来确定（其中收敛半径$ <font color=purple>R</font> $为参与运算的级数的收敛半径的最小值）
 
-2、分析性质：设幂级数$\sum_{n=0}^{\infty} a_{n} x^{n}$的收敛半径为$R>0$，和函数为$S(x)$，则(1)$S(x)$在$(-R, R)$上连续；(2)$S(x)$在$(-R, R)$上可导，且可逐项求导，即$S^{\prime}(x)=\sum_{n=1}^{\infty} n a_{n} x^{n-1}$（原幂级数含常数项求导会使项数减少）；(3)$S(x)$在$(-R, R)$内可积, 且可逐项积分，即$\int_{0}^{x} S(t) \mathrm{d} t=\sum_{n=0}^{\infty} \int_{0}^{x} a_{n} t^{n} \mathrm{~d} t=\sum_{n=0}^{\infty} \frac{a_{n}}{n+1} x^{n+1} \quad(x \in(-R, R))$（注意这里用的定积分，并且下限是$0$，上限是$x$）；（积分和求导后均具有与原幂级数相同的收敛半径）（在利用幂级数的分析性质时需要用收敛区间讨论，因为端点上的收敛性可能在求导或者积分时发生变化，在收敛区间上讨论完之后，再由和函数在闭区间上的连续性得到端点上的收敛性）（求导后端点的收敛性可能失去，积分后端点的收敛性可能增加）（使用分析性质时一定要在收敛区间上进行讨论）
+2、分析性质：设幂级数$ \sum_{n=0}^{\infty} a_{n} x^{n} $的收敛半径为$ R>0 $，和函数为$ S(x) $，则(1)$ S(x) $在$ (-R, R) $上连续；(2)$ S(x) $在$ (-R, R) $上可导，且可逐项求导，即$ S^{\prime}(x)=\sum_{n=1}^{\infty} n a_{n} x^{n-1} $（原幂级数含常数项求导会使项数减少）；(3)$ S(x) $在$ (-R, R) $内可积, 且可逐项积分，即$ \int_{0}^{x} S(t) \mathrm{d} t=\sum_{n=0}^{\infty} \int_{0}^{x} a_{n} t^{n} \mathrm{~d} t=\sum_{n=0}^{\infty} \frac{a_{n}}{n+1} x^{n+1} \quad(x \in(-R, R)) $（注意这里用的定积分，并且下限是$ <font color=purple>0</font> $，上限是$ <font color=purple>x</font> $）；（积分和求导后均具有与原幂级数相同的收敛半径）（在利用幂级数的分析性质时需要用收敛区间讨论，因为端点上的收敛性可能在求导或者积分时发生变化，在收敛区间上讨论完之后，再由和函数在闭区间上的连续性得到端点上的收敛性）（求导后端点的收敛性可能失去，积分后端点的收敛性可能增加）（使用分析性质时一定要在收敛区间上进行讨论）
 
 \section{幂级数展开}\index{幂级数展开}
 
@@ -261,7 +261,7 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 1、间接法：利用常用的几个麦克劳林展开式，通过变量代换和幂级数性质（四则运算、逐项求导和逐项积分）
 
-2、直接法：求解函数在$x_0$处的各阶导数，写出在$x=x_0$处的泰勒级数，并考察泰勒级数的余项极限是否为0
+2、直接法：求解函数在$ x_0 $处的各阶导数，写出在$ x=x_0 $处的泰勒级数，并考察泰勒级数的余项极限是否为0
 
 注意：标注幂级数的收敛区间（不是收敛域）
 
@@ -269,21 +269,21 @@ b_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \mathrm{~d} x, \quad
 
 \subsection{常用的麦克劳林展开式}\index{幂级数展开!常用的麦克劳林展开式}
 
-1、$\frac{1}{1-x}=1+x+x^{2}+\cdots+x^{n}+\cdots, x \in(-1,1)$；
+1、$ \frac{1}{1-x}=1+x+x^{2}+\cdots+x^{n}+\cdots, x \in(-1,1) $；
 
-2、$\frac{1}{1+x}=1-x+x^{2}+\cdots+(-1)^{n} x^{n}+\cdots, x \in(-1,1)$；
+2、$ \frac{1}{1+x}=1-x+x^{2}+\cdots+(-1)^{n} x^{n}+\cdots, x \in(-1,1) $；
 
-3、$\mathrm{e}^{x}=1+x+\frac{x^{2}}{2 !}+\cdots+\frac{x^{n}}{n !}+\cdots, x \in(-\infty,+\infty)$；
+3、$ \mathrm{e}^{x}=1+x+\frac{x^{2}}{2 !}+\cdots+\frac{x^{n}}{n !}+\cdots, x \in(-\infty,+\infty) $；
 
-4、$\sin x=x-\frac{x^{3}}{3 !}+\cdots+\frac{(-1)^{n} x^{2 n+1}}{(2 n+1) !}+\cdots, x \in(-\infty,+\infty)$；
+4、$ \sin x=x-\frac{x^{3}}{3 !}+\cdots+\frac{(-1)^{n} x^{2 n+1}}{(2 n+1) !}+\cdots, x \in(-\infty,+\infty) $；
 
-5、$\cos x=1-\frac{x^{2}}{2 !}+\cdots+\frac{(-1)^{n} x^{2 n}}{(2 n) !}+\cdots, x \in(-\infty,+\infty)$；
+5、$ \cos x=1-\frac{x^{2}}{2 !}+\cdots+\frac{(-1)^{n} x^{2 n}}{(2 n) !}+\cdots, x \in(-\infty,+\infty) $；
 
-6、$\ln (1+x)=x-\frac{x^{2}}{2}+\cdots+\frac{(-1)^{n-1} x^{n}}{n}+\cdots, x \in(-1,1]$；
+6、$ \ln (1+x)=x-\frac{x^{2}}{2}+\cdots+\frac{(-1)^{n-1} x^{n}}{n}+\cdots, x \in(-1,1] $；
 
-7、$(1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2 !} x^{2}+\cdots+\frac{\alpha(\alpha-1) \cdots(\alpha-n+1)}{n !} x^{n}+\cdots, x \in(-1,1)$；
+7、$ (1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2 !} x^{2}+\cdots+\frac{\alpha(\alpha-1) \cdots(\alpha-n+1)}{n !} x^{n}+\cdots, x \in(-1,1) $；
 
-注意：以上1-6后边的区间均为收敛域，7的仅为收敛区间，收敛域要视$\alpha$的情况而定
+注意：以上1-6后边的区间均为收敛域，7的仅为收敛区间，收敛域要视$ <font color=purple>\alpha</font> $的情况而定
 
 注意：当求解包含函数与级数的组合时的级数时，先统一转换成函数，再由常用展开式或者分析性质展开
 

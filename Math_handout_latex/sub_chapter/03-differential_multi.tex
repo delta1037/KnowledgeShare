@@ -21,23 +21,23 @@
 
 \subsection{可微性}\index{函数的特征!可微性}
 
-1、利用可微的定义：考察$f_{x}^{\prime}\left(x_{0}, y_{0}\right)和f_{y}^{\prime}\left(x_{0}, y_{0}\right)$是否都存在，如果$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$和$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$中至少有一 个不存在，则函数$f(x, y)$在$\left(x_{0}, y_{0}\right)$不可微；如果$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$和$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$都存在，考察$\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{\left[f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)\right]-\left[f_{x}^{\prime}\left(x_{0}, y_{0}\right) \Delta x+f_{y}^{\prime}\left(x_{0}, y_{0}\right) \Delta y\right]}{\rho}=0$（可微定义式）是否成立，其中$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$，如果该式成立，则称函数$f(x, y)$在点$(x_0, y_0)$处可微（可微的充要条件）（可微的定义可以将微分的概念（$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$或者$\Delta z=A \Delta x+B \Delta y+o(\rho)$）和偏导即可微的必要条件（$\mathrm{d} z=\frac{\partial z}{\partial x} \mathrm{~d} x+\frac{\partial z}{\partial y} \mathrm{~d} y$）关联起来，这里好像就有$A=\frac{\partial z}{\partial x},B=\frac{\partial z}{\partial y}$的嫌疑）
+1、利用可微的定义：考察$ f_{x}^{\prime}\left(x_{0}, y_{0}\right)和f_{y}^{\prime}\left(x_{0}, y_{0}\right) $是否都存在，如果$ f_{x}^{\prime}\left(x_{0}, y_{0}\right) $和$ f_{y}^{\prime}\left(x_{0}, y_{0}\right) $中至少有一 个不存在，则函数$ f(x, y) $在$ \left(x_{0}, y_{0}\right) $不可微；如果$ f_{x}^{\prime}\left(x_{0}, y_{0}\right) $和$ f_{y}^{\prime}\left(x_{0}, y_{0}\right) $都存在，考察$ \lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{\left[f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)\right]-\left[f_{x}^{\prime}\left(x_{0}, y_{0}\right) \Delta x+f_{y}^{\prime}\left(x_{0}, y_{0}\right) \Delta y\right]}{\rho}=0 $（可微定义式）是否成立，其中$ \rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}} $，如果该式成立，则称函数$ f(x, y) $在点$ (x_0, y_0) $处可微（可微的充要条件）（可微的定义可以将微分的概念（$ <font color=purple>**\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)**</font> $或者$ <font color=purple>**\Delta z=A \Delta x+B \Delta y+o(\rho)**</font> $）和偏导即可微的必要条件（$ <font color=purple>**\mathrm{d} z=\frac{\partial z}{\partial x} \mathrm{~d} x+\frac{\partial z}{\partial y} \mathrm{~d} y**</font> $）关联起来，这里好像就有$ <font color=purple>A=\frac{\partial z}{\partial x},B=\frac{\partial z}{\partial y}</font> $的嫌疑）
 
 2、利用可微的必要条件：可微函数必可导，换言之，不可导的函数一定不可微（点处导数定义不存在）（判断二元函数不可微）
 
 3、利用可微的充分条件：有连续一阶偏导数的函数一定可微（点处偏导数定义值等于偏导在该点的极限值）（判断二元函数可微）
 
-4、利用微分的概念：函数$z=f(x, y)$在点$(x, y)$处的全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$可以表示为$\Delta z=A \Delta x+B \Delta y+o(\rho)$，其中$A,B$不依赖于$\Delta x, \Delta y$，而仅与$x, y$有关，$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$（也可以证明全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$是$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$的无穷小量，即$\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\rho}=0$，此时$A=0,B=0$）
+4、利用微分的概念：函数$ z=f(x, y) $在点$ (x, y) $处的全增量$ \Delta z=f(x+\Delta x, y+\Delta y)-f(x, y) $可以表示为$ \Delta z=A \Delta x+B \Delta y+o(\rho) $，其中$ **A,B** $不依赖于$ **\Delta x, \Delta y** $，而仅与$ **x, y** $有关，$ \rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}} $（也可以证明全增量$ <font color=purple>\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)</font> $是$ <font color=purple>\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}</font> $的无穷小量，即$ <font color=purple>\lim_{\Delta x \rightarrow 0,\Delta y \rightarrow 0}\frac{f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\rho}=0</font> $，此时$ <font color=purple>A=0,B=0</font> $）
 
 
 
 \subsection{极值与驻点的定义}\index{函数的特征!极值与驻点的定义}
 
-1、多元函数极值点定义：类似于领域内$f(x, y) \leqslant f\left(x_{0}, y_{0}\right)$（极大值）（注意可以取等号）（极值点除了需要考虑驻点外，还要考虑导数不存在的点）
+1、多元函数极值点定义：类似于领域内$ f(x, y) \leqslant f\left(x_{0}, y_{0}\right) $（极大值）（注意可以取等号）（极值点除了需要考虑驻点外，还要考虑导数不存在的点）
 
-2、多元函数驻点定义：使$f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0$同时成立的点$(x, y)$称为函数$f(x, y)$的驻点（驻点不一定是极值点；极值点不一定是驻点）
+2、多元函数驻点定义：使$ f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0 $同时成立的点$ (x, y) $称为函数$ f(x, y) $的驻点（驻点不一定是极值点；极值点不一定是驻点）
 
-3、多元函数极值的必要条件：设函数$f(x, y)$在点$M_{0}\left(x_{0}, y_{0}\right)$的一阶偏导数存在，且在$\left(x_{0}, y_{0}\right)$取得极值，则$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0$（由此可见具有一阶偏导数的函数的极值点一定是驻点，但驻点不一定是极值点）
+3、多元函数极值的必要条件：设函数$ f(x, y) $在点$ M_{0}\left(x_{0}, y_{0}\right) $的一阶偏导数存在，且在$ \left(x_{0}, y_{0}\right) $取得极值，则$ f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0 $（由此可见具有一阶偏导数的函数的极值点一定是驻点，但驻点不一定是极值点）
 
 
 
@@ -59,23 +59,23 @@
 
 \section{泰勒定理}\index{泰勒定理}
 
-1、拉格朗日余项泰勒展开式：$f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+R_{1}$，其中余项$R_{1}=\frac{1}{2 !}[\frac{\partial^{2} f\left(P_{1}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(P_{1}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(P_{1}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]$，点$P_{1}$为$\left(x_{0}+\theta\left(x-x_{0}\right), y_{0}+\theta\left(y-y_{0}\right)\right)$
+1、拉格朗日余项泰勒展开式：$ f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+R_{1} $，其中余项$ R_{1}=\frac{1}{2 !}[\frac{\partial^{2} f\left(P_{1}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(P_{1}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(P_{1}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}] $，点$ P_{1} $为$ \left(x_{0}+\theta\left(x-x_{0}\right), y_{0}+\theta\left(y-y_{0}\right)\right) $
 
-2、佩亚诺型余 项的二阶泰勒公式展开式：$f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+\frac{1}{2 !}[\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]+o\left(\rho^{2}\right)$，其中$\rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}$
+2、佩亚诺型余 项的二阶泰勒公式展开式：$ f(x, y)=f\left(x_{0}, y_{0}\right)+f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)+\frac{1}{2 !}[\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x^{2}}\left(x-x_{0}\right)^{2}+2 \frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial x \partial y}\left(x-x_{0}\right)\left(y-y_{0}\right)+\frac{\partial^{2} f\left(x_{0}, y_{0}\right)}{\partial y^{2}}\left(y-y_{0}\right)^{2}]+o\left(\rho^{2}\right) $，其中$ \rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}} $
 
 \section{隐函数的偏导数}\index{隐函数的偏导数}
 
-1、由一个方程确定的隐函数（一元函数）求导：设$F(x, y)$有连续一阶偏导数，且$F_{y}^{\prime} \neq 0$ ，则由方程$F(x, y)=0$确定的函数$y=y(x)$可导，且$\frac{\mathrm{d} y}{\mathrm{~d} x}=-\frac{F_{x}^{\prime}}{F_{y}^{\prime}}$
+1、由一个方程确定的隐函数（一元函数）求导：设$ F(x, y) $有连续一阶偏导数，且$ F_{y}^{\prime} \neq 0 $ ，则由方程$ F(x, y)=0 $确定的函数$ y=y(x) $可导，且$ \frac{\mathrm{d} y}{\mathrm{~d} x}=-\frac{F_{x}^{\prime}}{F_{y}^{\prime}} $
 
-2、由一个方程确定的隐函数（二元函数）求导：设$F(x, y, z)$有连续一阶偏导数，且$F_{z}^{\prime} \neq 0, z=z(x, y)$由方程$F(x, y, z)=0$所确定，则$\frac{\partial z}{\partial x}=-\frac{F_{x}^{\prime}}{F_{z}^{\prime}}, \quad \frac{\partial z}{\partial y}=-\frac{F_{y}^{\prime}}{F_{z}^{\prime}}$
+2、由一个方程确定的隐函数（二元函数）求导：设$ F(x, y, z) $有连续一阶偏导数，且$ F_{z}^{\prime} \neq 0, z=z(x, y) $由方程$ F(x, y, z)=0 $所确定，则$ \frac{\partial z}{\partial x}=-\frac{F_{x}^{\prime}}{F_{z}^{\prime}}, \quad \frac{\partial z}{\partial y}=-\frac{F_{y}^{\prime}}{F_{z}^{\prime}} $
 
-3、由方程组确定的隐函数（一元函数）求导：设$u=u(x), v=v(x)$由方程组$\left\{\begin{array}{l}F(x, u, v)=0,  \\ G(x, u, v)=0\end{array}\right. $所确定，$\frac{\mathrm{d} u}{\mathrm{~d} x}$和$\frac{\mathrm{d} v}{\mathrm{~d} x}$, 可通过原方程组两端对$x$求导得到，即$\left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+F_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+G_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \end{array}\right.$，从中解出$\frac{\mathrm{d} u}{\mathrm{~d} x}$和$\frac{\mathrm{d} v}{\mathrm{~d} x}$，这里假设由形式解出的$\frac{\mathrm{d} u}{\mathrm{~d} x}$与$\frac{\mathrm{d} v}{\mathrm{~d} x}$中的分母不为零（对$x$求偏导得方程组）
+3、由方程组确定的隐函数（一元函数）求导：设$ u=u(x), v=v(x) $由方程组$ \left\{\begin{array}{l}F(x, u, v)=0,  \\ G(x, u, v)=0\end{array}\right.  $所确定，$ \frac{\mathrm{d} u}{\mathrm{~d} x} $和$ \frac{\mathrm{d} v}{\mathrm{~d} x} $, 可通过原方程组两端对$ x $求导得到，即$ \left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+F_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\mathrm{d} u}{\mathrm{~d} x}+G_{v}^{\prime} \frac{\mathrm{d} v}{\mathrm{~d} x}=0 \end{array}\right. $，从中解出$ \frac{\mathrm{d} u}{\mathrm{~d} x} $和$ \frac{\mathrm{d} v}{\mathrm{~d} x} $，这里假设由形式解出的$ \frac{\mathrm{d} u}{\mathrm{~d} x} $与$ \frac{\mathrm{d} v}{\mathrm{~d} x} $中的分母不为零（对$ <font color=purple>x</font> $求偏导得方程组）
 
-4、由方程组确定的隐函数（二元函数）求导：设$u=u(x, y), v=v(x, y)$由方程组$\left\{\begin{array}{l}F(x, y, u, v)=0, \\ G(x, y, u, v)=0\end{array}\right.$所确定，若要求$\frac{\partial u}{\partial x}$和$\frac{\partial v}{\partial x}$，可先对 原方程组两端对$x$求偏导得到, 即$\left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\partial u}{\partial x}+F_{v}^{\prime} \frac{\partial v}{\partial x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\partial u}{\partial x}+G_{v}^{\prime} \frac{\partial v}{\partial x}=0 \end{array}\right.$，然后从中解出$\frac{\partial u}{\partial x}$和$\frac{\partial v}{\partial x}$；同理可求得$\frac{\partial u}{\partial y}$和$\frac{\partial v}{\partial y}$，这里假设由形式解出的式子中的分母不为零（对$x$求偏导得方程组求解关于$x$的偏导；对$y$求偏导得方程组求解关于$y$的偏导）
+4、由方程组确定的隐函数（二元函数）求导：设$ u=u(x, y), v=v(x, y) $由方程组$ \left\{\begin{array}{l}F(x, y, u, v)=0, \\ G(x, y, u, v)=0\end{array}\right. $所确定，若要求$ \frac{\partial u}{\partial x} $和$ \frac{\partial v}{\partial x} $，可先对 原方程组两端对$ x $求偏导得到, 即$ \left\{\begin{array}{l} F_{x}^{\prime}+F_{u}^{\prime} \frac{\partial u}{\partial x}+F_{v}^{\prime} \frac{\partial v}{\partial x}=0 \\ G_{x}^{\prime}+G_{u}^{\prime} \frac{\partial u}{\partial x}+G_{v}^{\prime} \frac{\partial v}{\partial x}=0 \end{array}\right. $，然后从中解出$ \frac{\partial u}{\partial x} $和$ \frac{\partial v}{\partial x} $；同理可求得$ \frac{\partial u}{\partial y} $和$ \frac{\partial v}{\partial y} $，这里假设由形式解出的式子中的分母不为零（对$ <font color=purple>x</font> $求偏导得方程组求解关于$ <font color=purple>x</font> $的偏导；对$ <font color=purple>y</font> $求偏导得方程组求解关于$ <font color=purple>y</font> $的偏导）
 
-注意：在求解$F^{\prime}_x$时，对$x$求导过程中，即使遇到$z$，也不求$z^{\prime}_x$（不深入求导），仅求导与$x$相关的变量，其它视为常数；求解$F^{\prime}_y$和$F^{\prime}_z$时也是如此，非求导变量均为常数，即使存在$z=z(x, y)$
+注意：在求解$ <font color=purple>F^{\prime}_x</font> $时，对$ <font color=purple>x</font> $求导过程中，即使遇到$ <font color=purple>z</font> $，也不求$ <font color=purple>z^{\prime}_x</font> $（不深入求导），仅求导与$ <font color=purple>**x**</font> $相关的变量，其它视为常数；求解$ <font color=purple>F^{\prime}_y</font> $和$ <font color=purple>F^{\prime}_z</font> $时也是如此，非求导变量均为常数，即使存在$ <font color=purple>z=z(x, y)</font> $
 
-备注：将函数关系代入可以得到明确的变量关系（循环迭代式关系函数：$z$是$x,y$的函数，$y$是$x,z$的函数，可以得到$z$是$x$的一元函数）
+备注：将函数关系代入可以得到明确的变量关系（循环迭代式关系函数：$ <font color=purple>z</font> $是$ <font color=purple>x,y</font> $的函数，$ <font color=purple>y</font> $是$ <font color=purple>x,z</font> $的函数，可以得到$ <font color=purple>z</font> $是$ <font color=purple>x</font> $的一元函数）
 
 备注：隐函数求导的常用的三种方法，利用隐函数求导公式；对方程两端求导，解出偏导数；利用微分形式不变性，方程两端求微分
 
@@ -85,29 +85,29 @@
 
 \subsection{二元极值的判断条件：（充分条件）}\index{极值与条件极值!二元极值的判断条件：（充分条件）}
 
-设函数$z=f(x, y)$在点$\left(x_{0}, y_{0}\right)$的某邻域内有连续的二阶偏导数，且$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0$。令$f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right)=A, f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right)=B, f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)=C$，则
+设函数$ z=f(x, y) $在点$ \left(x_{0}, y_{0}\right) $的某邻域内有连续的二阶偏导数，且$ f_{x}^{\prime}\left(x_{0}, y_{0}\right)=0, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=0 $。令$ f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right)=A, f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right)=B, f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)=C $，则
 
-(1)$A C-B^{2}>0$时，$f(x, y)$在点$\left(x_{0}, y_{0}\right)$取极值,且$\left\{\begin{array}{l}\text { 当 } A>0 \text { 时取极小值, } \\ \text { 当 } A<0 \text { 时取极大值. }\end{array}\right.$
+(1)$ A C-B^{2}>0 $时，$ f(x, y) $在点$ \left(x_{0}, y_{0}\right) $取极值,且$ \left\{\begin{array}{l}\text { 当 } A>0 \text { 时取极小值, } \\ \text { 当 } A<0 \text { 时取极大值. }\end{array}\right. $
 
-(2)$A C-B^{2}<0$时，$f(x, y)$在点$\left(x_{0}, y_{0}\right)$无极值
+(2)$ A C-B^{2}<0 $时，$ f(x, y) $在点$ \left(x_{0}, y_{0}\right) $无极值
 
-(3)$A C-B^{2}=0$时，不能确定$f(x, y)$在点$\left(x_{0}, y_{0}\right)$是否有极值，还需进一步讨论（一般用 极值定义)
+(3)$ A C-B^{2}=0 $时，不能确定$ f(x, y) $在点$ \left(x_{0}, y_{0}\right) $是否有极值，还需进一步讨论（一般用 极值定义)
 
 
 
-\subsection{二元极值的判断步骤：（前提：二元函数$z=f(x, y)$有连续二阶偏导数）}\index{极值与条件极值!二元极值的判断步骤：（前提：二元函数$z=f(x, y)$有连续二阶偏导数）}
+\subsection{二元极值的判断步骤：（前提：二元函数$ z=f(x, y) $有连续二阶偏导数）}\index{极值与条件极值!二元极值的判断步骤：（前提：二元函数$ z=f(x, y) $有连续二阶偏导数）}
 
-1、令$f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0$同时成立，求得所有驻点
+1、令$ f_{x}^{\prime}(x, y)=0, f_{y}^{\prime}(x, y)=0 $同时成立，求得所有驻点
 
-2、对每个驻点求出二阶偏导数$A=f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right), B=f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right), C=f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right)$
+2、对每个驻点求出二阶偏导数$ A=f_{x x}^{\prime \prime}\left(x_{0}, y_{0}\right), B=f_{x y}^{\prime \prime}\left(x_{0}, y_{0}\right), C=f_{y y}^{\prime \prime}\left(x_{0}, y_{0}\right) $
 
-3、利用极值充分条件,通过$A C-B^{2}$的正负对驻点$\left(x_{0}, y_{0}\right)$作判定
+3、利用极值充分条件,通过$ A C-B^{2} $的正负对驻点$ **\left(x_{0}, y_{0}\right)** $作判定
 
 
 
 \subsection{二元极值特殊的判断方法}\index{极值与条件极值!二元极值特殊的判断方法}
 
-1、代入特殊路径（反证法/定义法）：如果在某个点附近代入曲线（$y=x,y=-x$）后，函数值出现了可正可负的情况，则函数不存在极值（常用于极限表示式中）
+1、代入特殊路径（反证法/定义法）：如果在某个点附近代入曲线（$ y=x,y=-x $）后，函数值出现了可正可负的情况，则函数不存在极值（常用于极限表示式中）
 
 备注：在求某一点的二阶导时，对于无关的变量可以提前代入化简
 
@@ -115,9 +115,9 @@
 
 \subsection{条件极值求解-化为无条件极值}\index{极值与条件极值!条件极值求解-化为无条件极值}
 
-1、若从条件$\varphi(x, y)=0$中可解出$y=y(x)$或$x=x(y)$
+1、若从条件$ \varphi(x, y)=0 $中可解出$ y=y(x) $或$ x=x(y) $
 
-2、代人$z=f(x, y)$化简成无条件极值问题
+2、代人$ z=f(x, y) $化简成无条件极值问题
 
 注意：化为无条件极值适合单条件的情况
 
@@ -125,11 +125,11 @@
 
 \subsection{条件极值求解-拉格朗日乘数法：（多个条件的也是类似的）}\index{极值与条件极值!条件极值求解-拉格朗日乘数法：（多个条件的也是类似的）}
 
-1、函数$f(x, y)$在条件$\varphi(x, y)=0$下的极值的必要条件，先构造拉格朗日函数$F(x, y, \lambda)=f(x, y)+\lambda \varphi(x, y)$
+1、函数$ f(x, y) $在条件$ \varphi(x, y)=0 $下的极值的必要条件，先构造拉格朗日函数$ F(x, y, \lambda)=f(x, y)+\lambda \varphi(x, y) $
 
-2、解方程组$\left\{\begin{array}{l} \frac{\partial F}{\partial x}=\frac{\partial f}{\partial x}+\lambda \frac{\partial \varphi}{\partial x}=0 \\ \frac{\partial F}{\partial y}=\frac{\partial f}{\partial y}+\lambda \frac{\partial \varphi}{\partial y}=0 \\ \frac{\partial F}{\partial \lambda}=\varphi(x, y)=0 \end{array}\right.$
+2、解方程组$ \left\{\begin{array}{l} \frac{\partial F}{\partial x}=\frac{\partial f}{\partial x}+\lambda \frac{\partial \varphi}{\partial x}=0 \\ \frac{\partial F}{\partial y}=\frac{\partial f}{\partial y}+\lambda \frac{\partial \varphi}{\partial y}=0 \\ \frac{\partial F}{\partial \lambda}=\varphi(x, y)=0 \end{array}\right. $
 
-3、所有满足此方程组的解$(x, y, \lambda)$中$(x, y)$是函数$f(x, y)$在条件$\varphi(x, y)=0$下可能的极值点
+3、所有满足此方程组的解$ (x, y, \lambda) $中$ (x, y) $是函数$ f(x, y) $在条件$ \varphi(x, y)=0 $下可能的极值点
 
 注意：求解时注意利用方程中变量的对称性（不要过度依赖因为容易漏解，有时间还是按照标准步骤求解，或者根据不等式验证结果或者根据几何进行预分析）
 
@@ -149,17 +149,17 @@
 
 \subsection{定义与性质}\index{二元函数的极限和连续!定义与性质}
 
-1、重极限的定义：定义式为$0<\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}<\delta$（注意：二元函数的重极限是指定义域$D$中的$P(x, y)$以任何方式趋于点$P_{0}\left(x_{0}, y_{0}\right)$时，函数$f(x, y)$都无限趋近于同一常数$A$。换言之，若点$P(x, y)$沿两种不同路径趋向于点$P_{0}\left(x_{0}, y_{0}\right)$时，$f(x, y)$趋于不同常数，或点$P(x, y)$沿某一路径趋于$P_{0}\left(x_{0}, y_{0}\right)$时，$f(x, y)$的极限不存在，则重极限$\lim_{x \rightarrow x_{0},y \rightarrow y_{0}} f(x, y)$不存在。这是证明重极限不存在常用的有效方法）（重极限的极限运算(有理运算,复合运算)和性质(保号性, 夹逼性, 局部有界性,极限 与无穷小的关系）与一元函数完全类似）
+1、重极限的定义：定义式为$ 0<\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}<\delta $（注意：二元函数的重极限是指定义域$ <font color=purple>D</font> $中的$ <font color=purple>P(x, y)</font> $以任何方式趋于点$ <font color=purple>P_{0}\left(x_{0}, y_{0}\right)</font> $时，函数$ <font color=purple>f(x, y)</font> $都无限趋近于同一常数$ <font color=purple>A</font> $。换言之，若点$ <font color=purple>P(x, y)</font> $沿两种不同路径趋向于点$ <font color=purple>P_{0}\left(x_{0}, y_{0}\right)</font> $时，$ <font color=purple>f(x, y)</font> $趋于不同常数，或点$ <font color=purple>P(x, y)</font> $沿某一路径趋于$ <font color=purple>P_{0}\left(x_{0}, y_{0}\right)</font> $时，$ <font color=purple>f(x, y)</font> $的极限不存在，则重极限$ <font color=purple>\lim_{x \rightarrow x_{0},y \rightarrow y_{0}} f(x, y)</font> $不存在。这是证明重极限不存在常用的有效方法）（重极限的极限运算(有理运算,复合运算)和性质(保号性, 夹逼性, 局部有界性,极限 与无穷小的关系）与一元函数完全类似）
 
-2、二元函数连续的概念：设函数$f(x, y)$在开区域(或闭区域)$D$内有定义，$P_{0}\left(x_{0}, y_{0}\right)$是$D$的内点或边界点,且$P_{0} \in D$，如果$\lim_{x \rightarrow x_{0},y \rightarrow y_{0}} f(x, y)$，则称函数$f(x, y)$在点$P_{0}\left(x_{0}, y_{0}\right)$连续
+2、二元函数连续的概念：设函数$ f(x, y) $在开区域(或闭区域)$ D $内有定义，$ P_{0}\left(x_{0}, y_{0}\right) $是$ D $的内点或边界点,且$ P_{0} \in D $，如果$ \lim_{x \rightarrow x_{0},y \rightarrow y_{0}} f(x, y) $，则称函数$ f(x, y) $在点$ P_{0}\left(x_{0}, y_{0}\right) $连续
 
 3、连续函数的性质：
 
 3.1、连续函数的和、差、积、商（分母不为零）均是连续函数，连续函数的复合函数仍为连续函数（连续函数的组合）
 
-3.2、在有界闭区域$D$上连续的函数，在该区域$D$上有最大值和小值（最大最小值定理）
+3.2、在有界闭区域$ D $上连续的函数，在该区域$ D $上有最大值和小值（最大最小值定理）
 
-3.3、在有界闭区域$D$上连续的函数，可取到它在该区域上的最小值与最大值之间的任何值（介值定理）
+3.3、在有界闭区域$ D $上连续的函数，可取到它在该区域上的最小值与最大值之间的任何值（介值定理）
 
 3.4、一切多元初等函数在其定义区域内处处连续，这里的定义区域是指包含在定义域内的区域或闭区域
 
@@ -173,11 +173,11 @@
 
 \subsection{证明二重极限不存在-找趋近路径}\index{二元函数的极限和连续!证明二重极限不存在-找趋近路径}
 
-1、分子分母齐次：令$y=kx$
+1、分子分母齐次：令$ y=kx $
 
-2、分子分母化简后齐次：例如若$y$是高次方的，令$y_1=y^2$化简为齐次
+2、分子分母化简后齐次：例如若$ y $是高次方的，令$ y_1=y^2 $化简为齐次
 
-3、$\frac{xy}{x+y}$：令$y=-x+x^3$，得到趋近于0的结果是无穷，即该路径不存在
+3、$ \frac{xy}{x+y} $：令$ y=-x+x^3 $，得到趋近于0的结果是无穷，即该路径不存在
 
 
 
@@ -187,7 +187,7 @@
 
 2、消去分母中极限为零的因子（通常采用有理化，等价无穷小代换等)
 
-3、转化为一元函数极限，利用一元函数求极限方法求解（化一元函数是将可微的一部分替换为单一变量，如$t=x^2+y^2$）
+3、转化为一元函数极限，利用一元函数求极限方法求解（化一元函数是将可微的一部分替换为单一变量，如$ <font color=purple>t=x^2+y^2</font> $）
 
 4、利用无穷小量与有界变量（利用不等式判断有界）之积为无穷小量
 
@@ -199,15 +199,15 @@
 
 \subsection{二元函数的偏导数与全微分}\index{偏导数与全微分!二元函数的偏导数与全微分}
 
-1、偏导数的定义： 设函数$z=f(x, y)$在点$\left(x_{0}, y_{0}\right)$的某一邻域内有定义，如果$\lim_{\Delta x \rightarrow 0} \frac{f\left(x{0}+\Delta x, y_{0}\right)-f\left(x_{0}, y_{0}\right)}{\Delta x}$存在，则称此极限为函数$z=f(x, y)$在点$\left(x_{0}, y_{0}\right)$处对$x$的偏导数, 记为$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$；类似地可定义$f_{y}^{\prime}\left(x_{0}, y_{0}\right)=\lim_{\Delta y \rightarrow 0} \frac{f\left(x{0}, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\Delta y}$（偏导数本质上是一元函数的导数，事实上偏导数$f_{x}^{\prime}\left(x_{0}, y_{0}\right)$就是一元函数$\varphi(x)=f\left(x, y_{0}\right)$在$x=x_{0}$处的导数，即$f_{x}^{\prime}\left(x_{0}, y_{0}\right)=\varphi^{\prime}\left(x_{0}\right)=\left.\frac{\mathrm{d}}{\mathrm{d} x} f\left(x, y_{0}\right)\right|_{x=x_{0}}$，而偏导数$f_{y}^{\prime}\left(x_{0}, y_{0}\right)$也是类似的）（从几何上看就是曲面与$x=x_0,y=y_0$平面的交线在交线方向上的导数）
+1、偏导数的定义： 设函数$ z=f(x, y) $在点$ \left(x_{0}, y_{0}\right) $的某一邻域内有定义，如果$ \lim_{\Delta x \rightarrow 0} \frac{f\left(x{0}+\Delta x, y_{0}\right)-f\left(x_{0}, y_{0}\right)}{\Delta x} $存在，则称此极限为函数$ z=f(x, y) $在点$ \left(x_{0}, y_{0}\right) $处对$ x $的偏导数, 记为$ f_{x}^{\prime}\left(x_{0}, y_{0}\right) $；类似地可定义$ f_{y}^{\prime}\left(x_{0}, y_{0}\right)=\lim_{\Delta y \rightarrow 0} \frac{f\left(x{0}, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\Delta y} $（偏导数本质上是一元函数的导数，事实上偏导数$ <font color=purple>f_{x}^{\prime}\left(x_{0}, y_{0}\right)</font> $就是一元函数$ <font color=purple>\varphi(x)=f\left(x, y_{0}\right)</font> $在$ <font color=purple>x=x_{0}</font> $处的导数，即$ <font color=purple>f_{x}^{\prime}\left(x_{0}, y_{0}\right)=\varphi^{\prime}\left(x_{0}\right)=\left.\frac{\mathrm{d}}{\mathrm{d} x} f\left(x, y_{0}\right)\right|_{x=x_{0}}</font> $，而偏导数$ <font color=purple>f_{y}^{\prime}\left(x_{0}, y_{0}\right)</font> $也是类似的）（从几何上看就是曲面与$ <font color=purple>x=x_0,y=y_0</font> $平面的交线在交线方向上的导数）
 
-2、全微分的概念：函数$z=f(x, y)$在点$(x, y)$处的全增量$\Delta z=f(x+\Delta x, y+\Delta y)-f(x, y)$可以表示为$\Delta z=A \Delta x+B \Delta y+o(\rho)$，其中$A,B$不依赖于$\Delta x, \Delta y$，而仅与$x, y$有关，$\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$，则称函数$z=f(x, y)$在点$(x, y)$处可微，微分记为$\mathrm{d} z=A \Delta x+B \Delta y$
+2、全微分的概念：函数$ z=f(x, y) $在点$ (x, y) $处的全增量$ \Delta z=f(x+\Delta x, y+\Delta y)-f(x, y) $可以表示为$ \Delta z=A \Delta x+B \Delta y+o(\rho) $，其中$ A,B $不依赖于$ \Delta x, \Delta y $，而仅与$ x, y $有关，$ \rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}} $，则称函数$ z=f(x, y) $在点$ (x, y) $处可微，微分记为$ \mathrm{d} z=A \Delta x+B \Delta y $
 
-3、可微的必要条件：如果函数$z=f(x, y)$在点$(x, y)$处可微,则该函数在点$(x, y)$处的偏导数$\frac{\partial z}{\partial x}, \frac{\partial z}{\partial y}$必定存在，且$\mathrm{d} z=\frac{\partial z}{\partial x} \mathrm{~d} x+\frac{\partial z}{\partial y} \mathrm{~d} y$（利用该条件求解微分）（偏导数与微分的关系）
+3、可微的必要条件：如果函数$ z=f(x, y) $在点$ (x, y) $处可微,则该函数在点$ (x, y) $处的偏导数$ \frac{\partial z}{\partial x}, \frac{\partial z}{\partial y} $必定存在，且$ \mathrm{d} z=\frac{\partial z}{\partial x} \mathrm{~d} x+\frac{\partial z}{\partial y} \mathrm{~d} y $（利用该条件求解微分）（偏导数与微分的关系）
 
-4、可微的充分条件：如果函数$z=f(x, y)$的偏导数$\frac{\partial z}{\partial x}$和$\frac{\partial z}{\partial y}$在点$(x, y)$处连续，则称函数$z=f(x, y)$在点$(x, y)$处可微
+4、可微的充分条件：如果函数$ z=f(x, y) $的偏导数$ \frac{\partial z}{\partial x} $和$ \frac{\partial z}{\partial y} $在点$ (x, y) $处连续，则称函数$ z=f(x, y) $在点$ (x, y) $处可微
 
-5、多元函数连续、可导、可微的关系：多元函数可导既不能推得连续，也不能推得可微（原因在于多元的可导是指一阶偏导数存在，而偏导数是用一元函数极限定义的$\left(f_{x}^{\prime}\left(x_{0}\right.\right., \left.\left.y_{0}\right)=\lim_{x \rightarrow x{0}} \frac{f\left(x, y_{0}\right)-f\left(x_{0}, y_{0}\right)}{x-x_{0}}, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=\lim_{y \rightarrow y{0}} \frac{f\left(x_{0}, y\right)-f\left(x_{0}, y_{0}\right)}{y-y_{0}}\right)$，其动点$\left(x, y_{0}\right)$(或$\left.\left(x_{0}, y\right)\right)$是沿$x$(或$y$) 轴方向趋于$\left(x_{0}, y_{0}\right)$，它只与点$\left(x_{0}, y_{0}\right)$邻域内过该点且平行于两坐标的十字方向函数值有关；而连续（$\lim_{(x, y) \rightarrow\left(x_{0}, y_{0}\right)} f(x, y)=f\left(x_{0}, y_{0}\right)$）和可微（$f(x, y)-f(x_{0},y_{0})=A\left(x-x_{0}\right)+B\left(y-y_{0}\right)+o(\rho)$）都是用重极限定义的, 其动点$(x, y)$是以任意方式趋于$\left(x_{0}, y_{0}\right)$，它与点$\left(x_{0}, y_{0}\right)$邻域内函数值有关）
+5、多元函数连续、可导、可微的关系：多元函数可导既不能推得连续，也不能推得可微（原因在于多元的可导是指一阶偏导数存在，而偏导数是用一元函数极限定义的$ <font color=purple>\left(f_{x}^{\prime}\left(x_{0}\right.\right., \left.\left.y_{0}\right)=\lim_{x \rightarrow x{0}} \frac{f\left(x, y_{0}\right)-f\left(x_{0}, y_{0}\right)}{x-x_{0}}, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=\lim_{y \rightarrow y{0}} \frac{f\left(x_{0}, y\right)-f\left(x_{0}, y_{0}\right)}{y-y_{0}}\right)</font> $，其动点$ <font color=purple>\left(x, y_{0}\right)</font> $(或$ <font color=purple>\left.\left(x_{0}, y\right)\right)</font> $是沿$ <font color=purple>x</font> $(或$ <font color=purple>y</font> $) 轴方向趋于$ <font color=purple>\left(x_{0}, y_{0}\right)</font> $，它只与点$ <font color=purple>\left(x_{0}, y_{0}\right)</font> $邻域内过该点且平行于两坐标的十字方向函数值有关；而连续（$ <font color=purple>\lim_{(x, y) \rightarrow\left(x_{0}, y_{0}\right)} f(x, y)=f\left(x_{0}, y_{0}\right)</font> $）和可微（$ <font color=purple>f(x, y)-f(x_{0},y_{0})=A\left(x-x_{0}\right)+B\left(y-y_{0}\right)+o(\rho)</font> $）都是用重极限定义的, 其动点$ <font color=purple>(x, y)</font> $是以任意方式趋于$ <font color=purple>\left(x_{0}, y_{0}\right)</font> $，它与点$ <font color=purple>\left(x_{0}, y_{0}\right)</font> $邻域内函数值有关）
 
 
 
@@ -217,13 +217,13 @@
 
 2、全微分形式不变性：对中间变量的微分和对自变量的微分具有同样的形式
 
-3、高阶偏导数：$\frac{\partial^{2} z}{\partial x^{2}}=\frac{\partial}{\partial x}\left(\frac{\partial z}{\partial x}\right)=f_{x x}^{\prime \prime}(x, y)$，$\frac{\partial^{2} z}{\partial x \partial y}=\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial x}\right)=f_{x y}^{\prime \prime}(x, y)$（混合偏导），$\frac{\partial^{2} z}{\partial y \partial x}=\frac{\partial}{\partial x}\left(\frac{\partial z}{\partial y}\right)=f_{y x}^{\prime \prime}(x, y)$（混合偏导），$\frac{\partial^{2} z}{\partial y^{2}}=\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial y}\right)=f_{y y}^{\prime \prime}(x, y)$
+3、高阶偏导数：$ \frac{\partial^{2} z}{\partial x^{2}}=\frac{\partial}{\partial x}\left(\frac{\partial z}{\partial x}\right)=f_{x x}^{\prime \prime}(x, y) $，$ \frac{\partial^{2} z}{\partial x \partial y}=\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial x}\right)=f_{x y}^{\prime \prime}(x, y) $（混合偏导），$ \frac{\partial^{2} z}{\partial y \partial x}=\frac{\partial}{\partial x}\left(\frac{\partial z}{\partial y}\right)=f_{y x}^{\prime \prime}(x, y) $（混合偏导），$ \frac{\partial^{2} z}{\partial y^{2}}=\frac{\partial}{\partial y}\left(\frac{\partial z}{\partial y}\right)=f_{y y}^{\prime \prime}(x, y) $
 
-4、混合偏导数与求导次序无关：若函数$z=f(x, y)$的两个混合偏导数$\frac{\partial^{2} z}{\partial x \partial y}$和$\frac{\partial^{2} z}{\partial y \partial x}$在点$\left(x_{0}, y_{0}\right)$都连续, 则在$\left(x_{0}, y_{0}\right)$点$\frac{\partial^{2} z}{\partial x \partial y}=\frac{\partial^{2} z}{\partial y \partial x}$
+4、混合偏导数与求导次序无关：若函数$ z=f(x, y) $的两个混合偏导数$ \frac{\partial^{2} z}{\partial x \partial y} $和$ \frac{\partial^{2} z}{\partial y \partial x} $在点$ \left(x_{0}, y_{0}\right) $都连续, 则在$ \left(x_{0}, y_{0}\right) $点$ \frac{\partial^{2} z}{\partial x \partial y}=\frac{\partial^{2} z}{\partial y \partial x} $
 
 注意：如果待求导函数中的自变量不是求导变量，先对函数进行变量替换（化简），转化成有关求导变量为自变量的函数
 
-注意：对于极坐标函数，隐含有$r=\sqrt{x^2+y^2}$，$r$是极坐标的极径
+注意：对于极坐标函数，隐含有$ <font color=purple>r=\sqrt{x^2+y^2}</font> $，$ <font color=purple>r</font> $是极坐标的极径
 
 注意：区分整体求导（将一坨式子当作一个整体求导）和部分求导（对某一个自变量求导）
 
@@ -233,41 +233,41 @@
 
 \subsection{曲线的切线和法平面}\index{线面的空间特征（切、法）!曲线的切线和法平面}
 
-形式一：曲线$\Gamma$的方程为参数式$\left\{\begin{array}{l}x=x(t), \\ y=y(t),  \\ z=z(t),\end{array}\right.$
+形式一：曲线$ \Gamma $的方程为参数式$ \left\{\begin{array}{l}x=x(t), \\ y=y(t),  \\ z=z(t),\end{array}\right. $
 
-1、该曲线在其上一点$P_{0}\left(x_{0}, y_{0}, z_{0}\right)$处的切向量为$\tau=\left\{x^{\prime}\left(t_{0}\right), y^{\prime}\left(t_{0}\right), z^{\prime}\left(t_{0}\right)\right\}$（利用切向量构造切线或者法平面方程）
+1、该曲线在其上一点$ P_{0}\left(x_{0}, y_{0}, z_{0}\right) $处的切向量为$ \tau=\left\{x^{\prime}\left(t_{0}\right), y^{\prime}\left(t_{0}\right), z^{\prime}\left(t_{0}\right)\right\} $（利用切向量构造切线或者法平面方程）
 
-2、该点处的切线方程为$\frac{x-x_{0}}{x^{\prime}\left(t_{0}\right)}=\frac{y-y_{0}}{y^{\prime}\left(t_{0}\right)}=\frac{z-z_{0}}{z^{\prime}\left(t_{0}\right)}$
+2、该点处的切线方程为$ \frac{x-x_{0}}{x^{\prime}\left(t_{0}\right)}=\frac{y-y_{0}}{y^{\prime}\left(t_{0}\right)}=\frac{z-z_{0}}{z^{\prime}\left(t_{0}\right)} $
 
-3、该点处的法平面方程为$\left.x^{\prime}\left(t_{0}\right)\left(x-x_{0}\right)+y^{\prime}\left(t_{0}\right)\left(y-y_{0}\right)+z^{\prime}\left(t_{0}\right)\left(z-k_{0}\right) = 0\right\}$
+3、该点处的法平面方程为$ \left.x^{\prime}\left(t_{0}\right)\left(x-x_{0}\right)+y^{\prime}\left(t_{0}\right)\left(y-y_{0}\right)+z^{\prime}\left(t_{0}\right)\left(z-k_{0}\right) = 0\right\} $
 
-形式二：曲线$\Gamma$的方程为一般式$\left\{\begin{array}{l}F(x, y, z)=0,\\ G(x, y, z)=0,\end{array}\right.$
+形式二：曲线$ \Gamma $的方程为一般式$ \left\{\begin{array}{l}F(x, y, z)=0,\\ G(x, y, z)=0,\end{array}\right. $
 
-1、 则该曲线在点$P_{0}\left(x_{0}, y_{0}, z_{0}\right)$处的切向量为曲面$F(x, y, z)=0$和$G(x, y, z)=0$在该点的法向量$\boldsymbol{n}_{1}$和$\boldsymbol{n}_{2}$的向量积，即切向量 $\tau=\boldsymbol{n}_{1} \times \boldsymbol{n}_{2}$，其中$\begin{aligned} &\boldsymbol{n}_{1}=\left\{F{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} \\ &\boldsymbol{n}_{2}=\left\{G_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), G_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), G_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} \end{aligned}$，记$\boldsymbol{n}_{1} \times \boldsymbol{n}_{2}=\{A, B, C\}$（利用切向量构造切线或者法平面方程）
+1、 则该曲线在点$ P_{0}\left(x_{0}, y_{0}, z_{0}\right) $处的切向量为曲面$ F(x, y, z)=0 $和$ G(x, y, z)=0 $在该点的法向量$ \boldsymbol{n}_{1} $和$ \boldsymbol{n}_{2} $的向量积，即切向量 $ \tau=\boldsymbol{n}_{1} \times \boldsymbol{n}_{2} $，其中$ \begin{aligned} &\boldsymbol{n}_{1}=\left\{F{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} \\ &\boldsymbol{n}_{2}=\left\{G_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), G_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), G_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} \end{aligned} $，记$ \boldsymbol{n}_{1} \times \boldsymbol{n}_{2}=\{A, B, C\} $（利用切向量构造切线或者法平面方程）
 
-2、$P_{0}\left(x_{0}, y_{0}, z_{0}\right)$点的切线方程为$\frac{x-x_{0}}{A}=\frac{y-y_{0}}{B}=\frac{z-z_{0}}{C}$
+2、$ P_{0}\left(x_{0}, y_{0}, z_{0}\right) $点的切线方程为$ \frac{x-x_{0}}{A}=\frac{y-y_{0}}{B}=\frac{z-z_{0}}{C} $
 
-3、$P_{0}\left(x_{0}, y_{0}, z_{0}\right)$点的法平面方程为$A\left(x-x_{0}\right)+B\left(y-y_{0}\right)+C\left(z-z_{0}\right)=0$
+3、$ P_{0}\left(x_{0}, y_{0}, z_{0}\right) $点的法平面方程为$ A\left(x-x_{0}\right)+B\left(y-y_{0}\right)+C\left(z-z_{0}\right)=0 $
 
-形式三：平面曲线$y=f(x)$
+形式三：平面曲线$ y=f(x) $
 
-1、平面曲线在一点的切向量为$(1,y^{\prime}(x))$，可以用于推导曲率圆的中心
+1、平面曲线在一点的切向量为$ (1,y^{\prime}(x)) $，可以用于推导曲率圆的中心
 
 
 
 \subsection{曲面的切平面与法线}\index{线面的空间特征（切、法）!曲面的切平面与法线}
 
-形式一：$F(x, y, z)=0$
+形式一：$ F(x, y, z)=0 $
 
-1、该曲面在点$\left(x_{0}, y_{0}, z_{0}\right)$处的法向量为$\boldsymbol{n}=\left\{F_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\}$（利用法向量构造切平面或者法线方程）
+1、该曲面在点$ \left(x_{0}, y_{0}, z_{0}\right) $处的法向量为$ \boldsymbol{n}=\left\{F_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} $（利用法向量构造切平面或者法线方程）
 
-2、切平面为$F_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\left(x-x_{0}\right)+F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\left(y-y_{0}\right)+F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\left(z-z_{0}\right)=0 $
+2、切平面为$ F_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\left(x-x_{0}\right)+F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\left(y-y_{0}\right)+F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\left(z-z_{0}\right)=0  $
 
-3、法线方程为$\frac{x-x_{0}}{F_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)}=\frac{y-y_{0}}{F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)}=\frac{z-z_{0}}{F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)}$
+3、法线方程为$ \frac{x-x_{0}}{F_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)}=\frac{y-y_{0}}{F_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)}=\frac{z-z_{0}}{F_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)} $
 
-形式二：$z=f(x, y)$
+形式二：$ z=f(x, y) $
 
-1、该曲面在点$\left(x_{0}, y_{0}, z_{0}\right)$处的法向量为$\left\{f_{x}^{\prime}\left(x_{0}, y_{0}\right),f_{y}^{\prime}\left(x_{0}, y_{0}\right),-1\right\}$（利用法向量构造切平面或者法线方程）
+1、该曲面在点$ \left(x_{0}, y_{0}, z_{0}\right) $处的法向量为$ \left\{f_{x}^{\prime}\left(x_{0}, y_{0}\right),f_{y}^{\prime}\left(x_{0}, y_{0}\right),-1\right\} $（利用法向量构造切平面或者法线方程）
 
 备注：面的法向量可以归一化之后形成方向导数
 
@@ -281,9 +281,9 @@
 
 \subsection{方向导数}\index{方向导数、梯度、散度、旋度!方向导数}
 
-0、方向导数定义：二维：$\left.\frac{\partial f}{\partial l}\right|_{\left(x_{0}, y_{0}\right)}$=$\lim _{t \rightarrow 0^{+}} \frac{f\left(x_{0}+t \cos \alpha, y_{0}+t \cos \beta\right)-f\left(x_{0}, y_{0}\right)}{t}$；三维：$\left.\frac{\partial f}{\partial l}\right|_{\left(x_{0}, y_{0}, z_{0}\right)}$=$\newline\lim _{t \rightarrow 0^{+}} \frac{f\left(x_{0}+t \cos \alpha, y_{0}+t \cos \beta, z_{0}+t \cos \gamma\right)-f\left(x_{0}, y_{0}, z_{0}\right)}{t}$（注意$t$是趋近于$0^+$的）（求解未说明可微函数的方向导数或者不可微函数的方向导数）
+0、方向导数定义：二维：$ \left.\frac{\partial f}{\partial l}\right|_{\left(x_{0}, y_{0}\right)} $=$ \lim _{t \rightarrow 0^{+}} \frac{f\left(x_{0}+t \cos \alpha, y_{0}+t \cos \beta\right)-f\left(x_{0}, y_{0}\right)}{t} $；三维：$ \left.\frac{\partial f}{\partial l}\right|_{\left(x_{0}, y_{0}, z_{0}\right)} $=$ \newline\lim _{t \rightarrow 0^{+}} \frac{f\left(x_{0}+t \cos \alpha, y_{0}+t \cos \beta, z_{0}+t \cos \gamma\right)-f\left(x_{0}, y_{0}, z_{0}\right)}{t} $（注意$ <font color=purple>t</font> $是趋近于$ <font color=purple>0^+</font> $的）（求解未说明可微函数的方向导数或者不可微函数的方向导数）
 
-1、方向导数公式：二维：函数在点处可微，则在该点沿任一方向$l$的方向导数存在,且有$\frac{\partial f}{\partial l}|_{\left(x_{0}, y_{0}\right)}= f_{x}^{\prime}(x_{0},y_{0}) \cos \alpha+f_{y}^{\prime}\left(x_{0}, y_{0}\right) \cos \beta$其中$\cos \alpha, \cos \beta$为方向$l$的方向余弦；三维：$\frac{d f}{\partial l}|{\left(x_{0}, y_{0}, z_{0}\right)} $=$f_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \alpha$+$f_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \beta$+$f_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \beta+f_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \gamma$=$\newline\left\{f_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), f_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), f_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} \cdot e$，其中$e=\{\cos \alpha, \cos \beta, \cos \gamma\}$是$l$的方向的单位向量（求解可微函数的方向导数求解方向余弦和各个方向的偏导数即可）（利用方向导数公式可以对向量进行求导，设方向导数的单位向量，并利用方向导数公式展开即可，例如对法向量求导$\frac{\partial u}{\partial \boldsymbol{n}} \mathrm{d} s=\frac{\partial u}{\partial x} \cos (\boldsymbol{n}, x) \mathrm{d} s+\frac{\partial u}{\partial y} \cos (\boldsymbol{n}, y) \mathrm{d} s$，其中$\cos (\boldsymbol{n}, x) ,\cos (\boldsymbol{n}, y)$是法向量的方向余弦；或者类似于$\oiint_{\Sigma} \frac{\partial u}{\partial n} \mathrm{~d} S$=$\oiint_{\Sigma}(\frac{\partial u}{\partial x} \cos \alpha+\frac{\partial u}{\partial y} \cos \beta+\frac{\partial u}{\partial z} \cos \gamma) \mathrm{d} S$）
+1、方向导数公式：二维：函数在点处可微，则在该点沿任一方向$ l $的方向导数存在,且有$ \frac{\partial f}{\partial l}|_{\left(x_{0}, y_{0}\right)}= f_{x}^{\prime}(x_{0},y_{0}) \cos \alpha+f_{y}^{\prime}\left(x_{0}, y_{0}\right) \cos \beta $其中$ \cos \alpha, \cos \beta $为方向$ l $的方向余弦；三维：$ \frac{d f}{\partial l}|{\left(x_{0}, y_{0}, z_{0}\right)}  $=$ f_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \alpha $+$ f_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \beta $+$ f_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \beta+f_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right) \cos \gamma $=$ \newline\left\{f_{x}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), f_{y}^{\prime}\left(x_{0}, y_{0}, z_{0}\right), f_{z}^{\prime}\left(x_{0}, y_{0}, z_{0}\right)\right\} \cdot e $，其中$ e=\{\cos \alpha, \cos \beta, \cos \gamma\} $是$ l $的方向的单位向量（求解可微函数的方向导数求解方向余弦和各个方向的偏导数即可）（利用方向导数公式可以对向量进行求导，设方向导数的单位向量，并利用方向导数公式展开即可，例如对法向量求导$ <font color=orange>\frac{\partial u}{\partial \boldsymbol{n}} \mathrm{d} s=\frac{\partial u}{\partial x} \cos (\boldsymbol{n}, x) \mathrm{d} s+\frac{\partial u}{\partial y} \cos (\boldsymbol{n}, y) \mathrm{d} s</font> $，其中$ <font color=orange>\cos (\boldsymbol{n}, x) ,\cos (\boldsymbol{n}, y)</font> $是法向量的方向余弦；或者类似于$ <font color=orange>\oiint_{\Sigma} \frac{\partial u}{\partial n} \mathrm{~d} S</font> $=$ <font color=orange>\oiint_{\Sigma}(\frac{\partial u}{\partial x} \cos \alpha+\frac{\partial u}{\partial y} \cos \beta+\frac{\partial u}{\partial z} \cos \gamma) \mathrm{d} S</font> $）
 
 注意：一个点的所有方向的方向导数都存在，但是不一定可微（例如圆锥的顶点，属于尖锐的点）
 
@@ -291,11 +291,11 @@
 
 \subsection{梯度}\index{方向导数、梯度、散度、旋度!梯度}
 
-1、二维梯度公式：$\operatorname{grad} u(x, y)=\frac{\partial u}{\partial x} i+\frac{\partial u}{\partial y} j$
+1、二维梯度公式：$ \operatorname{grad} u(x, y)=\frac{\partial u}{\partial x} i+\frac{\partial u}{\partial y} j $
 
-2、三维梯度公式：$\operatorname{grad} u(x, y, z)=\frac{\partial u}{\partial x} i+\frac{\partial u}{\partial y} j+\frac{\partial u}{\partial z} k$
+2、三维梯度公式：$ \operatorname{grad} u(x, y, z)=\frac{\partial u}{\partial x} i+\frac{\partial u}{\partial y} j+\frac{\partial u}{\partial z} k $
 
-3、方向导数与梯度的关系：$\left.\frac{\partial u}{\partial{l}}\right|_{P}=\left.\operatorname{grad} u\right|_{P} \cdot \boldsymbol{e}_{l}=|\operatorname{grad} u(x_0, y_0, z_0) |cos \theta$，其中$\theta$是梯度方向与$e_l$的夹角（用于求解方向导数）（当方向与梯度方向相同时，函数增长最快；当方向与梯度方向相反时，函数减少最快；当方向与梯度方向正交时，函数在该方向的变化率为0）
+3、方向导数与梯度的关系：$ \left.\frac{\partial u}{\partial{l}}\right|_{P}=\left.\operatorname{grad} u\right|_{P} \cdot \boldsymbol{e}_{l}=|\operatorname{grad} u(x_0, y_0, z_0) |cos \theta $，其中$ \theta $是梯度方向与$ e_l $的夹角（用于求解方向导数）（当方向与梯度方向相同时，函数增长最快；当方向与梯度方向相反时，函数减少最快；当方向与梯度方向正交时，函数在该方向的变化率为0）
 
 注意：梯度是一个向量（注意二维和三维的表示，基向量表示和括号表示），表示下降最快的方向，即梯度方向的方向导数最大，最大值等于该点梯度向量的模
 
@@ -305,7 +305,7 @@
 
 \subsection{散度}\index{方向导数、梯度、散度、旋度!散度}
 
-1、散度公式：设有向量场$\boldsymbol{A}(x, y, z)=P(x, y, z) \boldsymbol{i}+Q(x, y, z) \boldsymbol{j}+R(x, y, z) \boldsymbol{k}$，其中$P,Q,R$有连续的一阶偏导，则向量场在一点的散度为$\operatorname{div} \boldsymbol{A}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$
+1、散度公式：设有向量场$ \boldsymbol{A}(x, y, z)=P(x, y, z) \boldsymbol{i}+Q(x, y, z) \boldsymbol{j}+R(x, y, z) \boldsymbol{k} $，其中$ P,Q,R $有连续的一阶偏导，则向量场在一点的散度为$ \operatorname{div} \boldsymbol{A}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z} $
 
 注意：散度的表示方法-一个数值
 
@@ -313,7 +313,7 @@
 
 \subsection{旋度}\index{方向导数、梯度、散度、旋度!旋度}
 
-1、旋度公式：设有向量场$\boldsymbol{A}(x, y, z)=P(x, y, z) \boldsymbol{i}+Q(x, y, z) \boldsymbol{j}+R(x, y, z) \boldsymbol{k}$，其中$P,Q,R$有连续的一阶偏导，则向量场在一点的旋度为$\operatorname{rot} \boldsymbol{A}=\left|\begin{array}{ccc}\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\P & Q & R\end{array}\right|$
+1、旋度公式：设有向量场$ \boldsymbol{A}(x, y, z)=P(x, y, z) \boldsymbol{i}+Q(x, y, z) \boldsymbol{j}+R(x, y, z) \boldsymbol{k} $，其中$ P,Q,R $有连续的一阶偏导，则向量场在一点的旋度为$ \operatorname{rot} \boldsymbol{A}=\left|\begin{array}{ccc}\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\P & Q & R\end{array}\right| $
 
 注意：对于具体的点处的各种度求值，记得代入具体点的值
 
