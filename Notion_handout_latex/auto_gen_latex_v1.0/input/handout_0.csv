@@ -1,0 +1,91 @@
+﻿名称,简介,分类
+/Heading 1,"1、简写：/h1
+2、解释：一级标题
+3、Markdown：# ",基础块
+/Heading 2,"1、简写：/h2
+2、解释：二级标题
+3、Markdown：## ",基础块
+/Heading 3,"1、简写：/h3
+2、解释：三级标题
+3、Markdown：### ",基础块
+/Text,"1、简写：/t 或者点击空白
+2、解释：段落",基础块
+/Page,"1、简写：/p
+2、解释：新建子页面",基础块
+/To-do list,"1、简写：/to
+2、解释：待办事项
+3、Markdown：- [ ]（notion为[ ]）",基础块
+/Numbered list,"1、简写：/num
+2、解释：有序列表
+3、Markdown：1. ",基础块
+/Bulleted list,"1、简写：/bu
+2、解释：无序列表
+3、Markdown：- （其中一种）",基础块
+/Toggle,"1、简写：/tog
+2、解释：可折叠列表",基础块
+/Callout,"1、简写：/call
+2、解释：让内容更佳突出显示",基础块
+/Quote,"1、简写：/quo
+2、解释：引用",基础块
+/Table,"1、简写：/ta
+2、解释：表格",基础块
+/Link to page,"1、简写：/link
+2、解释：建立到一个页面的链接",基础块
+/Divider,"1、简写：/di
+2、解释：分割条（用在page里）",基础块
+/Table of content,"1、简写：/table c
+2、解释：当前Page内容大纲",高级块
+/Block equation,"1、简写：/ block e
+2、解释：公式块",高级块
+/Template button,"1、简写：/button
+2、解释：建立一个模板区域，点击按钮生成设置好的内容",高级块
+/Breadcrumb,"1、简写：/bread
+2、解释：显示当前页面的位置（路径）",高级块
+/Synced block,"1、简写：/sync
+2、解释：同步块，该块在各个页面的复制品可以互相同步",高级块
+/Toggle Heading 1,"1、简写：/t h
+2、解释：可折叠的一级标题",高级块
+/Toggle Heading 2,"1、简写：/t h
+2、解释：可折叠的二级标题",高级块
+/Toggle Heading 3,"1、简写：/t h
+2、解释：可折叠的三级标题",高级块
+/Table database- inline,"1、简写：/table
+2、解释：在页面内建立一个表格数据库",数据库
+/Board database - inline,"1、简写：/board
+2、解释：在页面内建立一个看板数据库（任务管理）",数据库
+/Gallery database - inline,"1、简写：/ga
+2、解释：在页面内建立一个展示数据库（页面展示）",数据库
+/List database - inline,"1、简写：/list d
+2、解释：在页面内建立一个列表数据库（Page列表）",数据库
+/Calendar database - inline,"1、简写：/cale
+2、解释：在页面内建立一个日历数据库",数据库
+/Timeline database - inline,"1、简写：/time
+2、解释：在页面内建立一个时间线数据库",数据库
+/Table database - Full page,"1、简写：/table
+2、解释：在页面内建立一个指向表格数据库的子页面",数据库
+/Board database - Full page,"1、简写：/board
+2、解释：在页面内建立一个指向看板数据库（任务管理）的子页面",数据库
+/Gallery database - Full page,"1、简写：/ga
+2、解释：在页面内建立一个指向展示数据库（页面展示）的子页面",数据库
+/List database - Full page,"1、简写：/list d
+2、解释：在页面内建立一个指向列表数据库（Page列表）的子页面",数据库
+/Calendar database - Full page,"1、简写：/cale
+2、解释：在页面内建立一个指向日历数据库的子页面",数据库
+/Timeline database - Full page,"1、简写：/time
+2、解释：在页面内建立一个指向时间线数据库的子页面",数据库
+/Create linked database,"1、简写：/link d
+2、解释：创建一个指向数据库的链接（做同一种数据库的不同内容展示）",数据库
+/Image,"1、简写：/im
+2、解释：插入图片",多媒体
+/Web bookmark,"1、简写：/web
+2、解释：网络书签（插入一个美观的网络链接）",多媒体
+/Video,"1、简写：/vi
+2、解释：插入一个视频",多媒体
+/Audio,"1、简写：/au
+2、解释：插入一个音频",多媒体
+/Code,"1、简写：/code
+2、解释：插入一段代码（带有多种语言高亮）",多媒体
+/File,"1、简写：/file
+2、解释：插入一个文件",多媒体
+/Embed,"1、简写：/em
+2、解释：嵌入块，嵌入PDF、Google系列等等（嵌入与多媒体区别是会有一个展示窗口）",嵌入块
