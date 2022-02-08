@@ -46,39 +46,48 @@ def get_csv_classify(csv_name):
 
 
 # latex文件输出格式控制
+
+# 文本转码
+def trans_code(text_src):
+    text_src = text_src.replace("\\", "\\\\")
+    text_src = text_src.replace('#', '\\#')
+    text_src = text_src.replace('&', '\\&')
+    return text_src
+
+
 # 1、文件头内容
 def latex_head(handle, chapter):
-    head = "\\chapterimage{chapter_head_2.pdf}\n\\chapter{%s}\n\n" % chapter
+    head = "\\chapterimage{chapter_head_2.pdf}\n\\chapter{%s}\n\n" % trans_code(chapter)
     # print(head)
     handle.write(head)
 
 
 # 2、章节头 section
 def latex_section(handle, topic):
-    section = "\\section{%s}\\index{%s}\n\n" % (topic, topic)
+    section = "\\section{%s}\\index{%s}\n\n" % (trans_code(topic), trans_code(topic))
     handle.write(section)
     handle.write("\n\n")
 
 
 # 2、章节头 section，只有单个内容的输出
 def latex_section_single(handle, topic, idea):
-    section = "\\section{%s}\\index{%s}\n\n" % (topic, topic)
+    section = "\\section{%s}\\index{%s}\n\n" % (trans_code(topic), trans_code(topic))
     handle.write(section)
-    handle.write(idea.replace('\r', '').replace("\n", "\n\n"))
+    handle.write(trans_code(idea).replace('\r', '').replace("\n", "\n\n"))
     handle.write("\n\n")
 
 
 # 2、章节头 section，section的注意事项
 def latex_section_attention(handle, idea):
-    handle.write(idea.replace('\r', '').replace("\n", "\n\n"))
+    handle.write(trans_code(idea).replace('\r', '').replace("\n", "\n\n"))
     handle.write("\n\n")
 
 
 # 3、子章节 subsection
 def latex_subsection(handle, topic, subtopic, idea):
-    subsection = "\\subsection{%s}\\index{%s!%s}\n\n" % (subtopic, topic, subtopic)
+    subsection = "\\subsection{%s}\\index{%s!%s}\n\n" % (trans_code(subtopic), trans_code(topic), trans_code(subtopic))
     handle.write(subsection)
-    handle.write(idea.replace('\r', '').replace("\n", "\n\n"))
+    handle.write(trans_code(idea).replace('\r', '').replace("\n", "\n\n"))
     handle.write("\n\n")
 
 
@@ -145,7 +154,8 @@ if __name__ == '__main__':
     # print(classify_dic)
     csv_table = []
     for file in config.get_key("handout_file"):
-        csv_table = csv_table + get_csv_src(csv_name=(input_dir + "\\" + file), csv_format=config.get_key("csv_src_format"))
+        csv_table = csv_table + get_csv_src(csv_name=(input_dir + "\\" + file),
+                                            csv_format=config.get_key("csv_src_format"))
     print("笔记条目数", len(csv_table))
 
     # 合成输出路径
