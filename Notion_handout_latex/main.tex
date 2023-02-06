@@ -62,7 +62,7 @@
 \newcommand{\gt}{\textgreater}
 \newcommand{\lt}{\textless}
 \usepackage{euler}
-\usepackage{newpxtext}
+% \usepackage{newpxtext}
 \usepackage{amsmath}
 
 \begin{document}
@@ -76,8 +76,8 @@
 \thispagestyle{empty} % Suppress headers and footers on the title page
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
-\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering 知识点笔记 \\[15pt] % Book title
-{\Large Notion}\\[20pt] % Subtitle
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Notion \\[15pt] % Book title
+{\Large 指南}\\[20pt] % Subtitle
 {\huge Delta1037}}}; % Author name
 \end{tikzpicture}
 \vfill
@@ -115,7 +115,7 @@
 
 \tableofcontents % Print the table of contents itself
 
-\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
+% \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
 
 \pagestyle{fancy} % Enable headers and footers again
 
@@ -157,7 +157,10 @@
 %	CHAPTER 7 数据库操作
 %----------------------------------------------------------------------------------------
 \include{sub_chapter/07-database_op.tex}
-
+%----------------------------------------------------------------------------------------
+%	CHAPTER 8 数据库公式
+%----------------------------------------------------------------------------------------
+\include{sub_chapter/08-database_formula.tex}
 %----------------------------------------------------------------------------------------
 %	PART 2 附录
 %----------------------------------------------------------------------------------------
@@ -165,7 +168,7 @@
 %----------------------------------------------------------------------------------------
 %	INDEX
 %----------------------------------------------------------------------------------------
-\cleardoublepage % Make sure the index starts on an odd (right side) page
+% \cleardoublepage % Make sure the index starts on an odd (right side) page
 \phantomsection
 \setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
 

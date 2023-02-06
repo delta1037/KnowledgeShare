@@ -1,135 +1,60 @@
-\chapterimage{chapter_head_2.pdf}
-\chapter{数据库操作}
-
-\section{类型互联}\index{类型互联}
-
-1、数据库的分类：数据库不同的视图类型只是对同一个数据库不同的展示方式
-
-2、获取其它展示：数据库最上边的“+ Add View”，选择一种方式创建即可
-
-\section{基本类型}\index{基本类型}
-
-1、Text：富文本类型
-
+﻿名称,简介,分类
+类型互联,"1、数据库的分类：数据库不同的视图类型只是对同一个数据库不同的展示方式
+2、获取其它展示：数据库最上边的“+ Add View”，选择一种方式创建即可",数据库操作
+基本类型,"1、Text：富文本类型
 2、Number：数值类型（数值，百分比等等，特别多）
-
 3、Select：单选（从已创建的项里选择其中一项）（点击代替重复编辑，一改均改）
-
 4、Multi-select：多选（从已创建的项里选择其中一项或者多项）
-
 5、Status：状态（单选或者复选框，有三种类型）
-
 5、Date：日期类型（具体时间，是否包含结尾，日期的格式）
-
 6、Person：人（notion的用户）
-
-7、File\&Media：多媒体文件
-
+7、File&Media：多媒体文件
 8、Checkbox：复选框（代表该项是否完成）
-
 9、URL：超链接
-
 10、Email：邮箱
-
-11、Phone：电话号码
-
-\section{高级类型}\index{高级类型}
-
-1、Formula：基于同一数据库其它属性的函数，具体见https://www.notion.so/help/formulas
-
+11、Phone：电话号码",数据库操作
+高级类型,"1、Formula：基于同一数据库其它属性的函数，具体见https://www.notion.so/help/formulas
 2、Relation：基于不同数据库之间的关联
-
 3、Rollup：基于同一数据库的关联的相关计算
-
 4、Created time：该项创建时间
-
 5、Last edited time：该项最后编辑时间
-
 6、Created by：该项创建人
-
-7、Last edited by：该项最后的编辑人
-
-\section{顶部操作}\index{顶部操作}
-
-1、视图控制：包括已有的视图显示和新增视图选项
-
+7、Last edited by：该项最后的编辑人",数据库操作
+顶部操作,"1、视图控制：包括已有的视图显示和新增视图选项
 2、Filter：设置过滤条件，对内容过滤展示
-
 3、Sort：设置排序条件，对内容排序展示
-
 4、搜索：搜索数据库内容
-
 5、作为页面打开图标：将数据库作为一个页面打开
-
 6、New选项：新增一个page
-
-6、New选项右边的下拉按钮：page模板管理，可以新建一个page模板（不包括标题）
-
-\section{三饼选项（数据库选项，蓝色的New左边，鼠标移过去可以看到）}\index{三饼选项（数据库选项，蓝色的New左边，鼠标移过去可以看到）}
-
-0、选择试图的图标和命名
-
+6、New选项右边的下拉按钮：page模板管理，可以新建一个page模板（不包括标题）",数据库操作
+三饼选项（数据库选项，蓝色的New左边，鼠标移过去可以看到）,"0、选择试图的图标和命名
 1、Layout：切换数据库的展示视图（是修改，不是新增）
-
 1.1、Show database title：选择是否展示数据库的名字
-
 1.2、Show vertical lines：
-
 1.3、Wrap all colums：是否将内容全显示（不隐藏过长部分）
-
 1.4、Open pages in：选择打开数据库页面的位置（右侧、中间、整个）
-
 2、Properties：只展示部分属性
-
 3、Filter：过滤展示某些条目
-
 4、Sort：排序展示
-
 5、Group：按照指定属性分组展示
-
 6、Sub-items：创建子项
-
 7、Load limit：加载page个数
-
 8、Lock database ：锁定数据库视图和不能创建属性，子页面不受影响
-
 9、Copy link to view：拷贝指向视图的链接，可以在另一个地方粘贴
-
 10、Duplicate view：复制一个当前的视图
-
-11、Delete view：删除当前的视图
-
-\section{六饼选项（数据库块选项，最上方视图左边，鼠标移过去可以看到）}\index{六饼选项（数据库块选项，最上方视图左边，鼠标移过去可以看到）}
-
-1、一个搜索框：查找可以进行的操作
-
+11、Delete view：删除当前的视图",数据库操作
+六饼选项（数据库块选项，最上方视图左边，鼠标移过去可以看到）,"1、一个搜索框：查找可以进行的操作
 2、Delete：删除数据库
-
 3、Duplicate：将数据库拷贝一份放到现有数据库下面
-
 4、Copy link：复制数据库的链接在别的地方创建一个链接数据库
-
 5、Open as page：将数据库作为一个页面打开
-
 ——————————————————————
-
 6、Edit property：
-
 7：Turn into page：转换成页面
-
 8、Turn into simple table：转换成表格（只有在没有高级类型的情况下可以转）
-
 9、Merge with CSV：和导入的CSV文件合并
-
 10、Lock database：锁定数据库视图和不能创建属性，子页面不受影响（和Database lock功能一样？）
-
 11、Move to：转移到其它page
-
-12、Add to favorites：添加到收藏页面组
-
-\section{操作技巧}\index{操作技巧}
-
-1、Text内容换行：Shift + Enter
-
-2、创建的列太宽：先创建为 Checkbox 属性，缩小列宽，再转换为其他类型
-
+12、Add to favorites：添加到收藏页面组",数据库操作
+操作技巧,"1、Text内容换行：Shift + Enter
+2、创建的列太宽：先创建为 Checkbox 属性，缩小列宽，再转换为其他类型",数据库操作

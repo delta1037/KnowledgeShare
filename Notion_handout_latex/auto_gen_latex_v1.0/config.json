@@ -2,9 +2,10 @@
     "input_dir" : "input",
     "classify_file": "classify_dic.csv",
     "handout_file": [
-        "handout_0.csv",
-        "handout_1.csv",
-        "handout_2.csv"
+        "notion块表.csv",
+        "notion数据库.csv",
+        "notion富文本.csv",
+        "数据库公式.csv"
     ],
     "csv_src_format": [
         "topic",

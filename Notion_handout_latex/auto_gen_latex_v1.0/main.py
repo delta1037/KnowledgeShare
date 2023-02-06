@@ -49,7 +49,7 @@ def get_csv_classify(csv_name):
 
 # 文本转码
 def trans_code(text_src):
-    text_src = text_src.replace("\\", "\\\\")
+    # text_src = text_src.replace("\\", "\\\\")
     text_src = text_src.replace('#', '\\#')
     text_src = text_src.replace('&', '\\&')
     return text_src

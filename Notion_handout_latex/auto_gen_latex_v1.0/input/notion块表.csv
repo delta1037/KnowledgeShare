@@ -35,6 +35,16 @@
 2、解释：分割条（用在page里）",基础块
 /Table of content,"1、简写：/table c
 2、解释：当前Page内容大纲",高级块
+/Mention a person,"1、简写：/m
+2、解释：提及一个成员",行内块
+/Mention a page,"1、简写：/m
+2、解释：提及一个页面",行内块
+/Date or reminder,"1、简写：/da
+2、解释：日期或者提醒",行内块
+/Emoji,"1、简写：/e
+2、解释：表情",行内块
+/Inline equation,"1、简写：/inline eq
+2、解释：行内公式",行内块
 /Block equation,"1、简写：/ block e
 2、解释：公式块",高级块
 /Template button,"1、简写：/button
@@ -49,31 +59,31 @@
 2、解释：可折叠的二级标题",高级块
 /Toggle Heading 3,"1、简写：/t h
 2、解释：可折叠的三级标题",高级块
-/Table database- inline,"1、简写：/table
-2、解释：在页面内建立一个表格数据库",数据库
-/Board database - inline,"1、简写：/board
-2、解释：在页面内建立一个看板数据库（任务管理）",数据库
-/Gallery database - inline,"1、简写：/ga
-2、解释：在页面内建立一个展示数据库（页面展示）",数据库
-/List database - inline,"1、简写：/list d
-2、解释：在页面内建立一个列表数据库（Page列表）",数据库
-/Calendar database - inline,"1、简写：/cale
-2、解释：在页面内建立一个日历数据库",数据库
-/Timeline database - inline,"1、简写：/time
-2、解释：在页面内建立一个时间线数据库",数据库
-/Table database - Full page,"1、简写：/table
-2、解释：在页面内建立一个指向表格数据库的子页面",数据库
-/Board database - Full page,"1、简写：/board
-2、解释：在页面内建立一个指向看板数据库（任务管理）的子页面",数据库
-/Gallery database - Full page,"1、简写：/ga
-2、解释：在页面内建立一个指向展示数据库（页面展示）的子页面",数据库
-/List database - Full page,"1、简写：/list d
-2、解释：在页面内建立一个指向列表数据库（Page列表）的子页面",数据库
-/Calendar database - Full page,"1、简写：/cale
-2、解释：在页面内建立一个指向日历数据库的子页面",数据库
-/Timeline database - Full page,"1、简写：/time
-2、解释：在页面内建立一个指向时间线数据库的子页面",数据库
-/Create linked database,"1、简写：/link d
+/2 columns,"1、简写：/2 c
+2、解释：创建2个并列的text块（2列）",高级块
+/3 columns,"1、简写：/3 c
+2、解释：创建3个并列的text块（3列）",高级块
+/4 columns,"1、简写：/4 c
+2、解释：创建4个并列的text块（4列）",高级块
+/5 columns,"1、简写：/5 c
+2、解释：创建2个并列的text块（5列）",高级块
+/Table view,"1、简写：/table v
+2、解释：在页面内建立一个表格数据库（新建或是已有数据库的链接）",数据库
+/Board view,"1、简写：/board v
+2、解释：在页面内建立一个看板数据库（新建或是已有数据库的链接）（任务管理）",数据库
+/Gallery view,"1、简写：/ga v
+2、解释：在页面内建立一个展示数据库（新建或是已有数据库的链接）（页面展示）",数据库
+/List view,"1、简写：/list v
+2、解释：在页面内建立一个列表数据库（新建或是已有数据库的链接）（Page列表）",数据库
+/Calendar view,"1、简写：/cale v
+2、解释：在页面内建立一个日历数据库（新建或是已有数据库的链接）",数据库
+/Timeline view,"1、简写：/time v
+2、解释：在页面内建立一个时间线数据库（新建或是已有数据库的链接）",数据库
+/Database - Inline,"1、简写：/db i
+2、解释：在页面内建立一个数据库（默认为Table view）",数据库
+/Database - Full page,"1、简写：/db f
+2、解释：在页面内建立一个数据库的子页面（默认为Table view）",数据库
+/Linked view of database,"1、简写：/linked
 2、解释：创建一个指向数据库的链接（做同一种数据库的不同内容展示）",数据库
 /Image,"1、简写：/im
 2、解释：插入图片",多媒体
