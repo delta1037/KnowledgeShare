@@ -1,0 +1,282 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.4 (26/09/2018)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 附加说明：
+% 1、本模板源文件如上所述，经修改用于发布笔记的release版本
+% 2、
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\input{structure.tex} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+%\hypersetup{pdftitle={Title},pdfauthor={Author}} % Uncomment and fill out to include PDF metadata for the author and title of the book
+
+%----------------------------------------------------------------------------------------
+
+% 添加显示中文的部分
+\usepackage[UTF8]{ctex}
+% 一些数学符号的包
+\usepackage{esint}
+\newcommand{\gt}{\textgreater}
+\newcommand{\lt}{\textless}
+\usepackage{euler}
+\usepackage{amsmath}
+\xeCJKDeclareCharClass{CJK}{
+  "24EA,        % ⓪
+  "2460->"2473, % ①–⑳
+}
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+%% 注意！这里需要修改的内容有标题，子标题和作者名
+\begingroup
+\thispagestyle{empty} % Suppress headers and footers on the title page
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering 知识点笔记 \\[15pt] % Book title
+{\Large 物理学}\\[20pt] % Subtitle
+{\huge Delta1037}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2022 Delta1037\\ % Copyright notice
+
+\noindent \textsc{Published by Self}\\ % Publisher
+
+\noindent \textsc{web: www.delta1037.cn}\\ % URL
+
+\noindent \textsc{mail: geniusrabbit@qq.com}\\ % URL
+
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 4.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{https://creativecommons.org/licenses/by-nc-sa/4.0/}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information, replace this with your own license (if any)
+
+\noindent \textit{First printing, January 2022} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % Disable headers and footers for the following pages
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
+
+\pagestyle{fancy} % Enable headers and footers again
+
+% 对于自动转换部分的说明
+% 1、按照chapter对知识点进行分类
+% 2、每一个知识点构建成一个section
+% 3、一个知识点里如果包含子内容，构建成subsection
+% 4、index构建成索引
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PART 1 微积分部分
+%----------------------------------------------------------------------------------------
+\part{物理学}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1 函数与极限
+%----------------------------------------------------------------------------------------
+\include{sub_chapter/01-chapter.tex}
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2 一元微分
+%----------------------------------------------------------------------------------------
+% \include{sub_chapter/02-differential.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 3 多元微分
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/03-differential_multi.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 4 一元积分
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/04-integral.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 5 多元积分
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/05-integral_multi.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 6 向量代数与空间几何
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/06-vector_algebra.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 7 级数
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/07-series.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 8 微分方程
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/08-differential_equation.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 9 微分通识
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/09-general.tex}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %----------------------------------------------------------------------------------------
+% %	PART 2 线性代数
+% %----------------------------------------------------------------------------------------
+% \part{线性代数}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 1 行列式
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/11-determinant.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 2 矩阵
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/12-matrix.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 3 向量
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/13-vector.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 4 线性方程
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/14-linear_equations.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 5 特征值特/征向量/相似矩阵
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/15-eigenvalues.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 6 二次型
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/16-quadratic.tex}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %----------------------------------------------------------------------------------------
+% %	PART 3 概率论
+% %----------------------------------------------------------------------------------------
+% \part{概率论}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 1 随机事件和概率
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/21-random_events_and_probabilities.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 2 随机变量及其概率分布
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/22-random_variables_and_probability_distribution.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 3 多维随机变量及其分布
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/23-multi_random_variables_and_probability_distribution.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 4 随机变量的数字特征
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/24-numerical_characteristics_of_random_variables.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 5 大数定律和中心极限定理
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/25-law_of_Large_Numbers_and_Central_Limit_Theorem.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 6 数理统计的基本概念
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/26-basic_concepts_of_mathematical_statistics.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 7 参数估计
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/27-parameter_estimation.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 8 假设检验
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/28-hypothetical_test.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 9 概率论通识
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/29-general.tex}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %----------------------------------------------------------------------------------------
+% %	PART 4 公式汇总
+% %----------------------------------------------------------------------------------------
+% \part{公式汇总}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 1 高等数学公式
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/31-calculus.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 2 线性代数公式
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/32-linear_algebra.tex}
+% %----------------------------------------------------------------------------------------
+% %	CHAPTER 3 概率论公式
+% %----------------------------------------------------------------------------------------
+% \include{sub_chapter/33-probability.tex}
+
+%----------------------------------------------------------------------------------------
+%	PART 5 附录
+%----------------------------------------------------------------------------------------
+\part{附录}
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+\cleardoublepage % Make sure the index starts on an odd (right side) page
+\phantomsection
+\setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
+
+% 添加没有标号的一个章节
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+\chapterimage{chapter_head_2.pdf}
+\printindex % Output the index
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -1,0 +1,18 @@
+{
+    "data_dir" : "input",
+    "classify_file": "classify_dic.csv",
+    "handout_file": [
+        "普物力学.csv"
+    ],
+    "csv_src_format": {
+        "chapter": "章节",
+        "section_name": "名称",
+        "section_content": [
+        ],
+        "subsection_content": [
+            "重点公式","注意事项"
+        ]
+    },
+    "section_content_divider": "——————————————————————————",
+    "output_path": "../sub_chapter"
+}
